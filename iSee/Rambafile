@@ -1,0 +1,37 @@
+### Headers settings
+company: Vlad
+
+### Xcode project settings
+project_name: iSee
+xcodeproj_path: iSee.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: iSee
+
+# The file path for new modules
+project_file_path: iSee/User Stories
+
+# The Xcode group path to new modules
+project_group_path: iSee/User Stories
+
+### Tests generation settings section
+# The tests target name
+test_target: iSeeTests
+
+# The file path for new tests
+test_file_path: iSeeTests/Tests/User Stories
+
+# The Xcode group path to new tests
+test_group_path: iSeeTests/Tests/User Stories
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Catalogs
+catalogs:
+- 'https://github.com/surfstudio/generamba-templates'
+
+### Templates
+templates:
+- {name: surf_mvp_module}

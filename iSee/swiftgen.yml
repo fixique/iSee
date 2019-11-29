@@ -1,0 +1,20 @@
+xcassets:
+  inputs:
+    - iSee/Resources/Images/Assets.xcassets
+  outputs:
+    - templateName: swift4
+      output: iSee/Resources/Images/Assets.swift
+
+fonts:
+  inputs:
+    - iSee/Resources/Fonts/
+  outputs:
+    - templateName: swift4
+      output: iSee/Resources/Fonts/Fonts.swift
+
+strings:
+  inputs:
+    - iSee/Resources/Strings/Localizable.strings
+  outputs:
+    - templateName: structured-swift4
+      output: iSee/Resources/Strings/Strings.swift
