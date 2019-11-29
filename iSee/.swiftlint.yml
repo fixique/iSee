@@ -37,7 +37,6 @@ whitelist_rules:
     - legacy_constructor
     - legacy_hashing
     - legacy_nsgeometry_functions
-    - line_length
     - literal_expression_end_indentation
     - mark
     - multiline_arguments

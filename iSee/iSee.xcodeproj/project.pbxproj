@@ -7,7 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		026DD9719B25B6B0DC6AC873 /* CameraRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5B74D4B02E2E2EFC129E1B /* CameraRouter.swift */; };
+		0BAF214F3B7A7079F5DFF9C8 /* CameraModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8557D2B6D5AC782A9A30D5A /* CameraModuleConfigurator.swift */; };
+		0EC75D1C60FD4BF9F0F5A445 /* CameraRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DCC0FDA931FBC3DFF2E1A3 /* CameraRouterTests.swift */; };
+		14EAAEFF4DEEF2F94B18B11F /* CameraPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B018000517C03BF411B4C0 /* CameraPresenter.swift */; };
+		27CD1EE88699E4748B5C09FE /* CameraViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E92F314072FF3382FDBB75 /* CameraViewController.storyboard */; };
+		3261E9D49AFAF425D223727C /* CameraModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E9E033166A475AE035F09A /* CameraModuleOutput.swift */; };
+		37B1DF5505D422C8EE6545C0 /* CameraModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D865D9019422E36F936BF /* CameraModuleInput.swift */; };
+		3A5844C8E11D7FB9FE8DCDF4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7331705952103BACED904E2D /* CameraViewController.swift */; };
+		4EC9FC3ADD85D9A26EEB03D4 /* CameraPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FA75E891F9C79AB75E043 /* CameraPresenterTests.swift */; };
+		58569EB1E42AED7422200145 /* CameraViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD2DF346E443FD93D4D2800 /* CameraViewInput.swift */; };
+		9BBD2ED45A71761E809D505B /* CameraRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1442DF2F17564916FEABB4D /* CameraRouterInput.swift */; };
+		A28705C4DF7553B159A938B2 /* CameraViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2D76D504280A42486972E /* CameraViewTests.swift */; };
+		B73A8C1FF2180DBF9F6F2F8B /* CameraModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A60194102966E41A325637 /* CameraModuleConfiguratorTests.swift */; };
 		CF57092F610983F949DC142B /* Pods_iSee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08DA63D54E782A5A9597A0D7 /* Pods_iSee.framework */; };
+		ED3FBAECFC7BB40470B50215 /* CameraViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803B3541548D5978E635588E /* CameraViewOutput.swift */; };
 		F598B2EB239198BA00AB7B55 /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EA239198BA00AB7B55 /* fastlane */; };
 		F598B2ED239198BA00AB7B55 /* ci in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EC239198BA00AB7B55 /* ci */; };
 		F598B2EF239198BA00AB7B55 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EE239198BA00AB7B55 /* Podfile */; };
@@ -37,9 +51,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03E92F314072FF3382FDBB75 /* CameraViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = CameraViewController.storyboard; sourceTree = "<group>"; };
+		08A60194102966E41A325637 /* CameraModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		08DA63D54E782A5A9597A0D7 /* Pods_iSee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		182FA75E891F9C79AB75E043 /* CameraPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraPresenterTests.swift; sourceTree = "<group>"; };
+		41DCC0FDA931FBC3DFF2E1A3 /* CameraRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraRouterTests.swift; sourceTree = "<group>"; };
+		52C2D76D504280A42486972E /* CameraViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraViewTests.swift; sourceTree = "<group>"; };
+		7331705952103BACED904E2D /* CameraViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		7BD2DF346E443FD93D4D2800 /* CameraViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraViewInput.swift; sourceTree = "<group>"; };
+		803B3541548D5978E635588E /* CameraViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraViewOutput.swift; sourceTree = "<group>"; };
 		BDA159A1F6EF7F2163B114B0 /* Pods-iSee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSee.debug.xcconfig"; path = "Target Support Files/Pods-iSee/Pods-iSee.debug.xcconfig"; sourceTree = "<group>"; };
+		C13D865D9019422E36F936BF /* CameraModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraModuleInput.swift; sourceTree = "<group>"; };
+		C1442DF2F17564916FEABB4D /* CameraRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraRouterInput.swift; sourceTree = "<group>"; };
+		C5E9E033166A475AE035F09A /* CameraModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraModuleOutput.swift; sourceTree = "<group>"; };
 		D566E4ADD8265C1AD4D2D1AD /* Pods-iSee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSee.release.xcconfig"; path = "Target Support Files/Pods-iSee/Pods-iSee.release.xcconfig"; sourceTree = "<group>"; };
+		DB5B74D4B02E2E2EFC129E1B /* CameraRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraRouter.swift; sourceTree = "<group>"; };
+		E4B018000517C03BF411B4C0 /* CameraPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraPresenter.swift; sourceTree = "<group>"; };
+		E8557D2B6D5AC782A9A30D5A /* CameraModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraModuleConfigurator.swift; sourceTree = "<group>"; };
 		F598B2E6239198BA00AB7B55 /* iSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F598B2EA239198BA00AB7B55 /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fastlane; path = ../../fastlane; sourceTree = "<group>"; };
 		F598B2EC239198BA00AB7B55 /* ci */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ci; path = ../../ci; sourceTree = "<group>"; };
@@ -112,9 +140,29 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		35F91493A8BC67E21DA72A59 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				182FA75E891F9C79AB75E043 /* CameraPresenterTests.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4ADC220CF31D10D747A0F804 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DB5B74D4B02E2E2EFC129E1B /* CameraRouter.swift */,
+				C1442DF2F17564916FEABB4D /* CameraRouterInput.swift */,
+			);
+			name = Router;
+			path = Router;
+			sourceTree = "<group>";
+		};
 		5927BF7E2B40719EB90272BE /* User Stories */ = {
 			isa = PBXGroup;
 			children = (
+				5B9E98557E47C12A67274C98 /* Camera */,
 			);
 			path = "User Stories";
 			sourceTree = "<group>";
@@ -125,6 +173,77 @@
 				08DA63D54E782A5A9597A0D7 /* Pods_iSee.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B9E98557E47C12A67274C98 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				C7A7222D3D112900682710AE /* Configurator */,
+				C2D2EC9D29EDA1FEE21BCD79 /* Router */,
+				35F91493A8BC67E21DA72A59 /* Presenter */,
+				97CEDC748A4ED2B3DF5AC6C3 /* View */,
+			);
+			name = Camera;
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		801C903F4EB32504EDE46FA1 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				E8557D2B6D5AC782A9A30D5A /* CameraModuleConfigurator.swift */,
+			);
+			name = Configurator;
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		9540D8656A98593CCADD8A2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7331705952103BACED904E2D /* CameraViewController.swift */,
+				03E92F314072FF3382FDBB75 /* CameraViewController.storyboard */,
+				7BD2DF346E443FD93D4D2800 /* CameraViewInput.swift */,
+				803B3541548D5978E635588E /* CameraViewOutput.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		97CEDC748A4ED2B3DF5AC6C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52C2D76D504280A42486972E /* CameraViewTests.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		B9CC7E8D354516F424DB082C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E4B018000517C03BF411B4C0 /* CameraPresenter.swift */,
+				C13D865D9019422E36F936BF /* CameraModuleInput.swift */,
+				C5E9E033166A475AE035F09A /* CameraModuleOutput.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C2D2EC9D29EDA1FEE21BCD79 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				41DCC0FDA931FBC3DFF2E1A3 /* CameraRouterTests.swift */,
+			);
+			name = Router;
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C7A7222D3D112900682710AE /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				08A60194102966E41A325637 /* CameraModuleConfiguratorTests.swift */,
+			);
+			name = Configurator;
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 		F598B2DB239198BA00AB7B55 = {
@@ -345,6 +464,7 @@
 		F598B318239198BA00AB7B55 /* User Stories */ = {
 			isa = PBXGroup;
 			children = (
+				FD1557C775683963BD670E1C /* Camera */,
 			);
 			path = "User Stories";
 			sourceTree = "<group>";
@@ -376,6 +496,18 @@
 				5927BF7E2B40719EB90272BE /* User Stories */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		FD1557C775683963BD670E1C /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				801C903F4EB32504EDE46FA1 /* Configurator */,
+				4ADC220CF31D10D747A0F804 /* Router */,
+				B9CC7E8D354516F424DB082C /* Presenter */,
+				9540D8656A98593CCADD8A2D /* View */,
+			);
+			name = Camera;
+			path = Camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,6 +602,7 @@
 				F598B2ED239198BA00AB7B55 /* ci in Resources */,
 				F598B315239198BA00AB7B55 /* Assets.xcassets in Resources */,
 				F598B2EB239198BA00AB7B55 /* fastlane in Resources */,
+				27CD1EE88699E4748B5C09FE /* CameraViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +687,15 @@
 				F598B32E239198BA00AB7B55 /* ModuleTrasitionable.swift in Sources */,
 				F598B320239198BA00AB7B55 /* Strings.swift in Sources */,
 				F598B317239198BA00AB7B55 /* AppDelegate.swift in Sources */,
+				0BAF214F3B7A7079F5DFF9C8 /* CameraModuleConfigurator.swift in Sources */,
+				026DD9719B25B6B0DC6AC873 /* CameraRouter.swift in Sources */,
+				9BBD2ED45A71761E809D505B /* CameraRouterInput.swift in Sources */,
+				14EAAEFF4DEEF2F94B18B11F /* CameraPresenter.swift in Sources */,
+				37B1DF5505D422C8EE6545C0 /* CameraModuleInput.swift in Sources */,
+				3261E9D49AFAF425D223727C /* CameraModuleOutput.swift in Sources */,
+				3A5844C8E11D7FB9FE8DCDF4 /* CameraViewController.swift in Sources */,
+				58569EB1E42AED7422200145 /* CameraViewInput.swift in Sources */,
+				ED3FBAECFC7BB40470B50215 /* CameraViewOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +705,10 @@
 			files = (
 				F598B33E239198BB00AB7B55 /* XCTestCase.swift in Sources */,
 				F598B339239198BB00AB7B55 /* iSeeTests.swift in Sources */,
+				B73A8C1FF2180DBF9F6F2F8B /* CameraModuleConfiguratorTests.swift in Sources */,
+				0EC75D1C60FD4BF9F0F5A445 /* CameraRouterTests.swift in Sources */,
+				4EC9FC3ADD85D9A26EEB03D4 /* CameraPresenterTests.swift in Sources */,
+				A28705C4DF7553B159A938B2 /* CameraViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
