@@ -8,6 +8,7 @@
 
 import UIKit
 import SurfUtils
+import EasyTipView
 
 final class PredictedViewController: UIViewController, ModuleTransitionable {
 
@@ -19,6 +20,11 @@ final class PredictedViewController: UIViewController, ModuleTransitionable {
     // MARK: - Properties
 
     var output: PredictedViewOutput?
+
+    // MARK: - Private Properties
+
+    private var pointViews: [PointView] = []
+    private var boxes: [PredictedBoxEntity] = []
 
     // MARK: - UIViewController
 
@@ -34,6 +40,7 @@ final class PredictedViewController: UIViewController, ModuleTransitionable {
 extension PredictedViewController: PredictedViewInput {
 
     func setupInitialState(image: UIImage, boxes: [PredictedBoxEntity]) {
+        self.boxes = boxes
         configurePreviewImageView(with: image)
         configureCloseButton()
         renderBoxes(boxes: boxes)
@@ -76,14 +83,25 @@ private extension PredictedViewController {
             let standartSize = CGSize(width: 1280, height: 720)
             let currentSize = UIScreen.main.bounds.size
             let pointView = PointView(frame: CGRect(x: 0, y: 0, width: 24.0, height: 24.0))
+            pointView.tag = box.id
             pointView.center = CGPoint(x: (box.point.x / standartSize.height) * currentSize.width,
                                        y: (box.point.y / standartSize.width) * currentSize.height)
+            pointView.addTarget(self, action: #selector(pointSelected(button:)), for: .touchUpInside)
             view.addSubview(pointView)
+            pointViews.append(pointView)
         }
     }
 
-    func configureBubbleView() {
-        
+    func configureBubbleView(for pointView: UIView, box: PredictedBoxEntity) {
+        var preferences = EasyTipView.Preferences()
+        preferences.drawing.font = UIFont.systemFont(ofSize: 14.0, weight: .regular)
+//        preferences.drawing.foregroundColor = UIColor.whiteColor()
+        preferences.drawing.backgroundColor = UIColor.white.withAlphaComponent(0.8)
+        preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.bottom
+        EasyTipView.show(forView: pointView,
+                         withinSuperview: view,
+                         text: box.category,
+                         preferences: preferences)
     }
 
 }
@@ -94,6 +112,12 @@ private extension PredictedViewController {
 
     @IBAction func closeAction(_ sender: Any) {
         output?.close()
+    }
+
+    @objc
+    func pointSelected(button: UIButton) {
+
+//        configureBubbleView(for: pointViews[button.tag], box: boxes[button.tag])
     }
 
 }

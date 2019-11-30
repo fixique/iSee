@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class PointView: UIView {
+final class PointView: UIButton {
 
     // MARK: - Private Properties
 
