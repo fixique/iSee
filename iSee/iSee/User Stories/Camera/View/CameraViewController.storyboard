@@ -19,6 +19,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pq8-yd-V2M" customClass="CommonButton" customModule="SurfUtils">
+                                <rect key="frame" x="348" y="60" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0iN-kN-0Q2"/>
+                                    <constraint firstAttribute="width" constant="50" id="QgO-Dm-a5L"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="closeStateAction:" destination="h3k-bK-TNO" eventType="touchUpInside" id="bcN-ry-qr3"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dI-fA-0pC">
                                 <rect key="frame" x="175" y="758" width="64" height="64"/>
                                 <constraints>
@@ -42,8 +52,8 @@
                                 </constraints>
                                 <state key="normal" image="lens-shutter"/>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSw-Cu-m4j" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="28" y="168" width="358" height="400"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uSw-Cu-m4j" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="28" y="167" width="358" height="400"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="nne-SD-mfW"/>
@@ -61,10 +71,12 @@
                             <constraint firstAttribute="bottom" secondItem="DM0-Ol-Nas" secondAttribute="bottom" id="FhK-ME-oZo"/>
                             <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="uSw-Cu-m4j" secondAttribute="trailing" constant="28" id="FyD-ri-Lqs"/>
                             <constraint firstItem="uSw-Cu-m4j" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="28" id="PAV-bu-9Kl"/>
+                            <constraint firstItem="pq8-yd-V2M" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="16" id="VnW-bA-mXF"/>
                             <constraint firstAttribute="trailing" secondItem="DM0-Ol-Nas" secondAttribute="trailing" id="ZcF-6X-hP4"/>
                             <constraint firstAttribute="bottom" secondItem="Adx-kX-E8o" secondAttribute="bottom" id="afD-1F-92w"/>
                             <constraint firstItem="YWU-9O-L7t" firstAttribute="bottom" secondItem="2dI-fA-0pC" secondAttribute="bottom" constant="40" id="amH-5M-iBw"/>
                             <constraint firstItem="25r-uH-Oa2" firstAttribute="centerX" secondItem="cA6-JB-jfU" secondAttribute="centerX" id="ghv-rh-7HV"/>
+                            <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="pq8-yd-V2M" secondAttribute="trailing" constant="16" id="ia6-lB-GJH"/>
                             <constraint firstAttribute="trailing" secondItem="Adx-kX-E8o" secondAttribute="trailing" id="j3n-rH-iYI"/>
                             <constraint firstItem="Adx-kX-E8o" firstAttribute="leading" secondItem="cA6-JB-jfU" secondAttribute="leading" id="jKy-VA-MBe"/>
                             <constraint firstItem="uSw-Cu-m4j" firstAttribute="centerY" secondItem="cA6-JB-jfU" secondAttribute="centerY" constant="-80" id="qcE-fz-AHI"/>
@@ -76,6 +88,7 @@
                     </view>
                     <connections>
                         <outlet property="bluredLayer" destination="DM0-Ol-Nas" id="47y-9s-H0d"/>
+                        <outlet property="closeStateButton" destination="pq8-yd-V2M" id="ICv-Nx-5D6"/>
                         <outlet property="lensAnimationView" destination="uSw-Cu-m4j" id="osH-DL-dVC"/>
                         <outlet property="lensButton" destination="25r-uH-Oa2" id="VfC-6n-eac"/>
                         <outlet property="previewLayer" destination="Adx-kX-E8o" id="b1F-D2-FYu"/>

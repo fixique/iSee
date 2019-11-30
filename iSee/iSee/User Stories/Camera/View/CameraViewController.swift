@@ -13,6 +13,13 @@ import Lottie
 
 final class CameraViewController: UIViewController, ModuleTransitionable {
 
+    // MARK: - Enums
+
+    private enum States {
+        case `default`
+        case lensOpen
+    }
+
     // MARK: - IBOutlets
 
     @IBOutlet private weak var previewLayer: UIView!
@@ -20,6 +27,7 @@ final class CameraViewController: UIViewController, ModuleTransitionable {
     @IBOutlet private weak var bluredLayer: UIView!
     @IBOutlet private weak var lensButton: CommonButton!
     @IBOutlet private weak var lensAnimationView: AnimationView!
+    @IBOutlet private weak var closeStateButton: CommonButton!
 
     // MARK: - Properties
 
@@ -70,6 +78,7 @@ extension CameraViewController: CameraViewInput {
         configureLensButton()
         configureAnimationView()
         configureLensAction()
+        configureCloseStateButton()
     }
 
 }
@@ -123,11 +132,30 @@ private extension CameraViewController {
         bluredLayer.addGestureRecognizer(gesture)
     }
 
+    func configureCloseStateButton() {
+        closeStateButton.setImageForAllState(UIImage(asset: Asset.removeCircle), alpha: 0.6)
+        closeStateButton.alpha = 0.0
+    }
+
     // MARK: - Configure Default State
 
     func setDefaultState() {
-        bluredLayer.isHidden = false
-        lensButton.isHidden = false
+        bluredLayer.alpha = 0.0
+        closeStateButton.alpha = 1.0
+//        lensAnimationView.play { _ in
+//            self.lensButton.isHidden = false
+//            self.lensAnimationView.isHidden = true
+//        }
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       options: .curveLinear,
+                       animations: {
+                        self.bluredLayer.alpha = 1.0
+                        self.closeStateButton.alpha = 0.0
+                        self.lensAnimationView.alpha = 0.0
+        }) { _ in
+            self.lensButton.isHidden = false
+        }
     }
 
     func configureBluredView() {
@@ -138,7 +166,8 @@ private extension CameraViewController {
     }
 
     func configureLensButton() {
-        lensButton.setImageForAllState(UIImage(asset: Asset.lensShutter), alpha: 0.6)
+        lensButton.setImageForAllState(UIImage(asset: Asset.lensShutter), alpha: 1.0)
+        lensButton.isEnabled = false
         lensButton.isUserInteractionEnabled = true
         lensButton.isHidden = false
     }
@@ -164,15 +193,20 @@ private extension CameraViewController {
     func lensAction() {
         lensAnimationView.isHidden = false
         lensButton.isHidden = true
+        lensAnimationView.alpha = 1.0
         lensAnimationView.play()
         bluredLayer.alpha = 1.0
         UIView.animate(withDuration: 0.5,
                        delay: 0.0,
                        options: .curveLinear,
                        animations: {
-            self.bluredLayer.alpha = 0.0
+                        self.bluredLayer.alpha = 0.0
+                        self.closeStateButton.alpha = 1.0
         }) { _ in
         }
     }
 
+    @IBAction func closeStateAction(_ sender: Any) {
+        setDefaultState()
+    }
 }

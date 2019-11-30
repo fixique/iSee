@@ -19,6 +19,7 @@
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal static let lensShutter = ImageAsset(name: "lens-shutter")
+  internal static let removeCircle = ImageAsset(name: "remove-circle")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
