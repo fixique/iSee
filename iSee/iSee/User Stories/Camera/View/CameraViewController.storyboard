@@ -30,26 +30,64 @@
                                     <action selector="takePhotoAction:" destination="h3k-bK-TNO" eventType="touchUpInside" id="KYh-Bn-nzl"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DM0-Ol-Nas">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25r-uH-Oa2" customClass="CommonButton" customModule="SurfUtils">
+                                <rect key="frame" x="177" y="338" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="sBm-L6-Y16"/>
+                                    <constraint firstAttribute="width" constant="60" id="tLo-CZ-QYF"/>
+                                </constraints>
+                                <state key="normal" image="lens-shutter"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSw-Cu-m4j" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="28" y="168" width="358" height="400"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="nne-SD-mfW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="lensAnimation"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2dI-fA-0pC" firstAttribute="centerX" secondItem="cA6-JB-jfU" secondAttribute="centerX" id="7yd-y4-jOR"/>
+                            <constraint firstItem="uSw-Cu-m4j" firstAttribute="centerX" secondItem="cA6-JB-jfU" secondAttribute="centerX" id="8Jv-yc-sif"/>
+                            <constraint firstItem="DM0-Ol-Nas" firstAttribute="leading" secondItem="cA6-JB-jfU" secondAttribute="leading" id="CtR-gM-VCx"/>
+                            <constraint firstAttribute="bottom" secondItem="DM0-Ol-Nas" secondAttribute="bottom" id="FhK-ME-oZo"/>
+                            <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="uSw-Cu-m4j" secondAttribute="trailing" constant="28" id="FyD-ri-Lqs"/>
+                            <constraint firstItem="uSw-Cu-m4j" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="28" id="PAV-bu-9Kl"/>
+                            <constraint firstAttribute="trailing" secondItem="DM0-Ol-Nas" secondAttribute="trailing" id="ZcF-6X-hP4"/>
                             <constraint firstAttribute="bottom" secondItem="Adx-kX-E8o" secondAttribute="bottom" id="afD-1F-92w"/>
                             <constraint firstItem="YWU-9O-L7t" firstAttribute="bottom" secondItem="2dI-fA-0pC" secondAttribute="bottom" constant="40" id="amH-5M-iBw"/>
+                            <constraint firstItem="25r-uH-Oa2" firstAttribute="centerX" secondItem="cA6-JB-jfU" secondAttribute="centerX" id="ghv-rh-7HV"/>
                             <constraint firstAttribute="trailing" secondItem="Adx-kX-E8o" secondAttribute="trailing" id="j3n-rH-iYI"/>
                             <constraint firstItem="Adx-kX-E8o" firstAttribute="leading" secondItem="cA6-JB-jfU" secondAttribute="leading" id="jKy-VA-MBe"/>
+                            <constraint firstItem="uSw-Cu-m4j" firstAttribute="centerY" secondItem="cA6-JB-jfU" secondAttribute="centerY" constant="-80" id="qcE-fz-AHI"/>
+                            <constraint firstItem="25r-uH-Oa2" firstAttribute="centerY" secondItem="cA6-JB-jfU" secondAttribute="centerY" constant="-80" id="wzF-KT-JJ4"/>
+                            <constraint firstItem="DM0-Ol-Nas" firstAttribute="top" secondItem="cA6-JB-jfU" secondAttribute="top" id="xWO-2v-s0W"/>
                             <constraint firstItem="Adx-kX-E8o" firstAttribute="top" secondItem="cA6-JB-jfU" secondAttribute="top" id="zlM-Sc-ub4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
                     </view>
                     <connections>
+                        <outlet property="bluredLayer" destination="DM0-Ol-Nas" id="47y-9s-H0d"/>
+                        <outlet property="lensAnimationView" destination="uSw-Cu-m4j" id="osH-DL-dVC"/>
+                        <outlet property="lensButton" destination="25r-uH-Oa2" id="VfC-6n-eac"/>
                         <outlet property="previewLayer" destination="Adx-kX-E8o" id="b1F-D2-FYu"/>
                         <outlet property="takePhotoButton" destination="2dI-fA-0pC" id="buv-Aa-g5o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="575" y="-231"/>
+            <point key="canvasLocation" x="573.91304347826087" y="-231.02678571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lens-shutter" width="32" height="32"/>
+    </resources>
 </document>

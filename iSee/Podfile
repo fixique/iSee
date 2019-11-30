@@ -9,8 +9,15 @@ def utils
 end
 
 def surf_utils
-	# Put needed utils from SurfUtils here
+  $SurfUtils = "https://github.com/surfstudio/iOS-Utils.git"
+  $Version = '10.0.2'
+
+  pod 'SurfUtils/StringAttributes', :git => $SurfUtils, :tag => $Version
+  pod 'SurfUtils/BlurBuilder', :git => $SurfUtils, :tag => $Version
+  pod 'SurfUtils/SettingsRouter', :git => $SurfUtils, :tag => $Version
+  pod 'SurfUtils/CommonButton', :git => $SurfUtils, :tag => $Version
 end
+
 
 def surf_lib
     # And other Surf pods, like NodeKit
@@ -21,7 +28,7 @@ def common_pods
     surf_utils
     surf_lib
 
-    # Put your pods here
+    pod 'lottie-ios', '3.1.3'
 end
 
 target 'iSee' do

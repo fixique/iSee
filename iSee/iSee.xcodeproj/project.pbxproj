@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		B73A8C1FF2180DBF9F6F2F8B /* CameraModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A60194102966E41A325637 /* CameraModuleConfiguratorTests.swift */; };
 		CF57092F610983F949DC142B /* Pods_iSee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08DA63D54E782A5A9597A0D7 /* Pods_iSee.framework */; };
 		ED3FBAECFC7BB40470B50215 /* CameraViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803B3541548D5978E635588E /* CameraViewOutput.swift */; };
+		F55F5CE8239268DB00890055 /* lensAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = F55F5CE7239268DB00890055 /* lensAnimation.json */; };
 		F598B2EB239198BA00AB7B55 /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EA239198BA00AB7B55 /* fastlane */; };
 		F598B2ED239198BA00AB7B55 /* ci in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EC239198BA00AB7B55 /* ci */; };
 		F598B2EF239198BA00AB7B55 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EE239198BA00AB7B55 /* Podfile */; };
@@ -68,6 +69,7 @@
 		DB5B74D4B02E2E2EFC129E1B /* CameraRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraRouter.swift; sourceTree = "<group>"; };
 		E4B018000517C03BF411B4C0 /* CameraPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraPresenter.swift; sourceTree = "<group>"; };
 		E8557D2B6D5AC782A9A30D5A /* CameraModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraModuleConfigurator.swift; sourceTree = "<group>"; };
+		F55F5CE7239268DB00890055 /* lensAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lensAnimation.json; sourceTree = "<group>"; };
 		F598B2E6239198BA00AB7B55 /* iSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F598B2EA239198BA00AB7B55 /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fastlane; path = ../../fastlane; sourceTree = "<group>"; };
 		F598B2EC239198BA00AB7B55 /* ci */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ci; path = ../../ci; sourceTree = "<group>"; };
@@ -237,6 +239,14 @@
 			path = Configurator;
 			sourceTree = "<group>";
 		};
+		F55F5CE6239268C700890055 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				F55F5CE7239268DB00890055 /* lensAnimation.json */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		F598B2DB239198BA00AB7B55 = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +320,7 @@
 		F598B2F6239198BA00AB7B55 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F55F5CE6239268C700890055 /* Animation */,
 				F598B2F7239198BA00AB7B55 /* Strings */,
 				F598B2F9239198BA00AB7B55 /* Images */,
 				F598B2FB239198BA00AB7B55 /* Constants */,
@@ -513,6 +524,7 @@
 				F598B2E2239198BA00AB7B55 /* Resources */,
 				F598B2E3239198BA00AB7B55 /* Swift Lint */,
 				F598B2E4239198BA00AB7B55 /* Swift Gen */,
+				9AECC3909651195CEE379716 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -590,6 +602,7 @@
 				F598B2F1239198BA00AB7B55 /* .gitignore in Resources */,
 				F598B2EF239198BA00AB7B55 /* Podfile in Resources */,
 				F598B2ED239198BA00AB7B55 /* ci in Resources */,
+				F55F5CE8239268DB00890055 /* lensAnimation.json in Resources */,
 				F598B315239198BA00AB7B55 /* Assets.xcassets in Resources */,
 				F598B2EB239198BA00AB7B55 /* fastlane in Resources */,
 				27CD1EE88699E4748B5C09FE /* CameraViewController.storyboard in Resources */,
@@ -626,6 +639,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AECC3909651195CEE379716 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iSee/Pods-iSee-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iSee/Pods-iSee-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iSee/Pods-iSee-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F598B2E3239198BA00AB7B55 /* Swift Lint */ = {

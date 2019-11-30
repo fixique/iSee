@@ -8,6 +8,8 @@
 
 import UIKit
 import AVFoundation
+import SurfUtils
+import Lottie
 
 final class CameraViewController: UIViewController, ModuleTransitionable {
 
@@ -15,6 +17,9 @@ final class CameraViewController: UIViewController, ModuleTransitionable {
 
     @IBOutlet private weak var previewLayer: UIView!
     @IBOutlet private weak var takePhotoButton: UIButton!
+    @IBOutlet private weak var bluredLayer: UIView!
+    @IBOutlet private weak var lensButton: CommonButton!
+    @IBOutlet private weak var lensAnimationView: AnimationView!
 
     // MARK: - Properties
 
@@ -61,6 +66,10 @@ extension CameraViewController: CameraViewInput {
 
     func setupInitialState() {
         configureCaptureSession()
+        configureBluredView()
+        configureLensButton()
+        configureAnimationView()
+        configureLensAction()
     }
 
 }
@@ -109,6 +118,39 @@ private extension CameraViewController {
         }
     }
 
+    func configureLensAction() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(lensAction))
+        bluredLayer.addGestureRecognizer(gesture)
+    }
+
+    // MARK: - Configure Default State
+
+    func setDefaultState() {
+        bluredLayer.isHidden = false
+        lensButton.isHidden = false
+    }
+
+    func configureBluredView() {
+        bluredLayer.addBlur(color: UIColor(red: 255.0 / 255.0, green: 255.0 / 255.0, blue: 255.0 / 255.0, alpha: 0.1),
+                            style: .systemUltraThinMaterialDark)
+        bluredLayer.isUserInteractionEnabled = true
+        bluredLayer.isHidden = false
+    }
+
+    func configureLensButton() {
+        lensButton.setImageForAllState(UIImage(asset: Asset.lensShutter), alpha: 0.6)
+        lensButton.isUserInteractionEnabled = true
+        lensButton.isHidden = false
+    }
+
+    func configureAnimationView() {
+        lensAnimationView.backgroundColor = .clear
+        lensAnimationView.contentMode = .scaleAspectFit
+        lensAnimationView.loopMode = .playOnce
+        lensAnimationView.backgroundBehavior = .pauseAndRestore
+        lensAnimationView.isHidden = true
+    }
+
 }
 
 // MARK: - Actions
@@ -116,6 +158,21 @@ private extension CameraViewController {
 private extension CameraViewController {
 
     @IBAction func takePhotoAction(_ sender: Any) {
+    }
+
+    @objc
+    func lensAction() {
+        lensAnimationView.isHidden = false
+        lensButton.isHidden = true
+        lensAnimationView.play()
+        bluredLayer.alpha = 1.0
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       options: .curveLinear,
+                       animations: {
+            self.bluredLayer.alpha = 0.0
+        }) { _ in
+        }
     }
 
 }
