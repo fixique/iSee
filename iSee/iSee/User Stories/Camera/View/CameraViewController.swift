@@ -269,8 +269,9 @@ private extension CameraViewController {
         lensAnimationView.isHidden = false
         lensButton.isHidden = true
         lensAnimationView.alpha = 1.0
+        lensAnimationView.currentProgress = 0.0
+        lensAnimationView.isHidden = false
         lensAnimationView.play()
-        bluredLayer.isHidden = true
         bluredLayer.alpha = 1.0
         bluredLayer.isUserInteractionEnabled = false
         takePhotoButton.alpha = 0.0

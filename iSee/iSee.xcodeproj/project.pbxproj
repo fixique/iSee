@@ -45,6 +45,8 @@
 		F598B339239198BB00AB7B55 /* iSeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F598B338239198BB00AB7B55 /* iSeeTests.swift */; };
 		F598B33E239198BB00AB7B55 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F598B33D239198BB00AB7B55 /* XCTestCase.swift */; };
 		F5D27C5F2392B10E00D2E5F3 /* reverseLensAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = F5D27C5E2392B10E00D2E5F3 /* reverseLensAnimation.json */; };
+		F5D27C622392B7E800D2E5F3 /* MainRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C612392B7E800D2E5F3 /* MainRoute.swift */; };
+		F5D27C642392B89C00D2E5F3 /* SeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C632392B89C00D2E5F3 /* SeeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +89,6 @@
 		F598B2EE239198BA00AB7B55 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../../Podfile; sourceTree = "<group>"; };
 		F598B2F0239198BA00AB7B55 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../../.gitignore; sourceTree = "<group>"; };
 		F598B2F3239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		F598B2F5239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		F598B2F8239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		F598B2FA239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		F598B2FC239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -120,6 +121,8 @@
 		F598B33D239198BB00AB7B55 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = XCTestCase.swift; path = ../XCTestCase.swift; sourceTree = "<group>"; };
 		F598B33F239198BB00AB7B55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5D27C5E2392B10E00D2E5F3 /* reverseLensAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = reverseLensAnimation.json; sourceTree = "<group>"; };
+		F5D27C612392B7E800D2E5F3 /* MainRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRoute.swift; sourceTree = "<group>"; };
+		F5D27C632392B89C00D2E5F3 /* SeeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,7 +348,8 @@
 		F598B2F4239198BA00AB7B55 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				F598B2F5239198BA00AB7B55 /* .gitkeep */,
+				F5D27C602392B7CF00D2E5F3 /* Endpoints */,
+				F5D27C632392B89C00D2E5F3 /* SeeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -532,6 +536,14 @@
 				5927BF7E2B40719EB90272BE /* User Stories */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		F5D27C602392B7CF00D2E5F3 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				F5D27C612392B7E800D2E5F3 /* MainRoute.swift */,
+			);
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
 		FD1557C775683963BD670E1C /* Camera */ = {
@@ -749,12 +761,14 @@
 				9BBD2ED45A71761E809D505B /* CameraRouterInput.swift in Sources */,
 				14EAAEFF4DEEF2F94B18B11F /* CameraPresenter.swift in Sources */,
 				37B1DF5505D422C8EE6545C0 /* CameraModuleInput.swift in Sources */,
+				F5D27C642392B89C00D2E5F3 /* SeeService.swift in Sources */,
 				3261E9D49AFAF425D223727C /* CameraModuleOutput.swift in Sources */,
 				3A5844C8E11D7FB9FE8DCDF4 /* CameraViewController.swift in Sources */,
 				F55F5CEE23928F8E00890055 /* LoaderView.swift in Sources */,
 				58569EB1E42AED7422200145 /* CameraViewInput.swift in Sources */,
 				F55F5CF52392A3E600890055 /* PreviewImageView.swift in Sources */,
 				F55F5CF02392910000890055 /* UIView.swift in Sources */,
+				F5D27C622392B7E800D2E5F3 /* MainRoute.swift in Sources */,
 				ED3FBAECFC7BB40470B50215 /* CameraViewOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
