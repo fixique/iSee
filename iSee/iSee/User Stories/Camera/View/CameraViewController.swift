@@ -31,7 +31,7 @@ final class CameraViewController: UIViewController, ModuleTransitionable, StateP
     @IBOutlet private weak var lensAnimationView: AnimationView!
     @IBOutlet private weak var closeStateButton: CommonButton!
     @IBOutlet private weak var backgroundPreviewImage: UIImageView!
-//
+
     // MARK: - Properties
 
     var output: CameraViewOutput?
@@ -41,6 +41,7 @@ final class CameraViewController: UIViewController, ModuleTransitionable, StateP
     private var captureSession: AVCaptureSession?
     private var captureOutput: AVCapturePhotoOutput?
     private var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+    private var previewImage: PreviewImageView = PreviewImageView()
 
     // MARK: - UIViewController
 
@@ -100,6 +101,7 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
 
         let image = UIImage(data: imageData)
         backgroundPreviewImage.image = image
+        previewImage.setImage(image)
     }
 
 }
@@ -276,6 +278,7 @@ private extension CameraViewController {
         bluredLayer.isUserInteractionEnabled = false
         closeStateButton.alpha = 1.0
         backgroundPreviewImage.isHidden = false
+        configurePreviewImage()
         UIView.animate(withDuration: 0.5,
                        delay: 0.0,
                        options: .curveLinear,
@@ -284,7 +287,15 @@ private extension CameraViewController {
                         self.bluredLayer.alpha = 1.0
                         self.closeStateButton.alpha = 0.0
                         self.lensAnimationView.alpha = 0.0
+                        self.previewImage.alpha = 1.0
         })
+    }
+
+    func configurePreviewImage() {
+        view.addSubview(previewImage)
+        previewImage.anchorCenter(to: view, yOffset: 85)
+        previewImage.anchorSize(size: CGSize(width: 100, height: 170))
+        previewImage.alpha = 0.0
     }
 
 }

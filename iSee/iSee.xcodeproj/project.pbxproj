@@ -27,6 +27,7 @@
 		F55F5CEE23928F8E00890055 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F5CED23928F8E00890055 /* LoaderView.swift */; };
 		F55F5CF02392910000890055 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F5CEF2392910000890055 /* UIView.swift */; };
 		F55F5CF2239291E000890055 /* StatePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F5CF1239291E000890055 /* StatePresentable.swift */; };
+		F55F5CF52392A3E600890055 /* PreviewImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F5CF42392A3E600890055 /* PreviewImageView.swift */; };
 		F598B2EB239198BA00AB7B55 /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EA239198BA00AB7B55 /* fastlane */; };
 		F598B2ED239198BA00AB7B55 /* ci in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EC239198BA00AB7B55 /* ci */; };
 		F598B2EF239198BA00AB7B55 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EE239198BA00AB7B55 /* Podfile */; };
@@ -78,6 +79,7 @@
 		F55F5CED23928F8E00890055 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		F55F5CEF2392910000890055 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		F55F5CF1239291E000890055 /* StatePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePresentable.swift; sourceTree = "<group>"; };
+		F55F5CF42392A3E600890055 /* PreviewImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewImageView.swift; sourceTree = "<group>"; };
 		F598B2E6239198BA00AB7B55 /* iSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F598B2EA239198BA00AB7B55 /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fastlane; path = ../../fastlane; sourceTree = "<group>"; };
 		F598B2EC239198BA00AB7B55 /* ci */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ci; path = ../../ci; sourceTree = "<group>"; };
@@ -267,6 +269,14 @@
 			path = LoaderView;
 			sourceTree = "<group>";
 		};
+		F55F5CF32392A3C600890055 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				F55F5CF42392A3E600890055 /* PreviewImageView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		F598B2DB239198BA00AB7B55 = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +462,7 @@
 		F598B30B239198BA00AB7B55 /* Reusable Layer */ = {
 			isa = PBXGroup;
 			children = (
+				F55F5CF32392A3C600890055 /* UIView */,
 				F55F5CE9239278A600890055 /* Buttons */,
 			);
 			path = "Reusable Layer";
@@ -738,6 +749,7 @@
 				3A5844C8E11D7FB9FE8DCDF4 /* CameraViewController.swift in Sources */,
 				F55F5CEE23928F8E00890055 /* LoaderView.swift in Sources */,
 				58569EB1E42AED7422200145 /* CameraViewInput.swift in Sources */,
+				F55F5CF52392A3E600890055 /* PreviewImageView.swift in Sources */,
 				F55F5CF02392910000890055 /* UIView.swift in Sources */,
 				ED3FBAECFC7BB40470B50215 /* CameraViewOutput.swift in Sources */,
 			);
