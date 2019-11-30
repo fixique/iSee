@@ -116,8 +116,27 @@ private extension PredictedViewController {
 
     @objc
     func pointSelected(button: UIButton) {
-
+        guard let image = cropImage(for: boxes[button.tag].box) else {
+            return
+        }
+        print(image)
 //        configureBubbleView(for: pointViews[button.tag], box: boxes[button.tag])
+    }
+
+}
+
+// MARK: - Help Methods
+
+private extension PredictedViewController {
+
+    func cropImage(for rect: CGRect) -> UIImage? {
+        guard let cgImage = previewImageView.image?.cgImage else {
+            return nil
+        }
+        guard let cropedCgImage = cgImage.cropping(to: rect) else {
+            return nil
+        }
+        return UIImage(cgImage: cropedCgImage)
     }
 
 }

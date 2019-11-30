@@ -26,7 +26,6 @@ final class PointView: UIButton {
         setupInitialState()
     }
 
-
 }
 
 // MARK: - Configuration
