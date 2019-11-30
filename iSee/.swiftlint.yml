@@ -109,13 +109,6 @@ custom_rules:
         regex: "@IBOutlet ?(weak){0,1} var"
         message: "IBOutlet should be private or fileprivate"
         severity: error
-
-    open_ibaction:
-        included: ".*.swift"
-        name: "IBAction opening"
-        regex: "@IBAction func"
-        message: "IBAction should be private or fileprivate"
-        severity: error
         
     mark_newlines:
         included: ".*.swift"

@@ -29,8 +29,10 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need your camere for app working propouse</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We need your camere for app working propouse</string>
 </dict>
 </plist>

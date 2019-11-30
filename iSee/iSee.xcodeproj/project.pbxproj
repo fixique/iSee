@@ -145,7 +145,6 @@
 			children = (
 				182FA75E891F9C79AB75E043 /* CameraPresenterTests.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -155,7 +154,6 @@
 				DB5B74D4B02E2E2EFC129E1B /* CameraRouter.swift */,
 				C1442DF2F17564916FEABB4D /* CameraRouterInput.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -183,7 +181,6 @@
 				35F91493A8BC67E21DA72A59 /* Presenter */,
 				97CEDC748A4ED2B3DF5AC6C3 /* View */,
 			);
-			name = Camera;
 			path = Camera;
 			sourceTree = "<group>";
 		};
@@ -192,7 +189,6 @@
 			children = (
 				E8557D2B6D5AC782A9A30D5A /* CameraModuleConfigurator.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -204,7 +200,6 @@
 				7BD2DF346E443FD93D4D2800 /* CameraViewInput.swift */,
 				803B3541548D5978E635588E /* CameraViewOutput.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -213,7 +208,6 @@
 			children = (
 				52C2D76D504280A42486972E /* CameraViewTests.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -224,7 +218,6 @@
 				C13D865D9019422E36F936BF /* CameraModuleInput.swift */,
 				C5E9E033166A475AE035F09A /* CameraModuleOutput.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -233,7 +226,6 @@
 			children = (
 				41DCC0FDA931FBC3DFF2E1A3 /* CameraRouterTests.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -242,7 +234,6 @@
 			children = (
 				08A60194102966E41A325637 /* CameraModuleConfiguratorTests.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -506,7 +497,6 @@
 				B9CC7E8D354516F424DB082C /* Presenter */,
 				9540D8656A98593CCADD8A2D /* View */,
 			);
-			name = Camera;
 			path = Camera;
 			sourceTree = "<group>";
 		};
@@ -845,6 +835,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JE6A9LTMD3;
 				INFOPLIST_FILE = iSee/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -852,7 +843,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = DataGym.iSee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -864,6 +855,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JE6A9LTMD3;
 				INFOPLIST_FILE = iSee/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -871,7 +863,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = DataGym.iSee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

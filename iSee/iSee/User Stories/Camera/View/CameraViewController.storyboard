@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h3k-bK-TNO">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,44 @@
             <objects>
                 <viewController id="h3k-bK-TNO" customClass="CameraViewController" customModule="iSee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cA6-JB-jfU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Adx-kX-E8o">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dI-fA-0pC">
+                                        <rect key="frame" x="175" y="792" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="NSp-ro-ulm"/>
+                                            <constraint firstAttribute="width" constant="64" id="itE-nN-Ytf"/>
+                                        </constraints>
+                                        <state key="normal" title="Photo"/>
+                                        <connections>
+                                            <action selector="takePhotoAction:" destination="h3k-bK-TNO" eventType="touchUpInside" id="KYh-Bn-nzl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="2dI-fA-0pC" firstAttribute="centerX" secondItem="Adx-kX-E8o" secondAttribute="centerX" id="Ptz-op-3bd"/>
+                                    <constraint firstAttribute="bottom" secondItem="2dI-fA-0pC" secondAttribute="bottom" constant="40" id="qfn-ke-xcm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Adx-kX-E8o" secondAttribute="bottom" id="afD-1F-92w"/>
+                            <constraint firstAttribute="trailing" secondItem="Adx-kX-E8o" secondAttribute="trailing" id="j3n-rH-iYI"/>
+                            <constraint firstItem="Adx-kX-E8o" firstAttribute="leading" secondItem="cA6-JB-jfU" secondAttribute="leading" id="jKy-VA-MBe"/>
+                            <constraint firstItem="Adx-kX-E8o" firstAttribute="top" secondItem="cA6-JB-jfU" secondAttribute="top" id="zlM-Sc-ub4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
                     </view>
+                    <connections>
+                        <outlet property="previewLayer" destination="Adx-kX-E8o" id="b1F-D2-FYu"/>
+                        <outlet property="takePhotoButton" destination="2dI-fA-0pC" id="buv-Aa-g5o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

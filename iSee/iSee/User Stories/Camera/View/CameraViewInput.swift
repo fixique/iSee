@@ -7,5 +7,5 @@
 //
 
 protocol CameraViewInput: class {
-
+    func setupInitialState()
 }

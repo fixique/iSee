@@ -7,5 +7,5 @@
 //
 
 protocol CameraViewOutput {
-
+    func viewLoaded()
 }

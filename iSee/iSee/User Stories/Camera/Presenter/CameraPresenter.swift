@@ -6,7 +6,7 @@
 //  Copyright © 2019 Vlad. All rights reserved.
 //
 
-final class CameraPresenter: CameraViewOutput, CameraModuleInput {
+final class CameraPresenter {
 
     // MARK: - Properties
 
@@ -14,8 +14,19 @@ final class CameraPresenter: CameraViewOutput, CameraModuleInput {
     var router: CameraRouterInput?
     var output: CameraModuleOutput?
 
-    // MARK: - CameraViewOutput
+}
 
-    // MARK: - CameraModuleInput
+// MARK: - CameraViewOutput
 
+extension CameraPresenter: CameraViewOutput {
+
+    func viewLoaded() {
+        view?.setupInitialState()
+    }
+
+}
+
+// MAKR: - CameraModuleInput
+
+extension CameraPresenter: CameraModuleInput {
 }
