@@ -8,4 +8,5 @@
 
 protocol CameraViewInput: class {
     func setupInitialState()
+    func setState(_ state: CameraViewController.CameraState)
 }

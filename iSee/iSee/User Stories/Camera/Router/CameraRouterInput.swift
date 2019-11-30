@@ -6,7 +6,8 @@
 //  Copyright © 2019 Vlad. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol CameraRouterInput {
+    func openPredictedModule(image: UIImage, boxes: [PredictedBoxEntity], output: PredictedModuleOutput?)
 }

@@ -16,4 +16,9 @@ final class CameraRouter: CameraRouterInput {
 
 	// MARK: - CameraRouterInput
 
+    func openPredictedModule(image: UIImage, boxes: [PredictedBoxEntity], output: PredictedModuleOutput?) {
+        let predictedVc = PredictedModuleConfigurator().configure(image: image, boxes: boxes, output: output)
+        view?.presentModule(predictedVc, animated: true, completion: nil)
+    }
+
 }

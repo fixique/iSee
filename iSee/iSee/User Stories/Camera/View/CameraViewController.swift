@@ -89,6 +89,17 @@ extension CameraViewController: CameraViewInput {
         configureBackgroundPreviewImage()
     }
 
+    func setState(_ state: CameraState) {
+        switch state {
+        case .default:
+            setDefaultState()
+        case .lensOpen:
+            setLensState()
+        case .loadingPreview:
+            setLoadingPreviewState()
+        }
+    }
+
 }
 
 // MARK: - AVCapturePhotoCaptureDelegate
@@ -96,7 +107,6 @@ extension CameraViewController: CameraViewInput {
 extension CameraViewController: AVCapturePhotoCaptureDelegate {
 
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-
         guard let imageData = photo.fileDataRepresentation() else {
             return
         }
@@ -112,17 +122,6 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
 // MARK: - Configuration
 
 private extension CameraViewController {
-
-    func setState(_ state: CameraState) {
-        switch state {
-        case .default:
-            setDefaultState()
-        case .lensOpen:
-            setLensState()
-        case .loadingPreview:
-            setLoadingPreviewState()
-        }
-    }
 
     func configureCaptureSession() {
         captureSession = AVCaptureSession()
@@ -244,6 +243,9 @@ private extension CameraViewController {
 private extension CameraViewController {
 
     func setDefaultState() {
+        hideLoader()
+        backgroundPreviewImage.isHidden = true
+        previewImage.alpha = 0.0
         bluredLayer.isHidden = false
         bluredLayer.alpha = 0.0
         bluredLayer.isUserInteractionEnabled = true
@@ -267,6 +269,9 @@ private extension CameraViewController {
     }
 
     func setLensState() {
+        hideLoader()
+        backgroundPreviewImage.isHidden = true
+        previewImage.alpha = 0.0
         lensAnimationView.isHidden = false
         lensButton.isHidden = true
         lensAnimationView.alpha = 1.0
@@ -293,6 +298,7 @@ private extension CameraViewController {
         bluredLayer.alpha = 0.0
         bluredLayer.isUserInteractionEnabled = false
         closeStateButton.alpha = 1.0
+        backgroundPreviewImage.image = nil
         backgroundPreviewImage.isHidden = false
         configurePreviewImage()
         UIView.animate(withDuration: 0.5,

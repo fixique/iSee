@@ -27,20 +27,36 @@ extension CameraPresenter: CameraViewOutput {
     }
 
     func predictByImage(_ image: UIImage?) {
-        DispatchQueue.global(qos: .background).async {
+        DispatchQueue.global(qos: .background).async { [weak self] in
             let base64String = image?.toBase64() ?? ""
             SeeService().predict(image64: base64String).onCompleted { boxes in
-                print("cool")
-                boxes.forEach { print("Category: \($0.category)")}
+                guard let image = image else {
+                    return
+                }
+                DispatchQueue.main.async {
+                    self?.router?.openPredictedModule(image: image, boxes: boxes, output: self)
+                }
             }.onError { error in
-                print("Some went wrong: \(error.localizedDescription)")
+                DispatchQueue.main.async {
+                    self?.view?.setState(.lensOpen)
+                }
             }
         }
     }
 
 }
 
-// MAKR: - CameraModuleInput
+// MARK: - PredictedModuleOutput
+
+extension CameraPresenter: PredictedModuleOutput {
+
+    func onClose() {
+        view?.setState(.lensOpen)
+    }
+
+}
+
+// MARK: - CameraModuleInput
 
 extension CameraPresenter: CameraModuleInput {
 }

@@ -10,17 +10,31 @@
 		026DD9719B25B6B0DC6AC873 /* CameraRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5B74D4B02E2E2EFC129E1B /* CameraRouter.swift */; };
 		0BAF214F3B7A7079F5DFF9C8 /* CameraModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8557D2B6D5AC782A9A30D5A /* CameraModuleConfigurator.swift */; };
 		0EC75D1C60FD4BF9F0F5A445 /* CameraRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DCC0FDA931FBC3DFF2E1A3 /* CameraRouterTests.swift */; };
+		1333D7BA8D6CA9C74D0E3649 /* PredictedRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC03ABD59E4CFDC3B4C980 /* PredictedRouterInput.swift */; };
 		14EAAEFF4DEEF2F94B18B11F /* CameraPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B018000517C03BF411B4C0 /* CameraPresenter.swift */; };
+		1E0C27D7790082494634107D /* PredictedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9D068BE00907F402C30DF4 /* PredictedPresenterTests.swift */; };
+		1EB4C49286D1DA4335316335 /* PredictedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB1A3B69009D7CB8994E2F /* PredictedPresenter.swift */; };
 		27CD1EE88699E4748B5C09FE /* CameraViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E92F314072FF3382FDBB75 /* CameraViewController.storyboard */; };
 		3261E9D49AFAF425D223727C /* CameraModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E9E033166A475AE035F09A /* CameraModuleOutput.swift */; };
 		37B1DF5505D422C8EE6545C0 /* CameraModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D865D9019422E36F936BF /* CameraModuleInput.swift */; };
 		3A5844C8E11D7FB9FE8DCDF4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7331705952103BACED904E2D /* CameraViewController.swift */; };
+		3BA73E89CFA57CB2237C1973 /* PredictedViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFD20C8C8D42E4AF8308FB0 /* PredictedViewInput.swift */; };
 		4EC9FC3ADD85D9A26EEB03D4 /* CameraPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FA75E891F9C79AB75E043 /* CameraPresenterTests.swift */; };
+		555C1267EB7594B068DE96FA /* PredictedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4FCFA8664BD2EF58E5ED38B /* PredictedViewController.storyboard */; };
 		58569EB1E42AED7422200145 /* CameraViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD2DF346E443FD93D4D2800 /* CameraViewInput.swift */; };
+		7345C954CCB65DE847919657 /* PredictedModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A52AF4811205C1C3408670 /* PredictedModuleConfiguratorTests.swift */; };
+		8CF34EB833F9BEFB94E76E0F /* PredictedViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4853C9ABCB3038CC934E725B /* PredictedViewTests.swift */; };
 		9BBD2ED45A71761E809D505B /* CameraRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1442DF2F17564916FEABB4D /* CameraRouterInput.swift */; };
+		9E7A1DD95353E5BA6ECD4AD7 /* PredictedModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F06219C04B35BF1E2F04A5 /* PredictedModuleInput.swift */; };
 		A28705C4DF7553B159A938B2 /* CameraViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2D76D504280A42486972E /* CameraViewTests.swift */; };
+		A6524CF75243B0A729514A39 /* PredictedModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F2E8D40117A4CA3BB22C3A /* PredictedModuleOutput.swift */; };
+		A69B1C7516222A9EBD416520 /* PredictedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4125D1027BB0881E085EA9 /* PredictedRouter.swift */; };
 		B73A8C1FF2180DBF9F6F2F8B /* CameraModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A60194102966E41A325637 /* CameraModuleConfiguratorTests.swift */; };
+		CB374865115B914506509DA7 /* PredictedViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE2B47716E3702191788F5E /* PredictedViewOutput.swift */; };
+		CE41F0BBDFC6D712E6FE5257 /* PredictedRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE55251BEB0A48D5D67AB503 /* PredictedRouterTests.swift */; };
 		CF57092F610983F949DC142B /* Pods_iSee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08DA63D54E782A5A9597A0D7 /* Pods_iSee.framework */; };
+		DE4317636762FFC01E0BC884 /* PredictedModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F22D6604C93AA8719800A9 /* PredictedModuleConfigurator.swift */; };
+		DF0C556878A3848C046AB29F /* PredictedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75333A0AB9298C8287872336 /* PredictedViewController.swift */; };
 		ED3FBAECFC7BB40470B50215 /* CameraViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803B3541548D5978E635588E /* CameraViewOutput.swift */; };
 		F55F5CE8239268DB00890055 /* lensAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = F55F5CE7239268DB00890055 /* lensAnimation.json */; };
 		F55F5CEB239278CC00890055 /* ShotButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F5CEA239278CC00890055 /* ShotButton.swift */; };
@@ -50,6 +64,7 @@
 		F5D27C662392BD3500D2E5F3 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C652392BD3500D2E5F3 /* UIImage.swift */; };
 		F5D27C682392CA6F00D2E5F3 /* PredictedBoxEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C672392CA6F00D2E5F3 /* PredictedBoxEntry.swift */; };
 		F5D27C6A2392CB0F00D2E5F3 /* PredictedBoxEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C692392CB0F00D2E5F3 /* PredictedBoxEntity.swift */; };
+		F5D27C6C2392F0EF00D2E5F3 /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C6B2392F0EF00D2E5F3 /* PointView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,21 +78,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02F2E8D40117A4CA3BB22C3A /* PredictedModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedModuleOutput.swift; sourceTree = "<group>"; };
 		03E92F314072FF3382FDBB75 /* CameraViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = CameraViewController.storyboard; sourceTree = "<group>"; };
 		08A60194102966E41A325637 /* CameraModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		08DA63D54E782A5A9597A0D7 /* Pods_iSee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		182FA75E891F9C79AB75E043 /* CameraPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraPresenterTests.swift; sourceTree = "<group>"; };
+		23F06219C04B35BF1E2F04A5 /* PredictedModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedModuleInput.swift; sourceTree = "<group>"; };
+		2E4125D1027BB0881E085EA9 /* PredictedRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedRouter.swift; sourceTree = "<group>"; };
 		41DCC0FDA931FBC3DFF2E1A3 /* CameraRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraRouterTests.swift; sourceTree = "<group>"; };
+		4853C9ABCB3038CC934E725B /* PredictedViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedViewTests.swift; sourceTree = "<group>"; };
 		52C2D76D504280A42486972E /* CameraViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraViewTests.swift; sourceTree = "<group>"; };
+		65A52AF4811205C1C3408670 /* PredictedModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		7331705952103BACED904E2D /* CameraViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		75333A0AB9298C8287872336 /* PredictedViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedViewController.swift; sourceTree = "<group>"; };
 		7BD2DF346E443FD93D4D2800 /* CameraViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraViewInput.swift; sourceTree = "<group>"; };
 		803B3541548D5978E635588E /* CameraViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraViewOutput.swift; sourceTree = "<group>"; };
+		88AC03ABD59E4CFDC3B4C980 /* PredictedRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedRouterInput.swift; sourceTree = "<group>"; };
+		AEE2B47716E3702191788F5E /* PredictedViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedViewOutput.swift; sourceTree = "<group>"; };
+		B0F22D6604C93AA8719800A9 /* PredictedModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedModuleConfigurator.swift; sourceTree = "<group>"; };
 		BDA159A1F6EF7F2163B114B0 /* Pods-iSee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSee.debug.xcconfig"; path = "Target Support Files/Pods-iSee/Pods-iSee.debug.xcconfig"; sourceTree = "<group>"; };
+		BE55251BEB0A48D5D67AB503 /* PredictedRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedRouterTests.swift; sourceTree = "<group>"; };
 		C13D865D9019422E36F936BF /* CameraModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraModuleInput.swift; sourceTree = "<group>"; };
 		C1442DF2F17564916FEABB4D /* CameraRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraRouterInput.swift; sourceTree = "<group>"; };
 		C5E9E033166A475AE035F09A /* CameraModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraModuleOutput.swift; sourceTree = "<group>"; };
+		CB9D068BE00907F402C30DF4 /* PredictedPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedPresenterTests.swift; sourceTree = "<group>"; };
+		CCFD20C8C8D42E4AF8308FB0 /* PredictedViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedViewInput.swift; sourceTree = "<group>"; };
+		D4FCFA8664BD2EF58E5ED38B /* PredictedViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = PredictedViewController.storyboard; sourceTree = "<group>"; };
 		D566E4ADD8265C1AD4D2D1AD /* Pods-iSee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSee.release.xcconfig"; path = "Target Support Files/Pods-iSee/Pods-iSee.release.xcconfig"; sourceTree = "<group>"; };
 		DB5B74D4B02E2E2EFC129E1B /* CameraRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraRouter.swift; sourceTree = "<group>"; };
+		DCDB1A3B69009D7CB8994E2F /* PredictedPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedPresenter.swift; sourceTree = "<group>"; };
 		E4B018000517C03BF411B4C0 /* CameraPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraPresenter.swift; sourceTree = "<group>"; };
 		E8557D2B6D5AC782A9A30D5A /* CameraModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraModuleConfigurator.swift; sourceTree = "<group>"; };
 		F55F5CE7239268DB00890055 /* lensAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lensAnimation.json; sourceTree = "<group>"; };
@@ -127,6 +156,7 @@
 		F5D27C652392BD3500D2E5F3 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		F5D27C672392CA6F00D2E5F3 /* PredictedBoxEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictedBoxEntry.swift; sourceTree = "<group>"; };
 		F5D27C692392CB0F00D2E5F3 /* PredictedBoxEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictedBoxEntity.swift; sourceTree = "<group>"; };
+		F5D27C6B2392F0EF00D2E5F3 /* PointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +178,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A903651B6EF61A4CF9FB375 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				65A52AF4811205C1C3408670 /* PredictedModuleConfiguratorTests.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		103B2CEB678CA38115C25EE8 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				B0F22D6604C93AA8719800A9 /* PredictedModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		1170B224290936CB89C03C5B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,12 +203,31 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		296E6418922833A31393845B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BE55251BEB0A48D5D67AB503 /* PredictedRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		35F91493A8BC67E21DA72A59 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
 				182FA75E891F9C79AB75E043 /* CameraPresenterTests.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		39D61B75A1122F06DB60C494 /* Predicted */ = {
+			isa = PBXGroup;
+			children = (
+				103B2CEB678CA38115C25EE8 /* Configurator */,
+				F07F4D9E0DD83CB62C45AF0C /* Router */,
+				F0437397C55276360ECE5F51 /* Presenter */,
+				AE3D3F19D756C21DEDE8959F /* View */,
+			);
+			path = Predicted;
 			sourceTree = "<group>";
 		};
 		4ADC220CF31D10D747A0F804 /* Router */ = {
@@ -178,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				5B9E98557E47C12A67274C98 /* Camera */,
+				E65F6867EB7191800B34D638 /* Predicted */,
 			);
 			path = "User Stories";
 			sourceTree = "<group>";
@@ -228,6 +294,25 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		9EC17238CB1441DBEEA0A6E2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CB9D068BE00907F402C30DF4 /* PredictedPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		AE3D3F19D756C21DEDE8959F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				75333A0AB9298C8287872336 /* PredictedViewController.swift */,
+				D4FCFA8664BD2EF58E5ED38B /* PredictedViewController.storyboard */,
+				CCFD20C8C8D42E4AF8308FB0 /* PredictedViewInput.swift */,
+				AEE2B47716E3702191788F5E /* PredictedViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B9CC7E8D354516F424DB082C /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +337,44 @@
 				08A60194102966E41A325637 /* CameraModuleConfiguratorTests.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		D031A82A75A49D12CC2E6E7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4853C9ABCB3038CC934E725B /* PredictedViewTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E65F6867EB7191800B34D638 /* Predicted */ = {
+			isa = PBXGroup;
+			children = (
+				0A903651B6EF61A4CF9FB375 /* Configurator */,
+				296E6418922833A31393845B /* Router */,
+				9EC17238CB1441DBEEA0A6E2 /* Presenter */,
+				D031A82A75A49D12CC2E6E7C /* View */,
+			);
+			path = Predicted;
+			sourceTree = "<group>";
+		};
+		F0437397C55276360ECE5F51 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB1A3B69009D7CB8994E2F /* PredictedPresenter.swift */,
+				23F06219C04B35BF1E2F04A5 /* PredictedModuleInput.swift */,
+				02F2E8D40117A4CA3BB22C3A /* PredictedModuleOutput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F07F4D9E0DD83CB62C45AF0C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2E4125D1027BB0881E085EA9 /* PredictedRouter.swift */,
+				88AC03ABD59E4CFDC3B4C980 /* PredictedRouterInput.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		F55F5CE6239268C700890055 /* Animation */ = {
@@ -283,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				F55F5CF42392A3E600890055 /* PreviewImageView.swift */,
+				F5D27C6B2392F0EF00D2E5F3 /* PointView.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -510,6 +634,7 @@
 			isa = PBXGroup;
 			children = (
 				FD1557C775683963BD670E1C /* Camera */,
+				39D61B75A1122F06DB60C494 /* Predicted */,
 			);
 			path = "User Stories";
 			sourceTree = "<group>";
@@ -658,6 +783,7 @@
 				F598B315239198BA00AB7B55 /* Assets.xcassets in Resources */,
 				F598B2EB239198BA00AB7B55 /* fastlane in Resources */,
 				27CD1EE88699E4748B5C09FE /* CameraViewController.storyboard in Resources */,
+				555C1267EB7594B068DE96FA /* PredictedViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,6 +879,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5D27C6C2392F0EF00D2E5F3 /* PointView.swift in Sources */,
 				F598B31C239198BA00AB7B55 /* Assets.swift in Sources */,
 				F598B323239198BA00AB7B55 /* Colors.swift in Sources */,
 				F598B31E239198BA00AB7B55 /* Fonts.swift in Sources */,
@@ -778,6 +905,15 @@
 				F55F5CF02392910000890055 /* UIView.swift in Sources */,
 				F5D27C622392B7E800D2E5F3 /* MainRoute.swift in Sources */,
 				ED3FBAECFC7BB40470B50215 /* CameraViewOutput.swift in Sources */,
+				DE4317636762FFC01E0BC884 /* PredictedModuleConfigurator.swift in Sources */,
+				A69B1C7516222A9EBD416520 /* PredictedRouter.swift in Sources */,
+				1333D7BA8D6CA9C74D0E3649 /* PredictedRouterInput.swift in Sources */,
+				1EB4C49286D1DA4335316335 /* PredictedPresenter.swift in Sources */,
+				9E7A1DD95353E5BA6ECD4AD7 /* PredictedModuleInput.swift in Sources */,
+				A6524CF75243B0A729514A39 /* PredictedModuleOutput.swift in Sources */,
+				DF0C556878A3848C046AB29F /* PredictedViewController.swift in Sources */,
+				3BA73E89CFA57CB2237C1973 /* PredictedViewInput.swift in Sources */,
+				CB374865115B914506509DA7 /* PredictedViewOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -791,6 +927,10 @@
 				0EC75D1C60FD4BF9F0F5A445 /* CameraRouterTests.swift in Sources */,
 				4EC9FC3ADD85D9A26EEB03D4 /* CameraPresenterTests.swift in Sources */,
 				A28705C4DF7553B159A938B2 /* CameraViewTests.swift in Sources */,
+				7345C954CCB65DE847919657 /* PredictedModuleConfiguratorTests.swift in Sources */,
+				CE41F0BBDFC6D712E6FE5257 /* PredictedRouterTests.swift in Sources */,
+				1E0C27D7790082494634107D /* PredictedPresenterTests.swift in Sources */,
+				8CF34EB833F9BEFB94E76E0F /* PredictedViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
