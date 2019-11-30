@@ -45,8 +45,9 @@ private extension LoaderView {
     func configureInicator() {
         let indicatorView = NVActivityIndicatorView(frame: .zero, type: .ballPulse, color: .white, padding: nil)
         addSubview(indicatorView)
-        indicatorView.anchorSize(size: CGSize(width: 36.0, height: 8.0))
-        indicatorView.anchorCenter(to: self)
+        indicatorView.anchorSize(size: CGSize(width: 30, height: 30))
+        indicatorView.anchorCenter(to: self, yOffset: -80)
+        indicatorView.startAnimating()
         self.indicatorView = indicatorView
     }
 

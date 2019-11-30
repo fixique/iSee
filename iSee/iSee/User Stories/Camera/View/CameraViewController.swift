@@ -30,7 +30,8 @@ final class CameraViewController: UIViewController, ModuleTransitionable, StateP
     @IBOutlet private weak var lensButton: CommonButton!
     @IBOutlet private weak var lensAnimationView: AnimationView!
     @IBOutlet private weak var closeStateButton: CommonButton!
-
+    @IBOutlet private weak var backgroundPreviewImage: UIImageView!
+//
     // MARK: - Properties
 
     var output: CameraViewOutput?
@@ -82,6 +83,23 @@ extension CameraViewController: CameraViewInput {
         configureLensAction()
         configureCloseStateButton()
         configureTakeShotButton()
+        configureBackgroundPreviewImage()
+    }
+
+}
+
+// MARK: - AVCapturePhotoCaptureDelegate
+
+extension CameraViewController: AVCapturePhotoCaptureDelegate {
+
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+
+        guard let imageData = photo.fileDataRepresentation() else {
+            return
+        }
+
+        let image = UIImage(data: imageData)
+        backgroundPreviewImage.image = image
     }
 
 }
@@ -158,6 +176,11 @@ private extension CameraViewController {
         takePhotoButton.alpha = 0.0
     }
 
+    func configureBackgroundPreviewImage() {
+        backgroundPreviewImage.contentMode = .scaleAspectFill
+        backgroundPreviewImage.isHidden = true
+    }
+
     // MARK: - Configure Default State
 
     func configureBluredView() {
@@ -189,6 +212,8 @@ private extension CameraViewController {
 
     @objc
     func takePhotoAction() {
+        let settings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
+        captureOutput?.capturePhoto(with: settings, delegate: self)
         setState(.loadingPreview)
     }
 
@@ -250,6 +275,7 @@ private extension CameraViewController {
         bluredLayer.alpha = 0.0
         bluredLayer.isUserInteractionEnabled = false
         closeStateButton.alpha = 1.0
+        backgroundPreviewImage.isHidden = false
         UIView.animate(withDuration: 0.5,
                        delay: 0.0,
                        options: .curveLinear,
