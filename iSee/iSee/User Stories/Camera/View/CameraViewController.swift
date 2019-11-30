@@ -29,6 +29,7 @@ final class CameraViewController: UIViewController, ModuleTransitionable, StateP
     @IBOutlet private weak var bluredLayer: UIView!
     @IBOutlet private weak var lensButton: CommonButton!
     @IBOutlet private weak var lensAnimationView: AnimationView!
+    @IBOutlet private weak var reverseLensAnimationView: AnimationView!
     @IBOutlet private weak var closeStateButton: CommonButton!
     @IBOutlet private weak var backgroundPreviewImage: UIImageView!
 
@@ -81,6 +82,7 @@ extension CameraViewController: CameraViewInput {
         configureBluredView()
         configureLensButton()
         configureAnimationView()
+        configureReverseAnimationView()
         configureLensAction()
         configureCloseStateButton()
         configureTakeShotButton()
@@ -206,6 +208,13 @@ private extension CameraViewController {
         lensAnimationView.isHidden = true
     }
 
+    func configureReverseAnimationView() {
+        reverseLensAnimationView.backgroundColor = .clear
+        reverseLensAnimationView.contentMode = .scaleAspectFit
+        reverseLensAnimationView.loopMode = .playOnce
+        reverseLensAnimationView.backgroundBehavior = .pauseAndRestore
+        reverseLensAnimationView.isHidden = true
+    }
 }
 
 // MARK: - Actions
@@ -238,6 +247,13 @@ private extension CameraViewController {
         bluredLayer.alpha = 0.0
         bluredLayer.isUserInteractionEnabled = true
         closeStateButton.alpha = 1.0
+        reverseLensAnimationView.isHidden = false
+        lensAnimationView.isHidden = true
+        reverseLensAnimationView.play { [weak self] _ in
+            self?.reverseLensAnimationView.isHidden = true
+            self?.reverseLensAnimationView.currentProgress = 0.0
+            self?.lensButton.isHidden = false
+        }
         UIView.animate(withDuration: 0.5,
                        delay: 0.0,
                        options: .curveLinear,
@@ -245,9 +261,7 @@ private extension CameraViewController {
                         self.takePhotoButton.alpha = 0.0
                         self.bluredLayer.alpha = 1.0
                         self.closeStateButton.alpha = 0.0
-                        self.lensAnimationView.alpha = 0.0
         }) { _ in
-            self.lensButton.isHidden = false
         }
     }
 

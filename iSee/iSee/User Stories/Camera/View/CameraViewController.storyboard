@@ -54,6 +54,16 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="lensAnimation"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJX-3A-5Lu" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="27" y="168" width="360" height="400"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Sac-nX-LKb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="reverseLensAnimation"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dI-fA-0pC" customClass="ShotButton" customModule="iSee" customModuleProvider="target">
                                 <rect key="frame" x="175" y="758" width="64" height="64"/>
                                 <constraints>
@@ -69,11 +79,14 @@
                             <constraint firstItem="2dI-fA-0pC" firstAttribute="centerX" secondItem="cA6-JB-jfU" secondAttribute="centerX" id="7yd-y4-jOR"/>
                             <constraint firstItem="uSw-Cu-m4j" firstAttribute="centerX" secondItem="cA6-JB-jfU" secondAttribute="centerX" id="8Jv-yc-sif"/>
                             <constraint firstItem="DM0-Ol-Nas" firstAttribute="leading" secondItem="cA6-JB-jfU" secondAttribute="leading" id="CtR-gM-VCx"/>
+                            <constraint firstItem="nJX-3A-5Lu" firstAttribute="centerX" secondItem="cA6-JB-jfU" secondAttribute="centerX" id="EAq-ZU-4dr"/>
                             <constraint firstAttribute="bottom" secondItem="DM0-Ol-Nas" secondAttribute="bottom" id="FhK-ME-oZo"/>
                             <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="uSw-Cu-m4j" secondAttribute="trailing" constant="28" id="FyD-ri-Lqs"/>
                             <constraint firstItem="zUI-Q3-Wqx" firstAttribute="leading" secondItem="cA6-JB-jfU" secondAttribute="leading" id="Ibi-Ar-5sd"/>
+                            <constraint firstItem="nJX-3A-5Lu" firstAttribute="centerY" secondItem="cA6-JB-jfU" secondAttribute="centerY" constant="-80" id="Mod-f1-Itl"/>
                             <constraint firstItem="uSw-Cu-m4j" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="28" id="PAV-bu-9Kl"/>
                             <constraint firstItem="pq8-yd-V2M" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="16" id="VnW-bA-mXF"/>
+                            <constraint firstAttribute="trailing" secondItem="nJX-3A-5Lu" secondAttribute="trailing" constant="27" id="ZC6-fH-lBj"/>
                             <constraint firstAttribute="trailing" secondItem="DM0-Ol-Nas" secondAttribute="trailing" id="ZcF-6X-hP4"/>
                             <constraint firstAttribute="bottom" secondItem="Adx-kX-E8o" secondAttribute="bottom" id="afD-1F-92w"/>
                             <constraint firstItem="YWU-9O-L7t" firstAttribute="bottom" secondItem="2dI-fA-0pC" secondAttribute="bottom" constant="40" id="amH-5M-iBw"/>
@@ -86,6 +99,7 @@
                             <constraint firstItem="25r-uH-Oa2" firstAttribute="centerY" secondItem="cA6-JB-jfU" secondAttribute="centerY" constant="-80" id="wzF-KT-JJ4"/>
                             <constraint firstItem="DM0-Ol-Nas" firstAttribute="top" secondItem="cA6-JB-jfU" secondAttribute="top" id="xWO-2v-s0W"/>
                             <constraint firstItem="Adx-kX-E8o" firstAttribute="top" secondItem="cA6-JB-jfU" secondAttribute="top" id="zlM-Sc-ub4"/>
+                            <constraint firstItem="nJX-3A-5Lu" firstAttribute="leading" secondItem="cA6-JB-jfU" secondAttribute="leading" constant="27" id="zzU-uC-NN5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
                     </view>
@@ -96,6 +110,7 @@
                         <outlet property="lensAnimationView" destination="uSw-Cu-m4j" id="osH-DL-dVC"/>
                         <outlet property="lensButton" destination="25r-uH-Oa2" id="VfC-6n-eac"/>
                         <outlet property="previewLayer" destination="Adx-kX-E8o" id="b1F-D2-FYu"/>
+                        <outlet property="reverseLensAnimationView" destination="nJX-3A-5Lu" id="gpZ-Tk-gdM"/>
                         <outlet property="takePhotoButton" destination="2dI-fA-0pC" id="buv-Aa-g5o"/>
                     </connections>
                 </viewController>

@@ -20,7 +20,7 @@ end
 
 
 def surf_lib
-    # And other Surf pods, like NodeKit
+  pod 'NodeKit', :git => 'https://github.com/surfstudio/NodeKit', :commit => 'd537ad9f76906c977321bb8ab8bdd863549bf23a'
 end
 
 def common_pods

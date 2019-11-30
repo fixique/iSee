@@ -44,6 +44,7 @@
 		F598B32E239198BA00AB7B55 /* ModuleTrasitionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F598B32D239198BA00AB7B55 /* ModuleTrasitionable.swift */; };
 		F598B339239198BB00AB7B55 /* iSeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F598B338239198BB00AB7B55 /* iSeeTests.swift */; };
 		F598B33E239198BB00AB7B55 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F598B33D239198BB00AB7B55 /* XCTestCase.swift */; };
+		F5D27C5F2392B10E00D2E5F3 /* reverseLensAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = F5D27C5E2392B10E00D2E5F3 /* reverseLensAnimation.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		F598B33C239198BB00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitkeep; path = Resources/.gitkeep; sourceTree = "<group>"; };
 		F598B33D239198BB00AB7B55 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = XCTestCase.swift; path = ../XCTestCase.swift; sourceTree = "<group>"; };
 		F598B33F239198BB00AB7B55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5D27C5E2392B10E00D2E5F3 /* reverseLensAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = reverseLensAnimation.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,7 @@
 		F55F5CE6239268C700890055 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				F5D27C5E2392B10E00D2E5F3 /* reverseLensAnimation.json */,
 				F55F5CE7239268DB00890055 /* lensAnimation.json */,
 			);
 			path = Animation;
@@ -627,6 +630,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5D27C5F2392B10E00D2E5F3 /* reverseLensAnimation.json in Resources */,
 				F598B327239198BA00AB7B55 /* .swiftlint.yml in Resources */,
 				F598B313239198BA00AB7B55 /* LaunchScreen.xib in Resources */,
 				F598B325239198BA00AB7B55 /* swiftgen.yml in Resources */,
