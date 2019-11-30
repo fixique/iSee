@@ -47,6 +47,9 @@
 		F5D27C5F2392B10E00D2E5F3 /* reverseLensAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = F5D27C5E2392B10E00D2E5F3 /* reverseLensAnimation.json */; };
 		F5D27C622392B7E800D2E5F3 /* MainRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C612392B7E800D2E5F3 /* MainRoute.swift */; };
 		F5D27C642392B89C00D2E5F3 /* SeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C632392B89C00D2E5F3 /* SeeService.swift */; };
+		F5D27C662392BD3500D2E5F3 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C652392BD3500D2E5F3 /* UIImage.swift */; };
+		F5D27C682392CA6F00D2E5F3 /* PredictedBoxEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C672392CA6F00D2E5F3 /* PredictedBoxEntry.swift */; };
+		F5D27C6A2392CB0F00D2E5F3 /* PredictedBoxEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C692392CB0F00D2E5F3 /* PredictedBoxEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +96,6 @@
 		F598B2FA239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		F598B2FC239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		F598B2FE239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		F598B301239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		F598B303239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		F598B306239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		F598B310239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		F598B312239198BA00AB7B55 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -123,6 +124,9 @@
 		F5D27C5E2392B10E00D2E5F3 /* reverseLensAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = reverseLensAnimation.json; sourceTree = "<group>"; };
 		F5D27C612392B7E800D2E5F3 /* MainRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRoute.swift; sourceTree = "<group>"; };
 		F5D27C632392B89C00D2E5F3 /* SeeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeService.swift; sourceTree = "<group>"; };
+		F5D27C652392BD3500D2E5F3 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		F5D27C672392CA6F00D2E5F3 /* PredictedBoxEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictedBoxEntry.swift; sourceTree = "<group>"; };
+		F5D27C692392CB0F00D2E5F3 /* PredictedBoxEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictedBoxEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -416,7 +420,7 @@
 		F598B300239198BA00AB7B55 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				F598B301239198BA00AB7B55 /* .gitkeep */,
+				F5D27C692392CB0F00D2E5F3 /* PredictedBoxEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -424,7 +428,7 @@
 		F598B302239198BA00AB7B55 /* Entry */ = {
 			isa = PBXGroup;
 			children = (
-				F598B303239198BA00AB7B55 /* .gitkeep */,
+				F5D27C672392CA6F00D2E5F3 /* PredictedBoxEntry.swift */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -462,6 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				F55F5CEF2392910000890055 /* UIView.swift */,
+				F5D27C652392BD3500D2E5F3 /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -765,8 +770,11 @@
 				3261E9D49AFAF425D223727C /* CameraModuleOutput.swift in Sources */,
 				3A5844C8E11D7FB9FE8DCDF4 /* CameraViewController.swift in Sources */,
 				F55F5CEE23928F8E00890055 /* LoaderView.swift in Sources */,
+				F5D27C682392CA6F00D2E5F3 /* PredictedBoxEntry.swift in Sources */,
 				58569EB1E42AED7422200145 /* CameraViewInput.swift in Sources */,
 				F55F5CF52392A3E600890055 /* PreviewImageView.swift in Sources */,
+				F5D27C6A2392CB0F00D2E5F3 /* PredictedBoxEntity.swift in Sources */,
+				F5D27C662392BD3500D2E5F3 /* UIImage.swift in Sources */,
 				F55F5CF02392910000890055 /* UIView.swift in Sources */,
 				F5D27C622392B7E800D2E5F3 /* MainRoute.swift in Sources */,
 				ED3FBAECFC7BB40470B50215 /* CameraViewOutput.swift in Sources */,

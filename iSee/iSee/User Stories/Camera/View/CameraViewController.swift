@@ -102,6 +102,7 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
         }
 
         let image = UIImage(data: imageData)
+        self.output?.predictByImage(image)
         backgroundPreviewImage.image = image
         previewImage.setImage(image)
     }

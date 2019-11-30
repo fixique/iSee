@@ -6,6 +6,9 @@
 //  Copyright © 2019 Vlad. All rights reserved.
 //
 
+import UIKit
+
 protocol CameraViewOutput {
     func viewLoaded()
+    func predictByImage(_ image: UIImage?)
 }
