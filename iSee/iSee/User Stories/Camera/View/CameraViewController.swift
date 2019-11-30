@@ -23,7 +23,7 @@ final class CameraViewController: UIViewController, ModuleTransitionable {
     // MARK: - IBOutlets
 
     @IBOutlet private weak var previewLayer: UIView!
-    @IBOutlet private weak var takePhotoButton: UIButton!
+    @IBOutlet private weak var takePhotoButton: ShotButton!
     @IBOutlet private weak var bluredLayer: UIView!
     @IBOutlet private weak var lensButton: CommonButton!
     @IBOutlet private weak var lensAnimationView: AnimationView!
@@ -150,6 +150,7 @@ private extension CameraViewController {
                        delay: 0.0,
                        options: .curveLinear,
                        animations: {
+                        self.takePhotoButton.alpha = 0.0
                         self.bluredLayer.alpha = 1.0
                         self.closeStateButton.alpha = 0.0
                         self.lensAnimationView.alpha = 0.0
@@ -196,10 +197,12 @@ private extension CameraViewController {
         lensAnimationView.alpha = 1.0
         lensAnimationView.play()
         bluredLayer.alpha = 1.0
+        takePhotoButton.alpha = 0.0
         UIView.animate(withDuration: 0.5,
                        delay: 0.0,
                        options: .curveLinear,
                        animations: {
+                        self.takePhotoButton.alpha = 1.0
                         self.bluredLayer.alpha = 0.0
                         self.closeStateButton.alpha = 1.0
         }) { _ in

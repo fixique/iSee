@@ -29,13 +29,12 @@
                                     <action selector="closeStateAction:" destination="h3k-bK-TNO" eventType="touchUpInside" id="bcN-ry-qr3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dI-fA-0pC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dI-fA-0pC" customClass="ShotButton" customModule="iSee" customModuleProvider="target">
                                 <rect key="frame" x="175" y="758" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="NSp-ro-ulm"/>
                                     <constraint firstAttribute="width" constant="64" id="itE-nN-Ytf"/>
                                 </constraints>
-                                <state key="normal" title="Photo"/>
                                 <connections>
                                     <action selector="takePhotoAction:" destination="h3k-bK-TNO" eventType="touchUpInside" id="KYh-Bn-nzl"/>
                                 </connections>

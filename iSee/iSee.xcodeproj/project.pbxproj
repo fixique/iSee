@@ -23,6 +23,7 @@
 		CF57092F610983F949DC142B /* Pods_iSee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08DA63D54E782A5A9597A0D7 /* Pods_iSee.framework */; };
 		ED3FBAECFC7BB40470B50215 /* CameraViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803B3541548D5978E635588E /* CameraViewOutput.swift */; };
 		F55F5CE8239268DB00890055 /* lensAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = F55F5CE7239268DB00890055 /* lensAnimation.json */; };
+		F55F5CEB239278CC00890055 /* ShotButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F5CEA239278CC00890055 /* ShotButton.swift */; };
 		F598B2EB239198BA00AB7B55 /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EA239198BA00AB7B55 /* fastlane */; };
 		F598B2ED239198BA00AB7B55 /* ci in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EC239198BA00AB7B55 /* ci */; };
 		F598B2EF239198BA00AB7B55 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EE239198BA00AB7B55 /* Podfile */; };
@@ -70,6 +71,7 @@
 		E4B018000517C03BF411B4C0 /* CameraPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraPresenter.swift; sourceTree = "<group>"; };
 		E8557D2B6D5AC782A9A30D5A /* CameraModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraModuleConfigurator.swift; sourceTree = "<group>"; };
 		F55F5CE7239268DB00890055 /* lensAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lensAnimation.json; sourceTree = "<group>"; };
+		F55F5CEA239278CC00890055 /* ShotButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotButton.swift; sourceTree = "<group>"; };
 		F598B2E6239198BA00AB7B55 /* iSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F598B2EA239198BA00AB7B55 /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fastlane; path = ../../fastlane; sourceTree = "<group>"; };
 		F598B2EC239198BA00AB7B55 /* ci */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ci; path = ../../ci; sourceTree = "<group>"; };
@@ -245,6 +247,14 @@
 				F55F5CE7239268DB00890055 /* lensAnimation.json */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		F55F5CE9239278A600890055 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				F55F5CEA239278CC00890055 /* ShotButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		F598B2DB239198BA00AB7B55 = {
@@ -432,6 +442,7 @@
 		F598B30B239198BA00AB7B55 /* Reusable Layer */ = {
 			isa = PBXGroup;
 			children = (
+				F55F5CE9239278A600890055 /* Buttons */,
 				F598B30C239198BA00AB7B55 /* .gitkeep */,
 			);
 			path = "Reusable Layer";
@@ -706,6 +717,7 @@
 				F598B31E239198BA00AB7B55 /* Fonts.swift in Sources */,
 				F598B32E239198BA00AB7B55 /* ModuleTrasitionable.swift in Sources */,
 				F598B320239198BA00AB7B55 /* Strings.swift in Sources */,
+				F55F5CEB239278CC00890055 /* ShotButton.swift in Sources */,
 				F598B317239198BA00AB7B55 /* AppDelegate.swift in Sources */,
 				0BAF214F3B7A7079F5DFF9C8 /* CameraModuleConfigurator.swift in Sources */,
 				026DD9719B25B6B0DC6AC873 /* CameraRouter.swift in Sources */,
