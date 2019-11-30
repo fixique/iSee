@@ -25,6 +25,8 @@ final class PredictedViewController: UIViewController, ModuleTransitionable {
 
     private var pointViews: [PointView] = []
     private var boxes: [PredictedBoxEntity] = []
+    private var redBoxes: [UIView] = []
+    private var previewImage: UIImage?
 
     // MARK: - UIViewController
 
@@ -41,6 +43,7 @@ extension PredictedViewController: PredictedViewInput {
 
     func setupInitialState(image: UIImage, boxes: [PredictedBoxEntity]) {
         self.boxes = boxes
+        self.previewImage = image
         configurePreviewImageView(with: image)
         configureCloseButton()
         renderBoxes(boxes: boxes)
@@ -75,6 +78,7 @@ private extension PredictedViewController {
             boxView.layer.borderColor = UIColor.red.cgColor
             boxView.layer.borderWidth = 2.0
             view.addSubview(boxView)
+            redBoxes.append(boxView)
         }
     }
 
@@ -87,6 +91,7 @@ private extension PredictedViewController {
             pointView.center = CGPoint(x: (box.point.x / standartSize.height) * currentSize.width,
                                        y: (box.point.y / standartSize.width) * currentSize.height)
             pointView.addTarget(self, action: #selector(pointSelected(button:)), for: .touchUpInside)
+            pointView.addedTouchArea = 40.0
             view.addSubview(pointView)
             pointViews.append(pointView)
         }
@@ -116,11 +121,14 @@ private extension PredictedViewController {
 
     @objc
     func pointSelected(button: UIButton) {
-        guard let image = cropImage(for: boxes[button.tag].box) else {
+        let screen = UIScreen.main.bounds
+        guard let previewImage = previewImage else {
+            return
+        }
+        guard let image = cropImage(inputImage: previewImage, toRect: redBoxes[button.tag].frame, boxSize: boxes[button.tag].box.size, viewWidth: screen.width, viewHeight: screen.height) else {
             return
         }
         print(image)
-//        configureBubbleView(for: pointViews[button.tag], box: boxes[button.tag])
     }
 
 }
@@ -129,14 +137,27 @@ private extension PredictedViewController {
 
 private extension PredictedViewController {
 
-    func cropImage(for rect: CGRect) -> UIImage? {
-        guard let cgImage = previewImageView.image?.cgImage else {
+    func cropImage(inputImage: UIImage, toRect cropRect: CGRect, boxSize: CGSize, viewWidth: CGFloat, viewHeight: CGFloat) -> UIImage? {
+        let imageViewScale = max(inputImage.size.width / viewWidth,
+                                 inputImage.size.height / viewHeight)
+
+        // Scale cropRect to handle images larger than shown-on-screen size
+        let cropZone = CGRect(x: cropRect.origin.y * imageViewScale,
+                              y: cropRect.origin.x * imageViewScale,
+                              width: boxSize.width,
+                              height: boxSize.height)
+
+        guard let cgImage = inputImage.cgImage else {
             return nil
         }
-        guard let cropedCgImage = cgImage.cropping(to: rect) else {
+        // Perform cropping in Core Graphics
+        guard let cutImageRef = cgImage.cropping(to: cropZone) else {
             return nil
         }
-        return UIImage(cgImage: cropedCgImage)
+
+        // Return image to UIImage
+        let croppedImage: UIImage = UIImage(cgImage: cutImageRef)
+        return croppedImage
     }
 
 }

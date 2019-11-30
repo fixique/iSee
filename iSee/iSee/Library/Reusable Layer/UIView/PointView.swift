@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SurfUtils
 
-final class PointView: UIButton {
+final class PointView: CommonButton {
 
     // MARK: - Private Properties
 
