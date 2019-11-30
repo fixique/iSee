@@ -10,14 +10,16 @@ import UIKit
 import AVFoundation
 import SurfUtils
 import Lottie
+import NVActivityIndicatorView
 
-final class CameraViewController: UIViewController, ModuleTransitionable {
+final class CameraViewController: UIViewController, ModuleTransitionable, StatePresentable {
 
     // MARK: - Enums
 
-    private enum States {
+    enum CameraState {
         case `default`
         case lensOpen
+        case loadingPreview
     }
 
     // MARK: - IBOutlets
@@ -79,6 +81,7 @@ extension CameraViewController: CameraViewInput {
         configureAnimationView()
         configureLensAction()
         configureCloseStateButton()
+        configureTakeShotButton()
     }
 
 }
@@ -86,6 +89,17 @@ extension CameraViewController: CameraViewInput {
 // MARK: - Configuration
 
 private extension CameraViewController {
+
+    func setState(_ state: CameraState) {
+        switch state {
+        case .default:
+            setDefaultState()
+        case .lensOpen:
+            setLensState()
+        case .loadingPreview:
+            setLoadingPreviewState()
+        }
+    }
 
     func configureCaptureSession() {
         captureSession = AVCaptureSession()
@@ -137,32 +151,18 @@ private extension CameraViewController {
         closeStateButton.alpha = 0.0
     }
 
-    // MARK: - Configure Default State
-
-    func setDefaultState() {
-        bluredLayer.alpha = 0.0
-        closeStateButton.alpha = 1.0
-//        lensAnimationView.play { _ in
-//            self.lensButton.isHidden = false
-//            self.lensAnimationView.isHidden = true
-//        }
-        UIView.animate(withDuration: 0.5,
-                       delay: 0.0,
-                       options: .curveLinear,
-                       animations: {
-                        self.takePhotoButton.alpha = 0.0
-                        self.bluredLayer.alpha = 1.0
-                        self.closeStateButton.alpha = 0.0
-                        self.lensAnimationView.alpha = 0.0
-        }) { _ in
-            self.lensButton.isHidden = false
-        }
+    func configureTakeShotButton() {
+        takePhotoButton.addTarget(self, action: #selector(takePhotoAction), for: .touchUpInside)
+        takePhotoButton.isUserInteractionEnabled = true
+        takePhotoButton.isEnabled = true
+        takePhotoButton.alpha = 0.0
     }
+
+    // MARK: - Configure Default State
 
     func configureBluredView() {
         bluredLayer.addBlur(color: UIColor(red: 255.0 / 255.0, green: 255.0 / 255.0, blue: 255.0 / 255.0, alpha: 0.1),
                             style: .systemUltraThinMaterialDark)
-        bluredLayer.isUserInteractionEnabled = true
         bluredLayer.isHidden = false
     }
 
@@ -187,16 +187,51 @@ private extension CameraViewController {
 
 private extension CameraViewController {
 
-    @IBAction func takePhotoAction(_ sender: Any) {
+    @objc
+    func takePhotoAction() {
+        setState(.loadingPreview)
     }
 
     @objc
     func lensAction() {
+        setState(.lensOpen)
+    }
+
+    @IBAction func closeStateAction(_ sender: Any) {
+        setState(.default)
+    }
+}
+
+// MARK: - State Preparation
+
+private extension CameraViewController {
+
+    func setDefaultState() {
+        bluredLayer.isHidden = false
+        bluredLayer.alpha = 0.0
+        bluredLayer.isUserInteractionEnabled = true
+        closeStateButton.alpha = 1.0
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       options: .curveLinear,
+                       animations: {
+                        self.takePhotoButton.alpha = 0.0
+                        self.bluredLayer.alpha = 1.0
+                        self.closeStateButton.alpha = 0.0
+                        self.lensAnimationView.alpha = 0.0
+        }) { _ in
+            self.lensButton.isHidden = false
+        }
+    }
+
+    func setLensState() {
         lensAnimationView.isHidden = false
         lensButton.isHidden = true
         lensAnimationView.alpha = 1.0
         lensAnimationView.play()
+        bluredLayer.isHidden = true
         bluredLayer.alpha = 1.0
+        bluredLayer.isUserInteractionEnabled = false
         takePhotoButton.alpha = 0.0
         UIView.animate(withDuration: 0.5,
                        delay: 0.0,
@@ -209,7 +244,21 @@ private extension CameraViewController {
         }
     }
 
-    @IBAction func closeStateAction(_ sender: Any) {
-        setDefaultState()
+    func setLoadingPreviewState() {
+        showLoader()
+        bluredLayer.isHidden = false
+        bluredLayer.alpha = 0.0
+        bluredLayer.isUserInteractionEnabled = false
+        closeStateButton.alpha = 1.0
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       options: .curveLinear,
+                       animations: {
+                        self.takePhotoButton.alpha = 0.0
+                        self.bluredLayer.alpha = 1.0
+                        self.closeStateButton.alpha = 0.0
+                        self.lensAnimationView.alpha = 0.0
+        })
     }
+
 }

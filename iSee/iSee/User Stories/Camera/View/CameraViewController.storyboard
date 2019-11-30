@@ -29,16 +29,6 @@
                                     <action selector="closeStateAction:" destination="h3k-bK-TNO" eventType="touchUpInside" id="bcN-ry-qr3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dI-fA-0pC" customClass="ShotButton" customModule="iSee" customModuleProvider="target">
-                                <rect key="frame" x="175" y="758" width="64" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="NSp-ro-ulm"/>
-                                    <constraint firstAttribute="width" constant="64" id="itE-nN-Ytf"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="takePhotoAction:" destination="h3k-bK-TNO" eventType="touchUpInside" id="KYh-Bn-nzl"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DM0-Ol-Nas">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -51,8 +41,8 @@
                                 </constraints>
                                 <state key="normal" image="lens-shutter"/>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uSw-Cu-m4j" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="28" y="167" width="358" height="400"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSw-Cu-m4j" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="28" y="168" width="358" height="400"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="nne-SD-mfW"/>
@@ -61,6 +51,13 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="lensAnimation"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dI-fA-0pC" customClass="ShotButton" customModule="iSee" customModuleProvider="target">
+                                <rect key="frame" x="175" y="758" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="NSp-ro-ulm"/>
+                                    <constraint firstAttribute="width" constant="64" id="itE-nN-Ytf"/>
+                                </constraints>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>

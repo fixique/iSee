@@ -24,6 +24,9 @@
 		ED3FBAECFC7BB40470B50215 /* CameraViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803B3541548D5978E635588E /* CameraViewOutput.swift */; };
 		F55F5CE8239268DB00890055 /* lensAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = F55F5CE7239268DB00890055 /* lensAnimation.json */; };
 		F55F5CEB239278CC00890055 /* ShotButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F5CEA239278CC00890055 /* ShotButton.swift */; };
+		F55F5CEE23928F8E00890055 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F5CED23928F8E00890055 /* LoaderView.swift */; };
+		F55F5CF02392910000890055 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F5CEF2392910000890055 /* UIView.swift */; };
+		F55F5CF2239291E000890055 /* StatePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F5CF1239291E000890055 /* StatePresentable.swift */; };
 		F598B2EB239198BA00AB7B55 /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EA239198BA00AB7B55 /* fastlane */; };
 		F598B2ED239198BA00AB7B55 /* ci in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EC239198BA00AB7B55 /* ci */; };
 		F598B2EF239198BA00AB7B55 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EE239198BA00AB7B55 /* Podfile */; };
@@ -72,6 +75,9 @@
 		E8557D2B6D5AC782A9A30D5A /* CameraModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraModuleConfigurator.swift; sourceTree = "<group>"; };
 		F55F5CE7239268DB00890055 /* lensAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lensAnimation.json; sourceTree = "<group>"; };
 		F55F5CEA239278CC00890055 /* ShotButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotButton.swift; sourceTree = "<group>"; };
+		F55F5CED23928F8E00890055 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		F55F5CEF2392910000890055 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		F55F5CF1239291E000890055 /* StatePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePresentable.swift; sourceTree = "<group>"; };
 		F598B2E6239198BA00AB7B55 /* iSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F598B2EA239198BA00AB7B55 /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fastlane; path = ../../fastlane; sourceTree = "<group>"; };
 		F598B2EC239198BA00AB7B55 /* ci */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ci; path = ../../ci; sourceTree = "<group>"; };
@@ -86,10 +92,6 @@
 		F598B301239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		F598B303239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		F598B306239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		F598B308239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		F598B30A239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		F598B30C239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		F598B30E239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		F598B310239198BA00AB7B55 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		F598B312239198BA00AB7B55 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		F598B314239198BA00AB7B55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -255,6 +257,14 @@
 				F55F5CEA239278CC00890055 /* ShotButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		F55F5CEC23928F7D00890055 /* LoaderView */ = {
+			isa = PBXGroup;
+			children = (
+				F55F5CED23928F8E00890055 /* LoaderView.swift */,
+			);
+			path = LoaderView;
 			sourceTree = "<group>";
 		};
 		F598B2DB239198BA00AB7B55 = {
@@ -426,7 +436,7 @@
 		F598B307239198BA00AB7B55 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				F598B308239198BA00AB7B55 /* .gitkeep */,
+				F55F5CEC23928F7D00890055 /* LoaderView */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -434,7 +444,7 @@
 		F598B309239198BA00AB7B55 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F598B30A239198BA00AB7B55 /* .gitkeep */,
+				F55F5CEF2392910000890055 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -443,7 +453,6 @@
 			isa = PBXGroup;
 			children = (
 				F55F5CE9239278A600890055 /* Buttons */,
-				F598B30C239198BA00AB7B55 /* .gitkeep */,
 			);
 			path = "Reusable Layer";
 			sourceTree = "<group>";
@@ -451,8 +460,8 @@
 		F598B30D239198BA00AB7B55 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				F598B30E239198BA00AB7B55 /* .gitkeep */,
 				F598B32D239198BA00AB7B55 /* ModuleTrasitionable.swift */,
+				F55F5CF1239291E000890055 /* StatePresentable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -719,6 +728,7 @@
 				F598B320239198BA00AB7B55 /* Strings.swift in Sources */,
 				F55F5CEB239278CC00890055 /* ShotButton.swift in Sources */,
 				F598B317239198BA00AB7B55 /* AppDelegate.swift in Sources */,
+				F55F5CF2239291E000890055 /* StatePresentable.swift in Sources */,
 				0BAF214F3B7A7079F5DFF9C8 /* CameraModuleConfigurator.swift in Sources */,
 				026DD9719B25B6B0DC6AC873 /* CameraRouter.swift in Sources */,
 				9BBD2ED45A71761E809D505B /* CameraRouterInput.swift in Sources */,
@@ -726,7 +736,9 @@
 				37B1DF5505D422C8EE6545C0 /* CameraModuleInput.swift in Sources */,
 				3261E9D49AFAF425D223727C /* CameraModuleOutput.swift in Sources */,
 				3A5844C8E11D7FB9FE8DCDF4 /* CameraViewController.swift in Sources */,
+				F55F5CEE23928F8E00890055 /* LoaderView.swift in Sources */,
 				58569EB1E42AED7422200145 /* CameraViewInput.swift in Sources */,
+				F55F5CF02392910000890055 /* UIView.swift in Sources */,
 				ED3FBAECFC7BB40470B50215 /* CameraViewOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
