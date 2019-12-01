@@ -6,7 +6,7 @@
 //  Copyright © 2019 Vlad. All rights reserved.
 //
 
-final class MyWardrobePresenter: MyWardrobeViewOutput, MyWardrobeModuleInput {
+final class MyWardrobePresenter {
 
     // MARK: - Properties
 
@@ -14,8 +14,19 @@ final class MyWardrobePresenter: MyWardrobeViewOutput, MyWardrobeModuleInput {
     var router: MyWardrobeRouterInput?
     var output: MyWardrobeModuleOutput?
 
-    // MARK: - MyWardrobeViewOutput
+}
 
-    // MARK: - MyWardrobeModuleInput
+// MARK: - MyWardrobeViewOutput
 
+extension MyWardrobePresenter: MyWardrobeViewOutput {
+
+    func viewLoaded() {
+        view?.setupInitialState()
+    }
+
+}
+
+// MARK: - MyWardrobeModuleInput
+
+extension MyWardrobePresenter: MyWardrobeModuleInput {
 }

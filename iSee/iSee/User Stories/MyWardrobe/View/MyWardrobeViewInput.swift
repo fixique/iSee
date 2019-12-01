@@ -7,5 +7,6 @@
 //
 
 protocol MyWardrobeViewInput: class {
-
+    func setupInitialState()
+    func update(with items: [WardrobeEntity])
 }

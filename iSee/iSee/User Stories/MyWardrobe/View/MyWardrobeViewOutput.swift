@@ -7,5 +7,5 @@
 //
 
 protocol MyWardrobeViewOutput {
-
+    func viewLoaded()
 }

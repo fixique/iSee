@@ -27,6 +27,8 @@ final class CameraRouter: CameraRouterInput {
     }
 
     func openWardrobe() {
+        let wardrobeVc = MyWardrobeModuleConfigurator().configure()
+        view?.presentModule(wardrobeVc, animated: true, completion: nil)
     }
 
     func openLooks() {

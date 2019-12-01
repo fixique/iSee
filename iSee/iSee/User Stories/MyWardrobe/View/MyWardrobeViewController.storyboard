@@ -1,28 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h3k-bK-TNO">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h3k-bK-TNO">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--My Wardrobe View Controller-->
         <scene sceneID="PlN-iW-H7B">
             <objects>
-                <viewController id="h3k-bK-TNO" customClass="MyWardrobeViewController" customModule="iSee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="h3k-bK-TNO" customClass="MyWardrobeViewController" customModule="SHKAF" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cA6-JB-jfU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uxi-X0-a0e">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ycv-ve-smi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3C-XH-wen">
+                                        <rect key="frame" x="268" y="30" width="83" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="83" id="SaL-yq-MHu"/>
+                                            <constraint firstAttribute="height" constant="40" id="Scb-eE-5dY"/>
+                                        </constraints>
+                                        <state key="normal" image="addButton"/>
+                                        <connections>
+                                            <action selector="addToWardrobe:" destination="h3k-bK-TNO" eventType="touchUpInside" id="Fbu-kZ-j85"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb5-yj-oVz">
+                                        <rect key="frame" x="24" y="34" width="234" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="a3C-XH-wen" secondAttribute="trailing" constant="24" id="864-Rk-SZi"/>
+                                    <constraint firstAttribute="height" constant="88" id="SwS-U2-o6U"/>
+                                    <constraint firstItem="a3C-XH-wen" firstAttribute="top" secondItem="Ycv-ve-smi" secondAttribute="top" constant="30" id="VSM-6N-slb"/>
+                                    <constraint firstItem="a3C-XH-wen" firstAttribute="leading" secondItem="bb5-yj-oVz" secondAttribute="trailing" constant="10" id="cfz-mN-r0d"/>
+                                    <constraint firstItem="bb5-yj-oVz" firstAttribute="top" secondItem="Ycv-ve-smi" secondAttribute="top" constant="34" id="dWJ-1Q-ADC"/>
+                                    <constraint firstItem="bb5-yj-oVz" firstAttribute="leading" secondItem="Ycv-ve-smi" secondAttribute="leading" constant="24" id="pBy-5N-CRr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uxi-X0-a0e" firstAttribute="top" secondItem="cA6-JB-jfU" secondAttribute="top" id="U4m-sn-YyI"/>
+                            <constraint firstItem="Ycv-ve-smi" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" id="Vhv-Eb-kcl"/>
+                            <constraint firstItem="Ycv-ve-smi" firstAttribute="top" secondItem="cA6-JB-jfU" secondAttribute="top" id="aGD-Aw-kLw"/>
+                            <constraint firstAttribute="bottom" secondItem="uxi-X0-a0e" secondAttribute="bottom" id="amK-fh-Tnj"/>
+                            <constraint firstAttribute="trailing" secondItem="uxi-X0-a0e" secondAttribute="trailing" id="cQ0-Xb-8wP"/>
+                            <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="Ycv-ve-smi" secondAttribute="trailing" id="iEf-pX-6os"/>
+                            <constraint firstItem="uxi-X0-a0e" firstAttribute="leading" secondItem="cA6-JB-jfU" secondAttribute="leading" id="ycg-Tr-K68"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
                     </view>
+                    <connections>
+                        <outlet property="screenTitle" destination="bb5-yj-oVz" id="C10-iX-B5A"/>
+                        <outlet property="tableView" destination="uxi-X0-a0e" id="eIX-LJ-NjL"/>
+                        <outlet property="topContainerView" destination="Ycv-ve-smi" id="KkB-xp-kU6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="575" y="-231"/>
+            <point key="canvasLocation" x="573.60000000000002" y="-231.63418290854574"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="addButton" width="83" height="40"/>
+    </resources>
 </document>
