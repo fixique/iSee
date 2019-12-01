@@ -11,6 +11,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         setupCameraModule()
+        checkKeychain()
         return true
     }
 
@@ -25,6 +26,14 @@ private extension AppDelegate {
         window?.makeKeyAndVisible()
         let cameraVc = CameraModuleConfigurator().configure()
         window?.rootViewController = cameraVc
+    }
+
+    func checkKeychain() {
+        guard !UserDefaults.standard.bool(forKey: "isFirstStart") else {
+            return
+        }
+        UserDefaults.standard.set(true, forKey: "isFirstStart")
+        DataStorage.shared.clear()
     }
 
 }

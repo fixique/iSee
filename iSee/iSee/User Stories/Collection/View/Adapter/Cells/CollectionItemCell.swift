@@ -35,11 +35,16 @@ final class CollectionItemCell: UITableViewCell {
 
     func configure(with item: ClotheItemEntity) {
         itemName.text = item.name
-        itemPrice.text = String(format: "%.2f", item.price) + " ₽"
+        itemPrice.text = item.price == 0.0 ? "Нет в наличии" : String(format: "%.2f", item.price) + " ₽"
         itemShop.text = item.source
         previewImageView.image = nil
         loadImage(with: item.imageUrl)
         favoriteButton.isSelected = DataStorage.shared.isFavorite(item)
+
+        if item.source == "youla" {
+            itemPrice.textColor = UIColor(red: 0.0, green: 192.0 / 255.0, blue: 88.0 / 255.0, alpha: 1.0)
+            itemShop.textColor = UIColor(red: 0.0, green: 192.0 / 255.0, blue: 88.0 / 255.0, alpha: 1.0)
+        }
     }
 
 }

@@ -66,6 +66,10 @@ final class DataStorage {
         set(data: favoritesData, forKey: Keys.favoriteList)
     }
 
+    func clear() {
+        keychain.clear()
+    }
+
 }
 
 // MARK: - Private Properties
