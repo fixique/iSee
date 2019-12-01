@@ -99,6 +99,8 @@
 		F55F5CF52392A3E600890055 /* PreviewImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F5CF42392A3E600890055 /* PreviewImageView.swift */; };
 		F591B19823943B4F00A9283F /* WardrobeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591B19723943B4E00A9283F /* WardrobeCell.swift */; };
 		F591B19A23943CB000A9283F /* WardrobeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591B19923943CB000A9283F /* WardrobeAdapter.swift */; };
+		F591B19D239450D500A9283F /* LooksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591B19C239450D500A9283F /* LooksCell.swift */; };
+		F591B19F239452A700A9283F /* LooksAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591B19E239452A700A9283F /* LooksAdapter.swift */; };
 		F598B2EB239198BA00AB7B55 /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EA239198BA00AB7B55 /* fastlane */; };
 		F598B2ED239198BA00AB7B55 /* ci in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EC239198BA00AB7B55 /* ci */; };
 		F598B2EF239198BA00AB7B55 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EE239198BA00AB7B55 /* Podfile */; };
@@ -240,6 +242,8 @@
 		F55F5CF42392A3E600890055 /* PreviewImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewImageView.swift; sourceTree = "<group>"; };
 		F591B19723943B4E00A9283F /* WardrobeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeCell.swift; sourceTree = "<group>"; };
 		F591B19923943CB000A9283F /* WardrobeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeAdapter.swift; sourceTree = "<group>"; };
+		F591B19C239450D500A9283F /* LooksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LooksCell.swift; sourceTree = "<group>"; };
+		F591B19E239452A700A9283F /* LooksAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LooksAdapter.swift; sourceTree = "<group>"; };
 		F598B2E6239198BA00AB7B55 /* SHKAF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHKAF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F598B2EA239198BA00AB7B55 /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fastlane; path = ../../fastlane; sourceTree = "<group>"; };
 		F598B2EC239198BA00AB7B55 /* ci */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ci; path = ../../ci; sourceTree = "<group>"; };
@@ -319,7 +323,6 @@
 			children = (
 				B19C7527155E80A33F943776 /* LooksModuleConfigurator.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -416,7 +419,6 @@
 			children = (
 				5B3F88224CA6F2B2B527DC17 /* LooksViewTests.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -461,7 +463,6 @@
 			children = (
 				FF0139E57FAF70061F00DA23 /* LooksModuleConfiguratorTests.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -470,7 +471,6 @@
 			children = (
 				535434EBDD3F72C3B9B8E186 /* LooksPresenterTests.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -517,7 +517,6 @@
 				58BA014CE76042B7456AE341 /* LooksModuleInput.swift */,
 				DDA37C02644EBCF314252B28 /* LooksModuleOutput.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -558,7 +557,6 @@
 				4FACE0D3634FEAA641C2F3C4 /* Presenter */,
 				C046F88EBA8BFEA9B0C9952C /* View */,
 			);
-			name = Looks;
 			path = Looks;
 			sourceTree = "<group>";
 		};
@@ -715,7 +713,6 @@
 				47D4FEAB3DBC7AD59F22E382 /* Presenter */,
 				318146E815CBD4AD128CA462 /* View */,
 			);
-			name = Looks;
 			path = Looks;
 			sourceTree = "<group>";
 		};
@@ -735,7 +732,6 @@
 				2883E49D1B62F9E76E6DB180 /* LooksRouter.swift */,
 				CC2686CEB94ED9B9400A60E2 /* LooksRouterInput.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -750,12 +746,12 @@
 		C046F88EBA8BFEA9B0C9952C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F591B19B239450C100A9283F /* Adapter */,
 				0BB303694BF7967A2D1A14B7 /* LooksViewController.swift */,
 				61FBB609F7ACF7BADFA0846D /* LooksViewController.storyboard */,
 				830EE1491907506ABF107137 /* LooksViewInput.swift */,
 				73A4F93A7A14DA209364DC7F /* LooksViewOutput.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -812,7 +808,6 @@
 			children = (
 				04AB8A00D867147409111CCE /* LooksRouterTests.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -896,6 +891,15 @@
 			children = (
 				F591B19723943B4E00A9283F /* WardrobeCell.swift */,
 				F591B19923943CB000A9283F /* WardrobeAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		F591B19B239450C100A9283F /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				F591B19C239450D500A9283F /* LooksCell.swift */,
+				F591B19E239452A700A9283F /* LooksAdapter.swift */,
 			);
 			path = Adapter;
 			sourceTree = "<group>";
@@ -1458,6 +1462,7 @@
 				F598B320239198BA00AB7B55 /* Strings.swift in Sources */,
 				F55F5CEB239278CC00890055 /* ShotButton.swift in Sources */,
 				F598B317239198BA00AB7B55 /* AppDelegate.swift in Sources */,
+				F591B19F239452A700A9283F /* LooksAdapter.swift in Sources */,
 				F55F5CF2239291E000890055 /* StatePresentable.swift in Sources */,
 				0BAF214F3B7A7079F5DFF9C8 /* CameraModuleConfigurator.swift in Sources */,
 				026DD9719B25B6B0DC6AC873 /* CameraRouter.swift in Sources */,
@@ -1515,6 +1520,7 @@
 				44A895EE07139020A8CD467D /* MyFavoritesViewOutput.swift in Sources */,
 				4F4DED865BD1330378BD9B38 /* MyWardrobeModuleConfigurator.swift in Sources */,
 				C7E4EB9DCC77F204922DFE39 /* MyWardrobeRouter.swift in Sources */,
+				F591B19D239450D500A9283F /* LooksCell.swift in Sources */,
 				00FA99E7929F35986480B2D1 /* MyWardrobeRouterInput.swift in Sources */,
 				DCB73F470DA6F15C433E824E /* MyWardrobePresenter.swift in Sources */,
 				11C2935DD974BBDF41D2C069 /* MyWardrobeModuleInput.swift in Sources */,

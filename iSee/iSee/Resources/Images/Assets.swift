@@ -18,6 +18,12 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
+  internal static let rectangle33 = ImageAsset(name: "Rectangle 33")
+  internal static let img1 = ImageAsset(name: "img1")
+  internal static let img2 = ImageAsset(name: "img2")
+  internal static let img3 = ImageAsset(name: "img3")
+  internal static let img5 = ImageAsset(name: "img5")
+  internal static let img6 = ImageAsset(name: "img6")
   internal static let shape = ImageAsset(name: "Shape")
   internal static let addButton = ImageAsset(name: "addButton")
   internal static let alarmBellRing1 = ImageAsset(name: "alarm-bell-ring-1")
@@ -25,6 +31,12 @@ internal enum Asset {
   internal static let background = ImageAsset(name: "background")
   internal static let favoriteSelected = ImageAsset(name: "favoriteSelected")
   internal static let favoriteUnselected = ImageAsset(name: "favoriteUnselected")
+  internal static let image1 = ImageAsset(name: "image1")
+  internal static let image2 = ImageAsset(name: "image2")
+  internal static let image3 = ImageAsset(name: "image3")
+  internal static let image4 = ImageAsset(name: "image4")
+  internal static let image5 = ImageAsset(name: "image5")
+  internal static let image6 = ImageAsset(name: "image6")
   internal static let lensShutter = ImageAsset(name: "lens-shutter")
   internal static let pointView = ImageAsset(name: "pointView")
   internal static let profileImage = ImageAsset(name: "profileImage")

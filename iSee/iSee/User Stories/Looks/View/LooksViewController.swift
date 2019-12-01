@@ -20,6 +20,14 @@ final class LooksViewController: UIViewController, ModuleTransitionable {
 
     var output: LooksViewOutput?
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
+    // MARK: - Private Properties
+
+    private var adapter: LooksAdapter?
+
     // MARK: - UIViewController
 
     override func viewDidLoad() {
@@ -38,6 +46,10 @@ extension LooksViewController: LooksViewInput {
         configureAdapter()
     }
 
+    func update(with items: [LooksCellModel]) {
+        adapter?.configure(with: items)
+    }
+
 }
 
 // MARK: - Configuration
@@ -52,7 +64,11 @@ private extension LooksViewController {
     }
 
     func configureAdapter() {
-
+        tableIView.contentInset = UIEdgeInsets(top: 88.0, left: 0, bottom: 0, right: 0)
+        adapter = LooksAdapter(with: tableIView)
+        tableIView.dataSource = adapter
+        tableIView.delegate = adapter
+        tableIView.reloadData()
     }
 
 }

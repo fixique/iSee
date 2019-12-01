@@ -8,4 +8,5 @@
 
 protocol LooksViewInput: class {
     func setupInitialState()
+    func update(with items: [LooksCellModel])
 }
