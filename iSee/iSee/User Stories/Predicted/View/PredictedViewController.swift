@@ -23,7 +23,7 @@ final class PredictedViewController: UIViewController, ModuleTransitionable {
 
     // MARK: - Private Properties
 
-    private var pointViews: [PointView] = []
+    private var pointViews: [CommonButton] = []
     private var boxes: [PredictedBoxEntity] = []
     private var redBoxes: [UIView] = []
     private var previewImage: UIImage?
@@ -86,7 +86,9 @@ private extension PredictedViewController {
         boxes.forEach { box in
             let standartSize = CGSize(width: 1280, height: 720)
             let currentSize = UIScreen.main.bounds.size
-            let pointView = PointView(frame: CGRect(x: 0, y: 0, width: 24.0, height: 24.0))
+            let pointView = CommonButton(type: .custom)
+            pointView.frame = CGRect(x: 0, y: 0, width: 60.0, height: 60.0)
+            pointView.setImageForAllState(UIImage(asset: Asset.pointView), alpha: 0.6)
             pointView.tag = box.id
             pointView.center = CGPoint(x: (box.point.x / standartSize.height) * currentSize.width,
                                        y: (box.point.y / standartSize.width) * currentSize.height)
