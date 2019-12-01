@@ -10,4 +10,7 @@ import UIKit
 
 protocol CameraRouterInput {
     func openPredictedModule(image: UIImage, boxes: [PredictedBoxEntity], output: PredictedModuleOutput?)
+    func openFavorites()
+    func openWardrobe()
+    func openLooks()
 }

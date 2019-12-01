@@ -11,4 +11,7 @@ import UIKit
 protocol CameraViewOutput {
     func viewLoaded()
     func predictByImage(_ image: UIImage?)
+    func openFavorites()
+    func openWardrobe()
+    func openLooks()
 }

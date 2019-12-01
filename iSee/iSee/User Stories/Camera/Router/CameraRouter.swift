@@ -21,4 +21,15 @@ final class CameraRouter: CameraRouterInput {
         view?.presentModule(predictedVc, animated: true, completion: nil)
     }
 
+    func openFavorites() {
+        let favoritesVc = MyFavoritesModuleConfigurator().configure()
+        view?.presentModule(favoritesVc, animated: true, completion: nil)
+    }
+
+    func openWardrobe() {
+    }
+
+    func openLooks() {
+    }
+
 }

@@ -32,7 +32,12 @@ final class CameraViewController: UIViewController, ModuleTransitionable, StateP
     @IBOutlet private weak var reverseLensAnimationView: AnimationView!
     @IBOutlet private weak var closeStateButton: CommonButton!
     @IBOutlet private weak var backgroundPreviewImage: UIImageView!
-    @IBOutlet private weak var collectionButton: CollectionButton!
+    @IBOutlet private weak var myFovarites: CommonButton!
+    @IBOutlet private weak var myWardrobe: CommonButton!
+    @IBOutlet private weak var looks: CommonButton!
+    @IBOutlet private weak var bottomControlsVIew: UIView!
+    @IBOutlet private weak var profileButton: UIButton!
+    @IBOutlet private weak var alarmButton: UIButton!
 
     // MARK: - Properties
 
@@ -92,7 +97,7 @@ extension CameraViewController: CameraViewInput {
         configureCloseStateButton()
         configureTakeShotButton()
         configureBackgroundPreviewImage()
-        configureCollectionButton()
+        configureBottomControls()
     }
 
     func setState(_ state: CameraState) {
@@ -191,10 +196,11 @@ private extension CameraViewController {
         backgroundPreviewImage.isHidden = true
     }
 
-    func configureCollectionButton() {
-        collectionButton.set(titleColor: UIColor.white, for: [.normal])
-        collectionButton.set(titleColor: UIColor.white.withAlphaComponent(0.6), for: [.selected, .highlighted, .focused, .disabled])
-        collectionButton.setTitleForAllState("My collection")
+    func configureBottomControls() {
+        bottomControlsVIew.backgroundColor = .clear
+        myFovarites.setImageForAllState(UIImage(asset: Asset.tab1), alpha: 0.6)
+        myWardrobe.setImageForAllState(UIImage(asset: Asset.tab2), alpha: 0.6)
+        looks.setImageForAllState(UIImage(asset: Asset.tab3), alpha: 0.6)
     }
 
     // MARK: - Configure Default State
@@ -248,6 +254,19 @@ private extension CameraViewController {
     @IBAction func closeStateAction(_ sender: Any) {
         setState(.default)
     }
+
+    @IBAction func openFavorites(_ sender: Any) {
+        output?.openFavorites()
+    }
+
+    @IBAction func openWardrobe(_ sender: Any) {
+        output?.openWardrobe()
+    }
+
+    @IBAction func openLooks(_ sender: Any) {
+        output?.openLooks()
+    }
+
 }
 
 // MARK: - State Preparation
@@ -264,17 +283,25 @@ private extension CameraViewController {
         closeStateButton.alpha = 1.0
         reverseLensAnimationView.isHidden = false
         lensAnimationView.isHidden = true
-        collectionButton.alpha = 0.0
+        bottomControlsVIew.alpha = 0.0
         reverseLensAnimationView.play { [weak self] _ in
             self?.reverseLensAnimationView.isHidden = true
             self?.reverseLensAnimationView.currentProgress = 0.0
             self?.lensButton.isHidden = false
         }
+        UIView.animate(withDuration: 0.3,
+                       delay: 0.5,
+                       options: .curveLinear,
+                       animations: {
+                        self.bottomControlsVIew.alpha = 1.0
+                        self.profileButton.alpha = 1.0
+                        self.alarmButton.alpha = 1.0
+        }) { _ in
+        }
         UIView.animate(withDuration: 0.5,
                        delay: 0.0,
                        options: .curveLinear,
                        animations: {
-                        self.collectionButton.alpha = 1.0
                         self.takePhotoButton.alpha = 0.0
                         self.bluredLayer.alpha = 1.0
                         self.closeStateButton.alpha = 0.0
@@ -295,13 +322,21 @@ private extension CameraViewController {
         bluredLayer.alpha = 1.0
         bluredLayer.isUserInteractionEnabled = false
         takePhotoButton.alpha = 0.0
-        UIView.animate(withDuration: 0.5,
+        UIView.animate(withDuration: 0.3,
                        delay: 0.0,
                        options: .curveLinear,
                        animations: {
-                        self.collectionButton.alpha = 0.0
-                        self.takePhotoButton.alpha = 1.0
+                        self.bottomControlsVIew.alpha = 0.0
+                        self.profileButton.alpha = 0.0
+                        self.alarmButton.alpha = 0.0
                         self.bluredLayer.alpha = 0.0
+        }) { _ in
+        }
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.3,
+                       options: .curveLinear,
+                       animations: {
+                        self.takePhotoButton.alpha = 1.0
                         self.closeStateButton.alpha = 1.0
         }) { _ in
         }
@@ -320,7 +355,9 @@ private extension CameraViewController {
                        delay: 0.0,
                        options: .curveLinear,
                        animations: {
-                        self.collectionButton.alpha = 0.0
+                        self.bottomControlsVIew.alpha = 0.0
+                        self.profileButton.alpha = 0.0
+                        self.alarmButton.alpha = 0.0
                         self.takePhotoButton.alpha = 0.0
                         self.bluredLayer.alpha = 1.0
                         self.closeStateButton.alpha = 0.0

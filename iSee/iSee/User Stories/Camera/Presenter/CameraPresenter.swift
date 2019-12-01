@@ -44,6 +44,18 @@ extension CameraPresenter: CameraViewOutput {
         }
     }
 
+    func openFavorites() {
+        router?.openFavorites()
+    }
+
+    func openWardrobe() {
+        router?.openWardrobe()
+    }
+
+    func openLooks() {
+        router?.openLooks()
+    }
+
 }
 
 // MARK: - PredictedModuleOutput

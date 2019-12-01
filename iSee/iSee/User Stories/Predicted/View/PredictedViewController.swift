@@ -79,8 +79,8 @@ private extension PredictedViewController {
                                                width: (box.box.height / standartSize.width) * currentSize.height,
                                                height: (box.box.width / standartSize.height) * currentSize.width))
             boxView.backgroundColor = .clear
-            boxView.layer.borderColor = UIColor.red.cgColor
-            boxView.layer.borderWidth = 2.0
+            boxView.layer.borderColor = UIColor.clear.cgColor
+            boxView.layer.borderWidth = 0.0
             view.addSubview(boxView)
             redBoxes.append(boxView)
         }
