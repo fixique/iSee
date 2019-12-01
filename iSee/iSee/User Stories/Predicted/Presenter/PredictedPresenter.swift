@@ -43,6 +43,10 @@ extension PredictedPresenter: PredictedViewOutput {
         router?.close()
     }
 
+    func clothesPicked(_ image: UIImage) {
+        router?.openCollection()
+    }
+
 }
 
 // MARK: - PredictedModuleInput

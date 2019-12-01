@@ -6,7 +6,10 @@
 //  Copyright © 2019 Vlad. All rights reserved.
 //
 
+import UIKit
+
 protocol PredictedViewOutput {
     func viewLoaded()
     func close()
+    func clothesPicked(_ image: UIImage)
 }

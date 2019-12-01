@@ -71,11 +71,19 @@
                                     <constraint firstAttribute="width" constant="64" id="itE-nN-Ytf"/>
                                 </constraints>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uL0-f6-8xZ" customClass="CollectionButton" customModule="iSee" customModuleProvider="target">
+                                <rect key="frame" x="72" y="758" width="270" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="nXT-Tm-5PK"/>
+                                </constraints>
+                                <state key="normal" title="My Collection"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="zUI-Q3-Wqx" secondAttribute="bottom" id="1dQ-No-gML"/>
                             <constraint firstItem="zUI-Q3-Wqx" firstAttribute="top" secondItem="cA6-JB-jfU" secondAttribute="top" id="2Pa-VA-EL0"/>
+                            <constraint firstItem="uL0-f6-8xZ" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="72" id="7En-rz-OO0"/>
                             <constraint firstItem="2dI-fA-0pC" firstAttribute="centerX" secondItem="cA6-JB-jfU" secondAttribute="centerX" id="7yd-y4-jOR"/>
                             <constraint firstItem="uSw-Cu-m4j" firstAttribute="centerX" secondItem="cA6-JB-jfU" secondAttribute="centerX" id="8Jv-yc-sif"/>
                             <constraint firstItem="DM0-Ol-Nas" firstAttribute="leading" secondItem="cA6-JB-jfU" secondAttribute="leading" id="CtR-gM-VCx"/>
@@ -88,8 +96,10 @@
                             <constraint firstItem="pq8-yd-V2M" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="16" id="VnW-bA-mXF"/>
                             <constraint firstAttribute="trailing" secondItem="nJX-3A-5Lu" secondAttribute="trailing" constant="27" id="ZC6-fH-lBj"/>
                             <constraint firstAttribute="trailing" secondItem="DM0-Ol-Nas" secondAttribute="trailing" id="ZcF-6X-hP4"/>
+                            <constraint firstItem="YWU-9O-L7t" firstAttribute="bottom" secondItem="uL0-f6-8xZ" secondAttribute="bottom" constant="40" id="acP-ev-Mwz"/>
                             <constraint firstAttribute="bottom" secondItem="Adx-kX-E8o" secondAttribute="bottom" id="afD-1F-92w"/>
                             <constraint firstItem="YWU-9O-L7t" firstAttribute="bottom" secondItem="2dI-fA-0pC" secondAttribute="bottom" constant="40" id="amH-5M-iBw"/>
+                            <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="uL0-f6-8xZ" secondAttribute="trailing" constant="72" id="bSi-dD-XcI"/>
                             <constraint firstItem="25r-uH-Oa2" firstAttribute="centerX" secondItem="cA6-JB-jfU" secondAttribute="centerX" id="ghv-rh-7HV"/>
                             <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="pq8-yd-V2M" secondAttribute="trailing" constant="16" id="ia6-lB-GJH"/>
                             <constraint firstAttribute="trailing" secondItem="Adx-kX-E8o" secondAttribute="trailing" id="j3n-rH-iYI"/>
@@ -107,6 +117,7 @@
                         <outlet property="backgroundPreviewImage" destination="zUI-Q3-Wqx" id="rKs-N2-F4f"/>
                         <outlet property="bluredLayer" destination="DM0-Ol-Nas" id="47y-9s-H0d"/>
                         <outlet property="closeStateButton" destination="pq8-yd-V2M" id="ICv-Nx-5D6"/>
+                        <outlet property="collectionButton" destination="uL0-f6-8xZ" id="Tgb-W0-fh3"/>
                         <outlet property="lensAnimationView" destination="uSw-Cu-m4j" id="osH-DL-dVC"/>
                         <outlet property="lensButton" destination="25r-uH-Oa2" id="VfC-6n-eac"/>
                         <outlet property="previewLayer" destination="Adx-kX-E8o" id="b1F-D2-FYu"/>

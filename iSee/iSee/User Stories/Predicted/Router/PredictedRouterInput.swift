@@ -11,4 +11,6 @@ import Foundation
 protocol PredictedRouterInput {
 
     func close()
+
+    func openCollection()
 }

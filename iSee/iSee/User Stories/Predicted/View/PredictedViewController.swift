@@ -128,7 +128,7 @@ private extension PredictedViewController {
         guard let image = cropImage(inputImage: previewImage, toRect: redBoxes[button.tag].frame, boxSize: boxes[button.tag].box.size, viewWidth: screen.width, viewHeight: screen.height) else {
             return
         }
-        print(image)
+        output?.clothesPicked(image)
     }
 
 }

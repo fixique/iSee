@@ -32,6 +32,7 @@ final class CameraViewController: UIViewController, ModuleTransitionable, StateP
     @IBOutlet private weak var reverseLensAnimationView: AnimationView!
     @IBOutlet private weak var closeStateButton: CommonButton!
     @IBOutlet private weak var backgroundPreviewImage: UIImageView!
+    @IBOutlet private weak var collectionButton: CollectionButton!
 
     // MARK: - Properties
 
@@ -87,6 +88,7 @@ extension CameraViewController: CameraViewInput {
         configureCloseStateButton()
         configureTakeShotButton()
         configureBackgroundPreviewImage()
+        configureCollectionButton()
     }
 
     func setState(_ state: CameraState) {
@@ -185,6 +187,12 @@ private extension CameraViewController {
         backgroundPreviewImage.isHidden = true
     }
 
+    func configureCollectionButton() {
+        collectionButton.set(titleColor: UIColor.white, for: [.normal])
+        collectionButton.set(titleColor: UIColor.white.withAlphaComponent(0.6), for: [.selected, .highlighted, .focused, .disabled])
+        collectionButton.setTitleForAllState("My collection")
+    }
+
     // MARK: - Configure Default State
 
     func configureBluredView() {
@@ -252,6 +260,7 @@ private extension CameraViewController {
         closeStateButton.alpha = 1.0
         reverseLensAnimationView.isHidden = false
         lensAnimationView.isHidden = true
+        collectionButton.alpha = 0.0
         reverseLensAnimationView.play { [weak self] _ in
             self?.reverseLensAnimationView.isHidden = true
             self?.reverseLensAnimationView.currentProgress = 0.0
@@ -261,6 +270,7 @@ private extension CameraViewController {
                        delay: 0.0,
                        options: .curveLinear,
                        animations: {
+                        self.collectionButton.alpha = 1.0
                         self.takePhotoButton.alpha = 0.0
                         self.bluredLayer.alpha = 1.0
                         self.closeStateButton.alpha = 0.0
@@ -285,6 +295,7 @@ private extension CameraViewController {
                        delay: 0.0,
                        options: .curveLinear,
                        animations: {
+                        self.collectionButton.alpha = 0.0
                         self.takePhotoButton.alpha = 1.0
                         self.bluredLayer.alpha = 0.0
                         self.closeStateButton.alpha = 1.0
@@ -305,6 +316,7 @@ private extension CameraViewController {
                        delay: 0.0,
                        options: .curveLinear,
                        animations: {
+                        self.collectionButton.alpha = 0.0
                         self.takePhotoButton.alpha = 0.0
                         self.bluredLayer.alpha = 1.0
                         self.closeStateButton.alpha = 0.0

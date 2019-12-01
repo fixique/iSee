@@ -22,4 +22,9 @@ final class PredictedRouter: PredictedRouterInput {
         view?.dismissView(animated: true, completion: nil)
     }
 
+    func openCollection() {
+        let collectionVc = CollectionModuleConfigurator().configure()
+        view?.presentModule(collectionVc, animated: true, completion: nil)
+    }
+
 }
