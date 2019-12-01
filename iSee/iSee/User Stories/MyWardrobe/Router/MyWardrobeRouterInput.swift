@@ -10,4 +10,5 @@ import Foundation
 
 protocol MyWardrobeRouterInput {
     func close()
+    func openPredict(with item: WardrobeEntity)
 }

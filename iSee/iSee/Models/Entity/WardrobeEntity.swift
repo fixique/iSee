@@ -66,10 +66,10 @@ class WardrobeBox: NSObject, NSCoding {
     }
 
     required init(coder aDecoder: NSCoder) {
-        self.id = aDecoder.decodeObject(forKey: "id") as? Int ?? 0
+        self.id = aDecoder.decodeInteger(forKey: "id")//(forKey: "id") as? Int ?? 0
         self.category = aDecoder.decodeObject(forKey: "category") as? String ?? ""
-        self.box = aDecoder.decodeObject(forKey: "box") as? CGRect ?? .zero
-        self.point = aDecoder.decodeObject(forKey: "point") as? CGPoint ?? .zero
+        self.box = aDecoder.decodeCGRect(forKey: "box")//(forKey: "box") as? CGRect ?? .zero
+        self.point = aDecoder.decodeCGPoint(forKey: "point")//aDecoder.decodeObject(forKey: "point") as? CGPoint ?? .zero
     }
 
     func encode(with aCoder: NSCoder) {

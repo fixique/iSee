@@ -12,12 +12,12 @@ final class PredictedModuleConfigurator {
 
     // MARK: - Internal methods
 
-    func configure(image: UIImage, boxes: [PredictedBoxEntity], output: PredictedModuleOutput? = nil) -> PredictedViewController {
+    func configure(image: UIImage, boxes: [PredictedBoxEntity], isWardrobe: Bool = false, output: PredictedModuleOutput? = nil) -> PredictedViewController {
         guard let view = UIStoryboard(name: String(describing: PredictedViewController.self),
                                       bundle: Bundle.main).instantiateInitialViewController() as? PredictedViewController else {
             fatalError("Can't load PredictedViewController from storyboard, check that controller is initial view controller")
         }
-        let presenter = PredictedPresenter(image: image, boxes: boxes)
+        let presenter = PredictedPresenter(image: image, boxes: boxes, isWardrobe: isWardrobe)
         let router = PredictedRouter()
 
         presenter.view = view

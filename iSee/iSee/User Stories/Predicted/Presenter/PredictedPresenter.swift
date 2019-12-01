@@ -20,13 +20,16 @@ final class PredictedPresenter {
 
     private let image: UIImage
     private let boxes: [PredictedBoxEntity]
+    private let isWardrobe: Bool
     private var isWasSaved = false
+
 
     // MARK: - Initialization
 
-    init(image: UIImage, boxes: [PredictedBoxEntity]) {
+    init(image: UIImage, boxes: [PredictedBoxEntity], isWardrobe: Bool) {
         self.image = image
         self.boxes = boxes
+        self.isWardrobe = isWardrobe
     }
 
 }
@@ -36,7 +39,7 @@ final class PredictedPresenter {
 extension PredictedPresenter: PredictedViewOutput {
 
     func viewLoaded() {
-        view?.setupInitialState(image: image, boxes: boxes)
+        view?.setupInitialState(image: image, boxes: boxes, isWardrobe: isWardrobe)
     }
 
     func close() {

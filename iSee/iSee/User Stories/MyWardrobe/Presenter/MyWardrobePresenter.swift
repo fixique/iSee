@@ -31,6 +31,10 @@ extension MyWardrobePresenter: MyWardrobeViewOutput {
         output?.addToWardrobe()
     }
 
+    func openWardrob(with item: WardrobeEntity) {
+        router?.openPredict(with: item)
+    }
+
 }
 
 // MARK: - MyWardrobeModuleInput

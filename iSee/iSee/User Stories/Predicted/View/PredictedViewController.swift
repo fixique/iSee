@@ -48,7 +48,7 @@ final class PredictedViewController: UIViewController, ModuleTransitionable {
 
 extension PredictedViewController: PredictedViewInput {
 
-    func setupInitialState(image: UIImage, boxes: [PredictedBoxEntity]) {
+    func setupInitialState(image: UIImage, boxes: [PredictedBoxEntity], isWardrobe: Bool) {
         self.boxes = boxes
         self.previewImage = image
         configurePreviewImageView(with: image)
@@ -56,6 +56,9 @@ extension PredictedViewController: PredictedViewInput {
         renderBoxes(boxes: boxes)
         renderPoints(boxes: boxes)
         configureSaveToWardrobe()
+        if isWardrobe {
+            saveButton.isHidden = true
+        }
     }
 
 }

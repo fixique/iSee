@@ -66,6 +66,9 @@ private extension MyWardrobeViewController {
     func configureAdapter() {
         tableView.contentInset = UIEdgeInsets(top: 88.0, left: 0, bottom: 0, right: 0)
         adapter = WardrobeAdapter(with: tableView)
+        adapter?.onItemSelect = { [weak self] item in
+            self?.output?.openWardrob(with: item)
+        }
         tableView.dataSource = adapter
         tableView.delegate = adapter
         tableView.reloadData()

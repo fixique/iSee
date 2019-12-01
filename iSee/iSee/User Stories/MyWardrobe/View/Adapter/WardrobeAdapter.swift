@@ -16,6 +16,10 @@ final class WardrobeAdapter: NSObject {
         static let estimatedHeight: CGFloat = 400
     }
 
+    // MARK: - Properties
+
+    var onItemSelect: ((WardrobeEntity) -> Void)?
+
     // MARK: - Private Properties
 
     private let tableView: UITableView
@@ -60,4 +64,9 @@ extension WardrobeAdapter: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension WardrobeAdapter: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        onItemSelect?(items[indexPath.row])
+    }
+
 }

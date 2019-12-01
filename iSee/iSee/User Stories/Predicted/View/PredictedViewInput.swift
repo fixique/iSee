@@ -9,5 +9,5 @@
 import UIKit
 
 protocol PredictedViewInput: class {
-    func setupInitialState(image: UIImage, boxes: [PredictedBoxEntity])
+    func setupInitialState(image: UIImage, boxes: [PredictedBoxEntity], isWardrobe: Bool)
 }

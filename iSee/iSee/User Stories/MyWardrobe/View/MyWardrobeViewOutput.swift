@@ -9,4 +9,5 @@
 protocol MyWardrobeViewOutput {
     func viewLoaded()
     func addToWardrob()
+    func openWardrob(with item: WardrobeEntity)
 }
