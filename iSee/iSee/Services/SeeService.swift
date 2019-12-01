@@ -25,7 +25,7 @@ final class SeeService {
             .process([Keys.image: image64])
     }
 
-    func findSimilar(image64: String, category: String) -> Observer<Void> {
+    func findSimilar(image64: String, category: String) -> Observer<[ClotheItemEntity]> {
         return UrlChainsBuilder()
             .default(with: UrlChainConfigModel(method: .post, route: MainRoute.findSimilar, metadata: ["Content-Type": "application/json"], encoding: .json))
             .process([Keys.image: image64,

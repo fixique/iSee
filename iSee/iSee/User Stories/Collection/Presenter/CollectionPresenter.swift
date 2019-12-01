@@ -39,6 +39,20 @@ extension CollectionPresenter: CollectionViewOutput {
         findSimilar()
     }
 
+    func onItemSelect(item: ClotheItemEntity) {
+        guard let url = URL(string: item.url) else {
+            return
+        }
+        UIApplication.shared.open(url)
+    }
+
+    func onFavoriteSelect(item: ClotheItemEntity) {
+        DataStorage.shared.setFavoriteItem(item: item)
+
+        let favorites = DataStorage.shared.getFavorites()
+        print(favorites)
+    }
+
 }
 
 // MARK: - CollectionModuleInput
@@ -57,8 +71,11 @@ private extension CollectionPresenter {
             }
             let base64String = self.cropedImage.toBase64() ?? ""
 
-            SeeService().findSimilar(image64: base64String, category: self.category).onCompleted { _ in
-
+            SeeService().findSimilar(image64: base64String, category: self.category).onCompleted { clothes in
+                let sortedClothe = clothes.sorted(by: { $0.position < $1.position })
+                DispatchQueue.main.async {
+                    self.view?.setupCollection(with: sortedClothe)
+                }
             }.onError { error in
                 print("Something whent wrong: \(error.localizedDescription)")
             }.defer {

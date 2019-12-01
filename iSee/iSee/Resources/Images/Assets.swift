@@ -18,6 +18,8 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
+  internal static let favoriteSelected = ImageAsset(name: "favoriteSelected")
+  internal static let favoriteUnselected = ImageAsset(name: "favoriteUnselected")
   internal static let lensShutter = ImageAsset(name: "lens-shutter")
   internal static let pointView = ImageAsset(name: "pointView")
   internal static let removeCircle = ImageAsset(name: "remove-circle")

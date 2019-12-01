@@ -8,4 +8,5 @@
 
 protocol CollectionViewInput: StatePresentable {
     func setupInitialState(collectionTitle: String)
+    func setupCollection(with collection: [ClotheItemEntity])
 }

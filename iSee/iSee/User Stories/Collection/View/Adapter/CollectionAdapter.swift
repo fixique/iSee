@@ -16,9 +16,15 @@ final class CollectionAdapter: NSObject {
         static let esitmatedHeight: CGFloat = 164.0
     }
 
+    // MARK: - Properties
+
+    var onItemSelect: ((ClotheItemEntity) -> Void)?
+    var onFavoritesSelect: ((ClotheItemEntity) -> Void)?
+
     // MARK: - Private Properties
 
     private let tableView: UITableView
+    private var items: [ClotheItemEntity] = []
 
     // MARK: - Initialization
 
@@ -29,6 +35,12 @@ final class CollectionAdapter: NSObject {
         self.tableView = tableView
     }
 
+    // MARK: - Internal Methods
+
+    func configureCollection(with items: [ClotheItemEntity]) {
+        self.items = items
+        self.tableView.reloadData()
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -36,12 +48,19 @@ final class CollectionAdapter: NSObject {
 extension CollectionAdapter: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return items.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionItemCell.nameOfClass) as? CollectionItemCell else {
             return UITableViewCell()
+        }
+        cell.configure(with: items[indexPath.row])
+        cell.onFavoriteSelect = { [weak self] in
+            guard let item = self?.items[indexPath.row] else {
+                return
+            }
+            self?.onFavoritesSelect?(item)
         }
         return cell
     }
@@ -51,4 +70,9 @@ extension CollectionAdapter: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension CollectionAdapter: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        onItemSelect?(items[indexPath.row])
+    }
+
 }

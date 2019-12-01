@@ -47,6 +47,10 @@ extension CollectionViewController: CollectionViewInput {
         configureAdapter()
     }
 
+    func setupCollection(with collection: [ClotheItemEntity]) {
+        adapter?.configureCollection(with: collection)
+    }
+
 }
 
 // MARK: - Configuration
@@ -58,7 +62,7 @@ private extension CollectionViewController {
         grabberView.layer.cornerRadius = 2
         grabberView.layer.masksToBounds = true
 
-        topContainerView.backgroundColor = UIColor.white.withAlphaComponent(0.6)
+        topContainerView.backgroundColor = UIColor.white.withAlphaComponent(0.95)
 
         collectionTitle.font = UIFont.systemFont(ofSize: 24.0, weight: .heavy)
         collectionTitle.text = title.lowercased().capitalizingFirstLetter()
@@ -67,6 +71,12 @@ private extension CollectionViewController {
     func configureAdapter() {
         tableView.contentInset = UIEdgeInsets(top: 88.0, left: 0, bottom: 0, right: 0)
         adapter = CollectionAdapter(with: tableView)
+        adapter?.onItemSelect = { [weak self] item in
+            self?.output?.onItemSelect(item: item)
+        }
+        adapter?.onFavoritesSelect = { [weak self] item in
+            self?.output?.onFavoriteSelect(item: item)
+        }
         tableView.dataSource = adapter
         tableView.delegate = adapter
         tableView.reloadData()
