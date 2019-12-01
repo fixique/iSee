@@ -7,5 +7,5 @@
 //
 
 protocol CollectionViewOutput {
-
+    func viewLoaded()
 }

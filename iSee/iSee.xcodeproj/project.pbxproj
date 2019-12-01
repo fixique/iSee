@@ -79,6 +79,9 @@
 		F5D27C6A2392CB0F00D2E5F3 /* PredictedBoxEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C692392CB0F00D2E5F3 /* PredictedBoxEntity.swift */; };
 		F5D27C6C2392F0EF00D2E5F3 /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C6B2392F0EF00D2E5F3 /* PointView.swift */; };
 		F5D27C6E2393224A00D2E5F3 /* CollectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C6D2393224A00D2E5F3 /* CollectionButton.swift */; };
+		F5D27C7323939B9700D2E5F3 /* CollectionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C7123939B9700D2E5F3 /* CollectionItemCell.swift */; };
+		F5D27C7623939EFA00D2E5F3 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C7523939EFA00D2E5F3 /* UITableView.swift */; };
+		F5D27C7823939F6C00D2E5F3 /* CollectionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C7723939F6C00D2E5F3 /* CollectionAdapter.swift */; };
 		FDCF912F28180E7B8BC93262 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F54B6A9C37C1FA58E6623A /* CollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -187,6 +190,9 @@
 		F5D27C692392CB0F00D2E5F3 /* PredictedBoxEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictedBoxEntity.swift; sourceTree = "<group>"; };
 		F5D27C6B2392F0EF00D2E5F3 /* PointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
 		F5D27C6D2393224A00D2E5F3 /* CollectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionButton.swift; sourceTree = "<group>"; };
+		F5D27C7123939B9700D2E5F3 /* CollectionItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionItemCell.swift; sourceTree = "<group>"; };
+		F5D27C7523939EFA00D2E5F3 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		F5D27C7723939F6C00D2E5F3 /* CollectionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +250,7 @@
 		29237FED0D7CC4F6EA58090E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F5D27C6F23939B6C00D2E5F3 /* Adapter */,
 				D5F54B6A9C37C1FA58E6623A /* CollectionViewController.swift */,
 				8C2C96ABD90106F283CEA030 /* CollectionViewController.storyboard */,
 				E1E3F33AB5CA85E443D5EAB2 /* CollectionViewInput.swift */,
@@ -685,6 +692,7 @@
 			children = (
 				F55F5CEF2392910000890055 /* UIView.swift */,
 				F5D27C652392BD3500D2E5F3 /* UIImage.swift */,
+				F5D27C7523939EFA00D2E5F3 /* UITableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -769,6 +777,23 @@
 				F5D27C612392B7E800D2E5F3 /* MainRoute.swift */,
 			);
 			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		F5D27C6F23939B6C00D2E5F3 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				F5D27C7023939B7500D2E5F3 /* Cells */,
+				F5D27C7723939F6C00D2E5F3 /* CollectionAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		F5D27C7023939B7500D2E5F3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F5D27C7123939B9700D2E5F3 /* CollectionItemCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F8EA1F2672B794CC454A5575 /* Presenter */ = {
@@ -1025,8 +1050,10 @@
 				F55F5CEE23928F8E00890055 /* LoaderView.swift in Sources */,
 				F5D27C682392CA6F00D2E5F3 /* PredictedBoxEntry.swift in Sources */,
 				58569EB1E42AED7422200145 /* CameraViewInput.swift in Sources */,
+				F5D27C7323939B9700D2E5F3 /* CollectionItemCell.swift in Sources */,
 				F55F5CF52392A3E600890055 /* PreviewImageView.swift in Sources */,
 				F5D27C6A2392CB0F00D2E5F3 /* PredictedBoxEntity.swift in Sources */,
+				F5D27C7623939EFA00D2E5F3 /* UITableView.swift in Sources */,
 				F5D27C662392BD3500D2E5F3 /* UIImage.swift in Sources */,
 				F55F5CF02392910000890055 /* UIView.swift in Sources */,
 				F5D27C622392B7E800D2E5F3 /* MainRoute.swift in Sources */,
@@ -1034,6 +1061,7 @@
 				DE4317636762FFC01E0BC884 /* PredictedModuleConfigurator.swift in Sources */,
 				F5D27C6E2393224A00D2E5F3 /* CollectionButton.swift in Sources */,
 				A69B1C7516222A9EBD416520 /* PredictedRouter.swift in Sources */,
+				F5D27C7823939F6C00D2E5F3 /* CollectionAdapter.swift in Sources */,
 				1333D7BA8D6CA9C74D0E3649 /* PredictedRouterInput.swift in Sources */,
 				1EB4C49286D1DA4335316335 /* PredictedPresenter.swift in Sources */,
 				9E7A1DD95353E5BA6ECD4AD7 /* PredictedModuleInput.swift in Sources */,

@@ -6,7 +6,7 @@
 //  Copyright © 2019 Vlad. All rights reserved.
 //
 
-final class CollectionPresenter: CollectionViewOutput, CollectionModuleInput {
+final class CollectionPresenter {
 
     // MARK: - Properties
 
@@ -14,8 +14,18 @@ final class CollectionPresenter: CollectionViewOutput, CollectionModuleInput {
     var router: CollectionRouterInput?
     var output: CollectionModuleOutput?
 
-    // MARK: - CollectionViewOutput
+}
 
-    // MARK: - CollectionModuleInput
+// MARK: - CollectionViewOutput
+
+extension CollectionPresenter: CollectionViewOutput {
+
+    func viewLoaded() {
+        view?.setupInitialState()
+    }
 
 }
+
+// MARK: - CollectionModuleInput
+
+extension CollectionPresenter: CollectionModuleInput {}
