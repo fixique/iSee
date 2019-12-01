@@ -48,11 +48,11 @@ extension CollectionPresenter: CollectionViewOutput {
 
     func onFavoriteSelect(item: ClotheItemEntity) {
         DataStorage.shared.setFavoriteItem(item: item)
-
-        let favorites = DataStorage.shared.getFavorites()
-        print(favorites)
     }
 
+    func onFavoriteUnselect(item: ClotheItemEntity) {
+        DataStorage.shared.removeFavorites(item)
+    }
 }
 
 // MARK: - CollectionModuleInput

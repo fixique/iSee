@@ -10,4 +10,5 @@ protocol CollectionViewOutput {
     func viewLoaded()
     func onItemSelect(item: ClotheItemEntity)
     func onFavoriteSelect(item: ClotheItemEntity)
+    func onFavoriteUnselect(item: ClotheItemEntity)
 }

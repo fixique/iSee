@@ -6,6 +6,8 @@
 //  Copyright © 2019 Vlad. All rights reserved.
 //
 
+import UIKit
+
 final class MyFavoritesPresenter {
 
     // MARK: - Properties
@@ -23,6 +25,19 @@ extension MyFavoritesPresenter: MyFavoritesViewOutput {
     func viewLoaded() {
         let favorites = DataStorage.shared.getFavorites()
         view?.setupInitialState(with: favorites)
+    }
+
+    func onItemSelect(item: ClotheItemEntity) {
+        guard let url = URL(string: item.url) else {
+            return
+        }
+        UIApplication.shared.open(url)
+    }
+
+    func onFavoriteUnselect(item: ClotheItemEntity) {
+        DataStorage.shared.removeFavorites(item)
+        let favorites = DataStorage.shared.getFavorites()
+        view?.update(with: favorites)
     }
 
 }

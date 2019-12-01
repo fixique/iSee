@@ -22,6 +22,7 @@ final class CollectionItemCell: UITableViewCell {
     // MARK: - Properties
 
     var onFavoriteSelect: EmptyClosure?
+    var onFavoriteUnselect: EmptyClosure?
 
     // MARK: - UITableViewCell
 
@@ -84,11 +85,12 @@ private extension CollectionItemCell {
 private extension CollectionItemCell {
 
     @IBAction func favoriteAction(_ sender: Any) {
-        guard !favoriteButton.isSelected else {
-            return
+        if favoriteButton.isSelected {
+            onFavoriteUnselect?()
+        } else {
+            onFavoriteSelect?()
         }
         favoriteButton.isSelected.toggle()
-        onFavoriteSelect?()
     }
 
 }

@@ -55,6 +55,17 @@ final class DataStorage {
         return favoritesEntity.contains(where: { $0.id == item.id })
     }
 
+    func removeFavorites(_ item: ClotheItemEntity) {
+        var favoritesEntity = getFavorites()
+        guard let findedIndex = favoritesEntity.firstIndex(where: { $0.id == item.id}) else {
+            return
+        }
+        favoritesEntity.remove(at: findedIndex)
+        let favoritesViewModel = favoritesEntity.map({ ClotheItemViewModel(with: $0) })
+        let favoritesData = NSKeyedArchiver.archivedData(withRootObject: favoritesViewModel)
+        set(data: favoritesData, forKey: Keys.favoriteList)
+    }
+
 }
 
 // MARK: - Private Properties

@@ -8,4 +8,6 @@
 
 protocol MyFavoritesViewOutput {
     func viewLoaded()
+    func onItemSelect(item: ClotheItemEntity)
+    func onFavoriteUnselect(item: ClotheItemEntity)
 }

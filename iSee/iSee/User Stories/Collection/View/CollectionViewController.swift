@@ -77,6 +77,9 @@ private extension CollectionViewController {
         adapter?.onFavoritesSelect = { [weak self] item in
             self?.output?.onFavoriteSelect(item: item)
         }
+        adapter?.onFavoritesUnselect = { [weak self] item in
+            self?.output?.onFavoriteUnselect(item: item)
+        }
         tableView.dataSource = adapter
         tableView.delegate = adapter
         tableView.reloadData()

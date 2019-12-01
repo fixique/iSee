@@ -8,4 +8,5 @@
 
 protocol MyFavoritesViewInput: class {
     func setupInitialState(with items: [ClotheItemEntity])
+    func update(with items: [ClotheItemEntity])
 }

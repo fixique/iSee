@@ -20,6 +20,7 @@ final class CollectionAdapter: NSObject {
 
     var onItemSelect: ((ClotheItemEntity) -> Void)?
     var onFavoritesSelect: ((ClotheItemEntity) -> Void)?
+    var onFavoritesUnselect: ((ClotheItemEntity) -> Void)?
 
     // MARK: - Private Properties
 
@@ -61,6 +62,12 @@ extension CollectionAdapter: UITableViewDataSource {
                 return
             }
             self?.onFavoritesSelect?(item)
+        }
+        cell.onFavoriteUnselect = { [weak self] in
+            guard let item = self?.items[indexPath.row] else {
+                return
+            }
+            self?.onFavoritesUnselect?(item)
         }
         return cell
     }

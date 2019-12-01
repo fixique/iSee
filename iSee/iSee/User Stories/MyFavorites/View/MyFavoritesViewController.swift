@@ -47,6 +47,10 @@ extension MyFavoritesViewController: MyFavoritesViewInput {
         configureAdapter(items: items)
     }
 
+    func update(with items: [ClotheItemEntity]) {
+        adapter?.configureCollection(with: items)
+    }
+
 }
 
 // MARK: - Configuration
@@ -69,10 +73,10 @@ private extension MyFavoritesViewController {
         adapter = CollectionAdapter(with: tableView)
         adapter?.configureCollection(with: items)
         adapter?.onItemSelect = { [weak self] item in
-//            self?.output?.onItemSelect(item: item)
+            self?.output?.onItemSelect(item: item)
         }
-        adapter?.onFavoritesSelect = { [weak self] item in
-//            self?.output?.onFavoriteSelect(item: item)
+        adapter?.onFavoritesUnselect = { [weak self] item in
+            self?.output?.onFavoriteUnselect(item: item)
         }
         tableView.dataSource = adapter
         tableView.delegate = adapter
