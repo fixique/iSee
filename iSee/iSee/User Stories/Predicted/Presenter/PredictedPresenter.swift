@@ -54,6 +54,7 @@ extension PredictedPresenter: PredictedViewOutput {
         guard !isWasSaved else {
             return
         }
+        isWasSaved = true
         let wardrobeItem = WardrobeEntity(name: name, image: image, boxes: boxes)
         DataStorage.shared.setWardrobe(item: wardrobeItem)
     }

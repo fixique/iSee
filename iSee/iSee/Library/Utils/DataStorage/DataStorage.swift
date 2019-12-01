@@ -83,6 +83,8 @@ final class DataStorage {
     }
 
     func clear() {
+        keychain.delete(Keys.favoriteList)
+        keychain.delete(Keys.wardrobeList)
         keychain.clear()
     }
 
