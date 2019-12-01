@@ -22,6 +22,13 @@ extension MyWardrobePresenter: MyWardrobeViewOutput {
 
     func viewLoaded() {
         view?.setupInitialState()
+        let wardrobe = DataStorage.shared.getWardrobe()
+        view?.update(with: wardrobe)
+    }
+
+    func addToWardrob() {
+        router?.close()
+        output?.addToWardrobe()
     }
 
 }

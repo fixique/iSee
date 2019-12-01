@@ -8,4 +8,5 @@
 
 protocol MyWardrobeViewOutput {
     func viewLoaded()
+    func addToWardrob()
 }

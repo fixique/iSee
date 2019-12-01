@@ -20,6 +20,14 @@ final class MyWardrobeViewController: UIViewController, ModuleTransitionable {
 
     var output: MyWardrobeViewOutput?
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
+    // MARK: - Private Properties
+
+    private var adapter: WardrobeAdapter?
+
     // MARK: - UIViewController
 
     override func viewDidLoad() {
@@ -35,10 +43,11 @@ extension MyWardrobeViewController: MyWardrobeViewInput {
 
     func setupInitialState() {
         configureCollectionTitle()
+        configureAdapter()
     }
 
     func update(with items: [WardrobeEntity]) {
-
+        adapter?.configure(with: items)
     }
 
 }
@@ -54,6 +63,14 @@ private extension MyWardrobeViewController {
         screenTitle.text = "My wardrobe".lowercased().capitalizingFirstLetter()
     }
 
+    func configureAdapter() {
+        tableView.contentInset = UIEdgeInsets(top: 88.0, left: 0, bottom: 0, right: 0)
+        adapter = WardrobeAdapter(with: tableView)
+        tableView.dataSource = adapter
+        tableView.delegate = adapter
+        tableView.reloadData()
+    }
+
 }
 
 // MARK: - Actions
@@ -61,7 +78,7 @@ private extension MyWardrobeViewController {
 private extension MyWardrobeViewController {
 
     @IBAction func addToWardrobe(_ sender: Any) {
-
+        output?.addToWardrob()
     }
 
 }

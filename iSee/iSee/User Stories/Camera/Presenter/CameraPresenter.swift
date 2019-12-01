@@ -49,7 +49,7 @@ extension CameraPresenter: CameraViewOutput {
     }
 
     func openWardrobe() {
-        router?.openWardrobe()
+        router?.openWardrobe(output: self)
     }
 
     func openLooks() {
@@ -63,6 +63,14 @@ extension CameraPresenter: CameraViewOutput {
 extension CameraPresenter: PredictedModuleOutput {
 
     func onClose() {
+        view?.setState(.lensOpen)
+    }
+
+}
+
+extension CameraPresenter: MyWardrobeModuleOutput {
+
+    func addToWardrobe() {
         view?.setState(.lensOpen)
     }
 

@@ -83,6 +83,8 @@
 		F55F5CF02392910000890055 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F5CEF2392910000890055 /* UIView.swift */; };
 		F55F5CF2239291E000890055 /* StatePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F5CF1239291E000890055 /* StatePresentable.swift */; };
 		F55F5CF52392A3E600890055 /* PreviewImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F5CF42392A3E600890055 /* PreviewImageView.swift */; };
+		F591B19823943B4F00A9283F /* WardrobeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591B19723943B4E00A9283F /* WardrobeCell.swift */; };
+		F591B19A23943CB000A9283F /* WardrobeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591B19923943CB000A9283F /* WardrobeAdapter.swift */; };
 		F598B2EB239198BA00AB7B55 /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EA239198BA00AB7B55 /* fastlane */; };
 		F598B2ED239198BA00AB7B55 /* ci in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EC239198BA00AB7B55 /* ci */; };
 		F598B2EF239198BA00AB7B55 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F598B2EE239198BA00AB7B55 /* Podfile */; };
@@ -209,6 +211,8 @@
 		F55F5CEF2392910000890055 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		F55F5CF1239291E000890055 /* StatePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePresentable.swift; sourceTree = "<group>"; };
 		F55F5CF42392A3E600890055 /* PreviewImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewImageView.swift; sourceTree = "<group>"; };
+		F591B19723943B4E00A9283F /* WardrobeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeCell.swift; sourceTree = "<group>"; };
+		F591B19923943CB000A9283F /* WardrobeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeAdapter.swift; sourceTree = "<group>"; };
 		F598B2E6239198BA00AB7B55 /* SHKAF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHKAF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F598B2EA239198BA00AB7B55 /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fastlane; path = ../../fastlane; sourceTree = "<group>"; };
 		F598B2EC239198BA00AB7B55 /* ci */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ci; path = ../../ci; sourceTree = "<group>"; };
@@ -503,6 +507,7 @@
 		7B45831A4BBA3762355E571D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F591B19623943B3A00A9283F /* Adapter */,
 				7DB91FF7E109776A456C0B88 /* MyWardrobeViewController.swift */,
 				9949A4C18A7D981E89AE4929 /* MyWardrobeViewController.storyboard */,
 				5299A2819379C8457C76550F /* MyWardrobeViewInput.swift */,
@@ -753,6 +758,15 @@
 				F5D27C6B2392F0EF00D2E5F3 /* PointView.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		F591B19623943B3A00A9283F /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				F591B19723943B4E00A9283F /* WardrobeCell.swift */,
+				F591B19923943CB000A9283F /* WardrobeAdapter.swift */,
+			);
+			path = Adapter;
 			sourceTree = "<group>";
 		};
 		F598B2DB239198BA00AB7B55 = {
@@ -1345,6 +1359,7 @@
 				DF0C556878A3848C046AB29F /* PredictedViewController.swift in Sources */,
 				3BA73E89CFA57CB2237C1973 /* PredictedViewInput.swift in Sources */,
 				CB374865115B914506509DA7 /* PredictedViewOutput.swift in Sources */,
+				F591B19A23943CB000A9283F /* WardrobeAdapter.swift in Sources */,
 				2805DBE5439098F7D16D476D /* CollectionModuleConfigurator.swift in Sources */,
 				8B934DD17CFDB163C3261B25 /* CollectionRouter.swift in Sources */,
 				22833E450B8F27F10D5E85F1 /* CollectionRouterInput.swift in Sources */,
@@ -1374,6 +1389,7 @@
 				EB5FFD2265EEC517F79C6114 /* MyWardrobeViewController.swift in Sources */,
 				DA25C93E32D2ED2165B88A74 /* MyWardrobeViewInput.swift in Sources */,
 				6306801551BD2F088D11D38E /* MyWardrobeViewOutput.swift in Sources */,
+				F591B19823943B4F00A9283F /* WardrobeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

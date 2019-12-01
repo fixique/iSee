@@ -14,6 +14,10 @@ final class MyWardrobeRouter: MyWardrobeRouterInput {
 
     weak var view: ModuleTransitionable?
 
-	// MARK: - MyWardrobeRouterInput
+	// MARK: - MyWardrobeRouterInput\
+
+    func close() {
+        view?.dismissView(animated: true, completion: nil)
+    }
 
 }

@@ -7,5 +7,5 @@
 //
 
 protocol MyWardrobeModuleOutput: class {
-
+    func addToWardrobe()
 }
