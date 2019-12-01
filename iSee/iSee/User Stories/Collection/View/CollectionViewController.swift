@@ -21,6 +21,10 @@ final class CollectionViewController: UIViewController, ModuleTransitionable {
 
     var output: CollectionViewOutput?
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     // MARK: - Private Properties
 
     private var adapter: CollectionAdapter?

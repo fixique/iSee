@@ -38,6 +38,10 @@ final class CameraViewController: UIViewController, ModuleTransitionable, StateP
 
     var output: CameraViewOutput?
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     // MARK: - Private Properties
 
     private var captureSession: AVCaptureSession?

@@ -21,6 +21,10 @@ final class PredictedViewController: UIViewController, ModuleTransitionable {
 
     var output: PredictedViewOutput?
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     // MARK: - Private Properties
 
     private var pointViews: [CommonButton] = []
