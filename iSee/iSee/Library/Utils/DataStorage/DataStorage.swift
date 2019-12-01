@@ -50,6 +50,11 @@ final class DataStorage {
         return favoriteArray?.compactMap({ ClotheItemEntity(with: $0) }) ?? []
     }
 
+    func isFavorite(_ item: ClotheItemEntity) -> Bool {
+        let favoritesEntity = getFavorites()
+        return favoritesEntity.contains(where: { $0.id == item.id })
+    }
+
 }
 
 // MARK: - Private Properties

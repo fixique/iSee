@@ -38,6 +38,7 @@ final class CollectionItemCell: UITableViewCell {
         itemShop.text = item.source
         previewImageView.image = nil
         loadImage(with: item.imageUrl)
+        favoriteButton.isSelected = DataStorage.shared.isFavorite(item)
     }
 
 }
