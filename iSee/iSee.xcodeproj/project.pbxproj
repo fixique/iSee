@@ -180,7 +180,7 @@
 		F55F5CEF2392910000890055 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		F55F5CF1239291E000890055 /* StatePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePresentable.swift; sourceTree = "<group>"; };
 		F55F5CF42392A3E600890055 /* PreviewImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewImageView.swift; sourceTree = "<group>"; };
-		F598B2E6239198BA00AB7B55 /* iSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F598B2E6239198BA00AB7B55 /* SHKAF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHKAF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F598B2EA239198BA00AB7B55 /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fastlane; path = ../../fastlane; sourceTree = "<group>"; };
 		F598B2EC239198BA00AB7B55 /* ci */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ci; path = ../../ci; sourceTree = "<group>"; };
 		F598B2EE239198BA00AB7B55 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../../Podfile; sourceTree = "<group>"; };
@@ -310,7 +310,6 @@
 			children = (
 				77A1CB52A61A66A9A080A071 /* MyFavoritesModuleConfigurator.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -319,7 +318,6 @@
 			children = (
 				DADAD1AF1192342DFFDC4697 /* MyFavoritesViewTests.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -375,7 +373,6 @@
 				A0FB25BAA7A0233E6F7A2F7E /* Presenter */,
 				355FBC07499E54835527BC45 /* View */,
 			);
-			name = MyFavorites;
 			path = MyFavorites;
 			sourceTree = "<group>";
 		};
@@ -412,7 +409,6 @@
 				2E8548078B65C60244EDCDF4 /* MyFavoritesRouter.swift */,
 				AE39CF183D470D489A380D07 /* MyFavoritesRouterInput.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -434,7 +430,6 @@
 				E91B7B3571DB51B2F4CA2B31 /* MyFavoritesModuleInput.swift */,
 				4E0100B2CC8EE70488C3F5C2 /* MyFavoritesModuleOutput.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -446,7 +441,6 @@
 				74F1E228F4B6ACFBA326A61F /* Presenter */,
 				AC3DCF04C5801A12171AA9B4 /* View */,
 			);
-			name = MyFavorites;
 			path = MyFavorites;
 			sourceTree = "<group>";
 		};
@@ -463,7 +457,6 @@
 			children = (
 				07B09508CAC8E1E009CB7AC4 /* MyFavoritesRouterTests.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -499,7 +492,6 @@
 			children = (
 				5EA5BE656C6DA3A1F9C4EC7C /* MyFavoritesPresenterTests.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -511,7 +503,6 @@
 				D32FAC75C4F47A79443EA5F3 /* MyFavoritesViewInput.swift */,
 				E832A3C4D9A4C7F5BAEA094B /* MyFavoritesViewOutput.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -576,7 +567,6 @@
 			children = (
 				3178BEDF45A61A0D124BBFF2 /* MyFavoritesModuleConfiguratorTests.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -667,7 +657,7 @@
 		F598B2E7239198BA00AB7B55 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F598B2E6239198BA00AB7B55 /* iSee.app */,
+				F598B2E6239198BA00AB7B55 /* SHKAF.app */,
 				F598B334239198BB00AB7B55 /* iSeeTests.xctest */,
 			);
 			name = Products;
@@ -1013,7 +1003,7 @@
 			);
 			name = iSee;
 			productName = iSee;
-			productReference = F598B2E6239198BA00AB7B55 /* iSee.app */;
+			productReference = F598B2E6239198BA00AB7B55 /* SHKAF.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F598B333239198BB00AB7B55 /* iSeeTests */ = {
@@ -1415,7 +1405,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = DataGym.iSee;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SHKAF;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1435,7 +1425,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = DataGym.iSee;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SHKAF;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
