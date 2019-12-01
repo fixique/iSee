@@ -38,8 +38,8 @@ final class CollectionViewController: UIViewController, ModuleTransitionable {
 
 extension CollectionViewController: CollectionViewInput {
 
-    func setupInitialState() {
-        configureCollectionTitle()
+    func setupInitialState(collectionTitle: String) {
+        configureCollectionTitle(with: collectionTitle)
         configureAdapter()
     }
 
@@ -49,7 +49,7 @@ extension CollectionViewController: CollectionViewInput {
 
 private extension CollectionViewController {
 
-    func configureCollectionTitle() {
+    func configureCollectionTitle(with title: String) {
         grabberView.backgroundColor = UIColor(red: 224.0 / 255.0, green: 224.0 / 255.0, blue: 224.0 / 255.0, alpha: 1.0)
         grabberView.layer.cornerRadius = 2
         grabberView.layer.masksToBounds = true
@@ -57,7 +57,7 @@ private extension CollectionViewController {
         topContainerView.backgroundColor = UIColor.white.withAlphaComponent(0.6)
 
         collectionTitle.font = UIFont.systemFont(ofSize: 24.0, weight: .heavy)
-        collectionTitle.text = "T-shirt, black"
+        collectionTitle.text = title.lowercased().capitalizingFirstLetter()
     }
 
     func configureAdapter() {

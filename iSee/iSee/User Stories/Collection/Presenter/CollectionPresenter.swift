@@ -6,6 +6,8 @@
 //  Copyright © 2019 Vlad. All rights reserved.
 //
 
+import UIKit
+
 final class CollectionPresenter {
 
     // MARK: - Properties
@@ -14,6 +16,18 @@ final class CollectionPresenter {
     var router: CollectionRouterInput?
     var output: CollectionModuleOutput?
 
+    // MARK: - Private Properties
+
+    private let cropedImage: UIImage
+    private let category: String
+
+    // MARK: - Initialization
+
+    init(cropedImage: UIImage, category: String) {
+        self.cropedImage = cropedImage
+        self.category = category
+    }
+
 }
 
 // MARK: - CollectionViewOutput
@@ -21,7 +35,7 @@ final class CollectionPresenter {
 extension CollectionPresenter: CollectionViewOutput {
 
     func viewLoaded() {
-        view?.setupInitialState()
+        view?.setupInitialState(collectionTitle: category)
     }
 
 }

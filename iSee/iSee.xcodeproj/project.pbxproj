@@ -82,6 +82,7 @@
 		F5D27C7323939B9700D2E5F3 /* CollectionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C7123939B9700D2E5F3 /* CollectionItemCell.swift */; };
 		F5D27C7623939EFA00D2E5F3 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C7523939EFA00D2E5F3 /* UITableView.swift */; };
 		F5D27C7823939F6C00D2E5F3 /* CollectionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C7723939F6C00D2E5F3 /* CollectionAdapter.swift */; };
+		F5D27C7A2393AAA200D2E5F3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D27C792393AAA200D2E5F3 /* String.swift */; };
 		FDCF912F28180E7B8BC93262 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F54B6A9C37C1FA58E6623A /* CollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -193,6 +194,7 @@
 		F5D27C7123939B9700D2E5F3 /* CollectionItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionItemCell.swift; sourceTree = "<group>"; };
 		F5D27C7523939EFA00D2E5F3 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		F5D27C7723939F6C00D2E5F3 /* CollectionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAdapter.swift; sourceTree = "<group>"; };
+		F5D27C792393AAA200D2E5F3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -693,6 +695,7 @@
 				F55F5CEF2392910000890055 /* UIView.swift */,
 				F5D27C652392BD3500D2E5F3 /* UIImage.swift */,
 				F5D27C7523939EFA00D2E5F3 /* UITableView.swift */,
+				F5D27C792393AAA200D2E5F3 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1048,6 +1051,7 @@
 				3261E9D49AFAF425D223727C /* CameraModuleOutput.swift in Sources */,
 				3A5844C8E11D7FB9FE8DCDF4 /* CameraViewController.swift in Sources */,
 				F55F5CEE23928F8E00890055 /* LoaderView.swift in Sources */,
+				F5D27C7A2393AAA200D2E5F3 /* String.swift in Sources */,
 				F5D27C682392CA6F00D2E5F3 /* PredictedBoxEntry.swift in Sources */,
 				58569EB1E42AED7422200145 /* CameraViewInput.swift in Sources */,
 				F5D27C7323939B9700D2E5F3 /* CollectionItemCell.swift in Sources */,

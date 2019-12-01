@@ -7,5 +7,5 @@
 //
 
 protocol CollectionViewInput: class {
-    func setupInitialState()
+    func setupInitialState(collectionTitle: String)
 }

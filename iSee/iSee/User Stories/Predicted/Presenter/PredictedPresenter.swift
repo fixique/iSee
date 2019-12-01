@@ -43,8 +43,8 @@ extension PredictedPresenter: PredictedViewOutput {
         router?.close()
     }
 
-    func clothesPicked(_ image: UIImage) {
-        router?.openCollection()
+    func clothesPicked(_ image: UIImage, category: String) {
+        router?.openCollection(image, category: category)
     }
 
 }

@@ -22,8 +22,8 @@ final class PredictedRouter: PredictedRouterInput {
         view?.dismissView(animated: true, completion: nil)
     }
 
-    func openCollection() {
-        let collectionVc = CollectionModuleConfigurator().configure()
+    func openCollection(_ image: UIImage, category: String) {
+        let collectionVc = CollectionModuleConfigurator().configure(image: image, category: category)
         view?.presentModule(collectionVc, animated: true, completion: nil)
     }
 

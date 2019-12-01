@@ -6,11 +6,11 @@
 //  Copyright © 2019 Vlad. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol PredictedRouterInput {
 
     func close()
 
-    func openCollection()
+    func openCollection(_ image: UIImage, category: String)
 }

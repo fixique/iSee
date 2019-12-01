@@ -12,12 +12,12 @@ final class CollectionModuleConfigurator {
 
     // MARK: - Internal methods
 
-    func configure(output: CollectionModuleOutput? = nil) -> CollectionViewController {
+    func configure(image: UIImage, category: String, output: CollectionModuleOutput? = nil) -> CollectionViewController {
         guard let view = UIStoryboard(name: String(describing: CollectionViewController.self),
                                       bundle: Bundle.main).instantiateInitialViewController() as? CollectionViewController else {
             fatalError("Can't load CollectionViewController from storyboard, check that controller is initial view controller")
         }
-        let presenter = CollectionPresenter()
+        let presenter = CollectionPresenter(cropedImage: image, category: category)
         let router = CollectionRouter()
 
         presenter.view = view

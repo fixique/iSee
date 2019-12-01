@@ -11,5 +11,5 @@ import UIKit
 protocol PredictedViewOutput {
     func viewLoaded()
     func close()
-    func clothesPicked(_ image: UIImage)
+    func clothesPicked(_ image: UIImage, category: String)
 }
