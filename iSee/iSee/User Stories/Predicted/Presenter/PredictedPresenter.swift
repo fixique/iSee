@@ -23,7 +23,6 @@ final class PredictedPresenter {
     private let isWardrobe: Bool
     private var isWasSaved = false
 
-
     // MARK: - Initialization
 
     init(image: UIImage, boxes: [PredictedBoxEntity], isWardrobe: Bool) {

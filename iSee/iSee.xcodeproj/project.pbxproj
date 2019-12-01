@@ -17,18 +17,26 @@
 		14EAAEFF4DEEF2F94B18B11F /* CameraPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B018000517C03BF411B4C0 /* CameraPresenter.swift */; };
 		1E0C27D7790082494634107D /* PredictedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9D068BE00907F402C30DF4 /* PredictedPresenterTests.swift */; };
 		1EB4C49286D1DA4335316335 /* PredictedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB1A3B69009D7CB8994E2F /* PredictedPresenter.swift */; };
+		1F28C10A534418F750A45A72 /* LooksModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BA014CE76042B7456AE341 /* LooksModuleInput.swift */; };
 		22833E450B8F27F10D5E85F1 /* CollectionRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C589D24F4992D871DCC7DC2 /* CollectionRouterInput.swift */; };
+		22F8018033CB161D1D5DE737 /* LooksRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2686CEB94ED9B9400A60E2 /* LooksRouterInput.swift */; };
 		27CD1EE88699E4748B5C09FE /* CameraViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E92F314072FF3382FDBB75 /* CameraViewController.storyboard */; };
 		2805DBE5439098F7D16D476D /* CollectionModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470EED1DCD11B82F91BF47BA /* CollectionModuleConfigurator.swift */; };
+		2A9730E09637FD2A181B6D37 /* LooksPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535434EBDD3F72C3B9B8E186 /* LooksPresenterTests.swift */; };
 		3261E9D49AFAF425D223727C /* CameraModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E9E033166A475AE035F09A /* CameraModuleOutput.swift */; };
+		32A7D56533359F36C05CA3B1 /* LooksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D44E7FF0EA62CB4B8C31C8 /* LooksPresenter.swift */; };
 		37B1DF5505D422C8EE6545C0 /* CameraModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D865D9019422E36F936BF /* CameraModuleInput.swift */; };
+		39070D3498D2B51DACFD3C26 /* LooksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2883E49D1B62F9E76E6DB180 /* LooksRouter.swift */; };
 		3A5844C8E11D7FB9FE8DCDF4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7331705952103BACED904E2D /* CameraViewController.swift */; };
 		3BA73E89CFA57CB2237C1973 /* PredictedViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFD20C8C8D42E4AF8308FB0 /* PredictedViewInput.swift */; };
 		3BDF52A2E65A0D8B2236EB01 /* CollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C010F9EF46D482D94E6385A3 /* CollectionViewTests.swift */; };
 		403D6D11FCFAA5619759E569 /* MyFavoritesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5BE656C6DA3A1F9C4EC7C /* MyFavoritesPresenterTests.swift */; };
 		40A8E1C64EFA0AB4B093655E /* MyFavoritesModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0100B2CC8EE70488C3F5C2 /* MyFavoritesModuleOutput.swift */; };
 		44A895EE07139020A8CD467D /* MyFavoritesViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832A3C4D9A4C7F5BAEA094B /* MyFavoritesViewOutput.swift */; };
+		44B6FFC0F70CB8C66AF0AF57 /* LooksModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0139E57FAF70061F00DA23 /* LooksModuleConfiguratorTests.swift */; };
+		45ACFD9CF017B44A7AC65848 /* LooksModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA37C02644EBCF314252B28 /* LooksModuleOutput.swift */; };
 		4A3BD0C1B1855D4E2C32B886 /* MyFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F625449AEEE6C69880F8AD5 /* MyFavoritesViewController.swift */; };
+		4BB067CEFE671A341CED0569 /* LooksRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB8A00D867147409111CCE /* LooksRouterTests.swift */; };
 		4BB8A8A2AFC4FC047A085F63 /* MyWardrobeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9949A4C18A7D981E89AE4929 /* MyWardrobeViewController.storyboard */; };
 		4EC9FC3ADD85D9A26EEB03D4 /* CameraPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FA75E891F9C79AB75E043 /* CameraPresenterTests.swift */; };
 		4F4DED865BD1330378BD9B38 /* MyWardrobeModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF791246AD3C09ED77B5034E /* MyWardrobeModuleConfigurator.swift */; };
@@ -41,12 +49,15 @@
 		64842AF3E3B0F5CA5E31557C /* MyFavoritesViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADAD1AF1192342DFFDC4697 /* MyFavoritesViewTests.swift */; };
 		6923A47E37CB717FDA529D92 /* CollectionViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E3F33AB5CA85E443D5EAB2 /* CollectionViewInput.swift */; };
 		6A6F2B15E54215F9B6A1F410 /* MyFavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C735E86656FFF466601E0E /* MyFavoritesPresenter.swift */; };
+		6B18659EACE6CAD1D774B500 /* LooksViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830EE1491907506ABF107137 /* LooksViewInput.swift */; };
 		7345C954CCB65DE847919657 /* PredictedModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A52AF4811205C1C3408670 /* PredictedModuleConfiguratorTests.swift */; };
+		7414BEFF1225CF7C3D0E03D0 /* LooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB303694BF7967A2D1A14B7 /* LooksViewController.swift */; };
 		747A21D9A44F1630F6EADCFC /* CollectionModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE99423050C86F0DA9AFCC /* CollectionModuleInput.swift */; };
 		8B934DD17CFDB163C3261B25 /* CollectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6274E4DA2B54031D51B4AA /* CollectionRouter.swift */; };
 		8CF34EB833F9BEFB94E76E0F /* PredictedViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4853C9ABCB3038CC934E725B /* PredictedViewTests.swift */; };
 		8E355709B3107983EF7A0B5E /* MyFavoritesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32FAC75C4F47A79443EA5F3 /* MyFavoritesViewInput.swift */; };
 		93E6BF4249BC0BDC7A1F716D /* MyWardrobePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F46F7D1F2456AEB2E9273E /* MyWardrobePresenterTests.swift */; };
+		9987B2BCC7982A199ACD5AAF /* LooksViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61FBB609F7ACF7BADFA0846D /* LooksViewController.storyboard */; };
 		9BBD2ED45A71761E809D505B /* CameraRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1442DF2F17564916FEABB4D /* CameraRouterInput.swift */; };
 		9C0AE62F211606D832FF2701 /* MyFavoritesModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B7B3571DB51B2F4CA2B31 /* MyFavoritesModuleInput.swift */; };
 		9E569EDDEA7A1071E44682F8 /* MyWardrobeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF969B93CE2201160C047A8D /* MyWardrobeRouterTests.swift */; };
@@ -66,15 +77,18 @@
 		CF57092F610983F949DC142B /* Pods_iSee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08DA63D54E782A5A9597A0D7 /* Pods_iSee.framework */; };
 		D2EFE09850B100A667629C47 /* MyFavoritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8548078B65C60244EDCDF4 /* MyFavoritesRouter.swift */; };
 		D53BEA2A18B1035CCC42470C /* MyFavoritesRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE39CF183D470D489A380D07 /* MyFavoritesRouterInput.swift */; };
+		D630B8A119D26945033F1408 /* LooksViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F88224CA6F2B2B527DC17 /* LooksViewTests.swift */; };
 		DA25C93E32D2ED2165B88A74 /* MyWardrobeViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299A2819379C8457C76550F /* MyWardrobeViewInput.swift */; };
 		DA4B2B636D8F704DD77DAC15 /* MyWardrobeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E057B322EAEB5F9BD7B9EE8 /* MyWardrobeViewTests.swift */; };
 		DCB73F470DA6F15C433E824E /* MyWardrobePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392B96F087CA0016B1631D4 /* MyWardrobePresenter.swift */; };
 		DE4317636762FFC01E0BC884 /* PredictedModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F22D6604C93AA8719800A9 /* PredictedModuleConfigurator.swift */; };
 		DF0C556878A3848C046AB29F /* PredictedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75333A0AB9298C8287872336 /* PredictedViewController.swift */; };
+		E21B0B4B8C23484DAFA2884A /* LooksViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A4F93A7A14DA209364DC7F /* LooksViewOutput.swift */; };
 		E448F5FF4B83645BFA214886 /* CollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2C96ABD90106F283CEA030 /* CollectionViewController.storyboard */; };
 		E9B9C7E2C76DEA158B616381 /* MyWardrobeModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1011793780F4F48EF9014AD1 /* MyWardrobeModuleConfiguratorTests.swift */; };
 		EB5FFD2265EEC517F79C6114 /* MyWardrobeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB91FF7E109776A456C0B88 /* MyWardrobeViewController.swift */; };
 		ED3FBAECFC7BB40470B50215 /* CameraViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803B3541548D5978E635588E /* CameraViewOutput.swift */; };
+		EEF12BCCFB47BE0C88DB8F8B /* LooksModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19C7527155E80A33F943776 /* LooksModuleConfigurator.swift */; };
 		EFCF0A6AE973886DE1A65FEC /* CollectionViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1616CD5F8459C4234B358F87 /* CollectionViewOutput.swift */; };
 		F112320CB5A25ACCED3EF425 /* MyFavoritesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420EC8AD2E7CB7AC1BB41727 /* MyFavoritesViewController.storyboard */; };
 		F55F5CE8239268DB00890055 /* lensAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = F55F5CE7239268DB00890055 /* lensAnimation.json */; };
@@ -134,10 +148,12 @@
 /* Begin PBXFileReference section */
 		02F2E8D40117A4CA3BB22C3A /* PredictedModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedModuleOutput.swift; sourceTree = "<group>"; };
 		03E92F314072FF3382FDBB75 /* CameraViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = CameraViewController.storyboard; sourceTree = "<group>"; };
+		04AB8A00D867147409111CCE /* LooksRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LooksRouterTests.swift; sourceTree = "<group>"; };
 		07B09508CAC8E1E009CB7AC4 /* MyFavoritesRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyFavoritesRouterTests.swift; sourceTree = "<group>"; };
 		08A60194102966E41A325637 /* CameraModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		08DA63D54E782A5A9597A0D7 /* Pods_iSee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACBA3DD966D035B0C7D3830 /* MyWardrobeModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyWardrobeModuleOutput.swift; sourceTree = "<group>"; };
+		0BB303694BF7967A2D1A14B7 /* LooksViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LooksViewController.swift; sourceTree = "<group>"; };
 		1011793780F4F48EF9014AD1 /* MyWardrobeModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyWardrobeModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		1616CD5F8459C4234B358F87 /* CollectionViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CollectionViewOutput.swift; sourceTree = "<group>"; };
 		182FA75E891F9C79AB75E043 /* CameraPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraPresenterTests.swift; sourceTree = "<group>"; };
@@ -145,6 +161,7 @@
 		22BAEBDD9FA7F7921204291D /* CollectionModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CollectionModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		23F06219C04B35BF1E2F04A5 /* PredictedModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedModuleInput.swift; sourceTree = "<group>"; };
 		27A78FAAEB12CFB1975BA59D /* CollectionModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CollectionModuleOutput.swift; sourceTree = "<group>"; };
+		2883E49D1B62F9E76E6DB180 /* LooksRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LooksRouter.swift; sourceTree = "<group>"; };
 		2CA184B6242598481671D64C /* MyWardrobeRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyWardrobeRouter.swift; sourceTree = "<group>"; };
 		2E4125D1027BB0881E085EA9 /* PredictedRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedRouter.swift; sourceTree = "<group>"; };
 		2E8548078B65C60244EDCDF4 /* MyFavoritesRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyFavoritesRouter.swift; sourceTree = "<group>"; };
@@ -159,17 +176,23 @@
 		4E0100B2CC8EE70488C3F5C2 /* MyFavoritesModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyFavoritesModuleOutput.swift; sourceTree = "<group>"; };
 		5299A2819379C8457C76550F /* MyWardrobeViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyWardrobeViewInput.swift; sourceTree = "<group>"; };
 		52C2D76D504280A42486972E /* CameraViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraViewTests.swift; sourceTree = "<group>"; };
+		535434EBDD3F72C3B9B8E186 /* LooksPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LooksPresenterTests.swift; sourceTree = "<group>"; };
+		58BA014CE76042B7456AE341 /* LooksModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LooksModuleInput.swift; sourceTree = "<group>"; };
 		59C8B73529300897C6F3681E /* CollectionPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CollectionPresenter.swift; sourceTree = "<group>"; };
+		5B3F88224CA6F2B2B527DC17 /* LooksViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LooksViewTests.swift; sourceTree = "<group>"; };
 		5EA5BE656C6DA3A1F9C4EC7C /* MyFavoritesPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyFavoritesPresenterTests.swift; sourceTree = "<group>"; };
+		61FBB609F7ACF7BADFA0846D /* LooksViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = LooksViewController.storyboard; sourceTree = "<group>"; };
 		65A52AF4811205C1C3408670 /* PredictedModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		65F46F7D1F2456AEB2E9273E /* MyWardrobePresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyWardrobePresenterTests.swift; sourceTree = "<group>"; };
 		7331705952103BACED904E2D /* CameraViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		73A4F93A7A14DA209364DC7F /* LooksViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LooksViewOutput.swift; sourceTree = "<group>"; };
 		75333A0AB9298C8287872336 /* PredictedViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedViewController.swift; sourceTree = "<group>"; };
 		77A1CB52A61A66A9A080A071 /* MyFavoritesModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyFavoritesModuleConfigurator.swift; sourceTree = "<group>"; };
 		7BD2DF346E443FD93D4D2800 /* CameraViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraViewInput.swift; sourceTree = "<group>"; };
 		7DB91FF7E109776A456C0B88 /* MyWardrobeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyWardrobeViewController.swift; sourceTree = "<group>"; };
 		7E6041148C970005C389B81B /* MyWardrobeViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyWardrobeViewOutput.swift; sourceTree = "<group>"; };
 		803B3541548D5978E635588E /* CameraViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraViewOutput.swift; sourceTree = "<group>"; };
+		830EE1491907506ABF107137 /* LooksViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LooksViewInput.swift; sourceTree = "<group>"; };
 		86CBA7A95F19161D0119539F /* CollectionRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CollectionRouterTests.swift; sourceTree = "<group>"; };
 		88AC03ABD59E4CFDC3B4C980 /* PredictedRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedRouterInput.swift; sourceTree = "<group>"; };
 		8C2C96ABD90106F283CEA030 /* CollectionViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = CollectionViewController.storyboard; sourceTree = "<group>"; };
@@ -180,6 +203,7 @@
 		AE39CF183D470D489A380D07 /* MyFavoritesRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyFavoritesRouterInput.swift; sourceTree = "<group>"; };
 		AEE2B47716E3702191788F5E /* PredictedViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedViewOutput.swift; sourceTree = "<group>"; };
 		B0F22D6604C93AA8719800A9 /* PredictedModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedModuleConfigurator.swift; sourceTree = "<group>"; };
+		B19C7527155E80A33F943776 /* LooksModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LooksModuleConfigurator.swift; sourceTree = "<group>"; };
 		B392B96F087CA0016B1631D4 /* MyWardrobePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyWardrobePresenter.swift; sourceTree = "<group>"; };
 		BDA159A1F6EF7F2163B114B0 /* Pods-iSee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSee.debug.xcconfig"; path = "Target Support Files/Pods-iSee/Pods-iSee.debug.xcconfig"; sourceTree = "<group>"; };
 		BE55251BEB0A48D5D67AB503 /* PredictedRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedRouterTests.swift; sourceTree = "<group>"; };
@@ -189,6 +213,7 @@
 		C5E9E033166A475AE035F09A /* CameraModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraModuleOutput.swift; sourceTree = "<group>"; };
 		CA6274E4DA2B54031D51B4AA /* CollectionRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CollectionRouter.swift; sourceTree = "<group>"; };
 		CB9D068BE00907F402C30DF4 /* PredictedPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedPresenterTests.swift; sourceTree = "<group>"; };
+		CC2686CEB94ED9B9400A60E2 /* LooksRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LooksRouterInput.swift; sourceTree = "<group>"; };
 		CCFD20C8C8D42E4AF8308FB0 /* PredictedViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedViewInput.swift; sourceTree = "<group>"; };
 		CF791246AD3C09ED77B5034E /* MyWardrobeModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyWardrobeModuleConfigurator.swift; sourceTree = "<group>"; };
 		D1FE99423050C86F0DA9AFCC /* CollectionModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CollectionModuleInput.swift; sourceTree = "<group>"; };
@@ -196,9 +221,11 @@
 		D4FCFA8664BD2EF58E5ED38B /* PredictedViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = PredictedViewController.storyboard; sourceTree = "<group>"; };
 		D566E4ADD8265C1AD4D2D1AD /* Pods-iSee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSee.release.xcconfig"; path = "Target Support Files/Pods-iSee/Pods-iSee.release.xcconfig"; sourceTree = "<group>"; };
 		D5F54B6A9C37C1FA58E6623A /* CollectionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		D6D44E7FF0EA62CB4B8C31C8 /* LooksPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LooksPresenter.swift; sourceTree = "<group>"; };
 		DADAD1AF1192342DFFDC4697 /* MyFavoritesViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyFavoritesViewTests.swift; sourceTree = "<group>"; };
 		DB5B74D4B02E2E2EFC129E1B /* CameraRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraRouter.swift; sourceTree = "<group>"; };
 		DCDB1A3B69009D7CB8994E2F /* PredictedPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PredictedPresenter.swift; sourceTree = "<group>"; };
+		DDA37C02644EBCF314252B28 /* LooksModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LooksModuleOutput.swift; sourceTree = "<group>"; };
 		E1E3F33AB5CA85E443D5EAB2 /* CollectionViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CollectionViewInput.swift; sourceTree = "<group>"; };
 		E4B018000517C03BF411B4C0 /* CameraPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraPresenter.swift; sourceTree = "<group>"; };
 		E832A3C4D9A4C7F5BAEA094B /* MyFavoritesViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyFavoritesViewOutput.swift; sourceTree = "<group>"; };
@@ -265,6 +292,7 @@
 		F5D27C802393E6D500D2E5F3 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		F5D27C822393E89400D2E5F3 /* EncodableDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableDecodable.swift; sourceTree = "<group>"; };
 		F5D27C842394317400D2E5F3 /* WardrobeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeEntity.swift; sourceTree = "<group>"; };
+		FF0139E57FAF70061F00DA23 /* LooksModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LooksModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +314,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01D02A139848A313265F7130 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				B19C7527155E80A33F943776 /* LooksModuleConfigurator.swift */,
+			);
+			name = Configurator;
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		0A903651B6EF61A4CF9FB375 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +411,15 @@
 			path = MyWardrobe;
 			sourceTree = "<group>";
 		};
+		318146E815CBD4AD128CA462 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B3F88224CA6F2B2B527DC17 /* LooksViewTests.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
 		355FBC07499E54835527BC45 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +454,24 @@
 				AE3D3F19D756C21DEDE8959F /* View */,
 			);
 			path = Predicted;
+			sourceTree = "<group>";
+		};
+		4092A232426353FBA8D32982 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				FF0139E57FAF70061F00DA23 /* LooksModuleConfiguratorTests.swift */,
+			);
+			name = Configurator;
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		47D4FEAB3DBC7AD59F22E382 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				535434EBDD3F72C3B9B8E186 /* LooksPresenterTests.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		4A19ACAC322DC5C509FA0D55 /* Configurator */ = {
@@ -446,6 +510,17 @@
 			path = MyFavorites;
 			sourceTree = "<group>";
 		};
+		4FACE0D3634FEAA641C2F3C4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D6D44E7FF0EA62CB4B8C31C8 /* LooksPresenter.swift */,
+				58BA014CE76042B7456AE341 /* LooksModuleInput.swift */,
+				DDA37C02644EBCF314252B28 /* LooksModuleOutput.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		52181C03D3522FEE14E7E7CE /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -462,6 +537,7 @@
 				F9171B14F70607C11A697B2A /* Collection */,
 				4E1DA850E8B4FCB5FF48CB14 /* MyFavorites */,
 				FF0ECB988941BC4DA076F50D /* MyWardrobe */,
+				B82740A99E95DF2BB518022F /* Looks */,
 			);
 			path = "User Stories";
 			sourceTree = "<group>";
@@ -472,6 +548,18 @@
 				08DA63D54E782A5A9597A0D7 /* Pods_iSee.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A4ECC8FB17267040D89AF80 /* Looks */ = {
+			isa = PBXGroup;
+			children = (
+				01D02A139848A313265F7130 /* Configurator */,
+				BA8B77C8B5B75B88EFD88EEE /* Router */,
+				4FACE0D3634FEAA641C2F3C4 /* Presenter */,
+				C046F88EBA8BFEA9B0C9952C /* View */,
+			);
+			name = Looks;
+			path = Looks;
 			sourceTree = "<group>";
 		};
 		5B053D79C8F39121FA582E7A /* Router */ = {
@@ -619,6 +707,18 @@
 			path = Collection;
 			sourceTree = "<group>";
 		};
+		B82740A99E95DF2BB518022F /* Looks */ = {
+			isa = PBXGroup;
+			children = (
+				4092A232426353FBA8D32982 /* Configurator */,
+				D9817A36576D61AE497D8BF6 /* Router */,
+				47D4FEAB3DBC7AD59F22E382 /* Presenter */,
+				318146E815CBD4AD128CA462 /* View */,
+			);
+			name = Looks;
+			path = Looks;
+			sourceTree = "<group>";
+		};
 		B9CC7E8D354516F424DB082C /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -629,12 +729,34 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		BA8B77C8B5B75B88EFD88EEE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2883E49D1B62F9E76E6DB180 /* LooksRouter.swift */,
+				CC2686CEB94ED9B9400A60E2 /* LooksRouterInput.swift */,
+			);
+			name = Router;
+			path = Router;
+			sourceTree = "<group>";
+		};
 		BD1B3F752542B73980BB15F2 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
 				22BAEBDD9FA7F7921204291D /* CollectionModuleConfiguratorTests.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		C046F88EBA8BFEA9B0C9952C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0BB303694BF7967A2D1A14B7 /* LooksViewController.swift */,
+				61FBB609F7ACF7BADFA0846D /* LooksViewController.storyboard */,
+				830EE1491907506ABF107137 /* LooksViewInput.swift */,
+				73A4F93A7A14DA209364DC7F /* LooksViewOutput.swift */,
+			);
+			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		C2D2EC9D29EDA1FEE21BCD79 /* Router */ = {
@@ -683,6 +805,15 @@
 				CF791246AD3C09ED77B5034E /* MyWardrobeModuleConfigurator.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		D9817A36576D61AE497D8BF6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				04AB8A00D867147409111CCE /* LooksRouterTests.swift */,
+			);
+			name = Router;
+			path = Router;
 			sourceTree = "<group>";
 		};
 		E65F6867EB7191800B34D638 /* Predicted */ = {
@@ -1003,6 +1134,7 @@
 				B266CCC44B8747812B633FDE /* Collection */,
 				7B6A55E1657B3F06E16B68C2 /* MyFavorites */,
 				2D14FE82AFF9A3B7D5FEC60E /* MyWardrobe */,
+				5A4ECC8FB17267040D89AF80 /* Looks */,
 			);
 			path = "User Stories";
 			sourceTree = "<group>";
@@ -1221,6 +1353,7 @@
 				E448F5FF4B83645BFA214886 /* CollectionViewController.storyboard in Resources */,
 				F112320CB5A25ACCED3EF425 /* MyFavoritesViewController.storyboard in Resources */,
 				4BB8A8A2AFC4FC047A085F63 /* MyWardrobeViewController.storyboard in Resources */,
+				9987B2BCC7982A199ACD5AAF /* LooksViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1390,6 +1523,15 @@
 				DA25C93E32D2ED2165B88A74 /* MyWardrobeViewInput.swift in Sources */,
 				6306801551BD2F088D11D38E /* MyWardrobeViewOutput.swift in Sources */,
 				F591B19823943B4F00A9283F /* WardrobeCell.swift in Sources */,
+				EEF12BCCFB47BE0C88DB8F8B /* LooksModuleConfigurator.swift in Sources */,
+				39070D3498D2B51DACFD3C26 /* LooksRouter.swift in Sources */,
+				22F8018033CB161D1D5DE737 /* LooksRouterInput.swift in Sources */,
+				32A7D56533359F36C05CA3B1 /* LooksPresenter.swift in Sources */,
+				1F28C10A534418F750A45A72 /* LooksModuleInput.swift in Sources */,
+				45ACFD9CF017B44A7AC65848 /* LooksModuleOutput.swift in Sources */,
+				7414BEFF1225CF7C3D0E03D0 /* LooksViewController.swift in Sources */,
+				6B18659EACE6CAD1D774B500 /* LooksViewInput.swift in Sources */,
+				E21B0B4B8C23484DAFA2884A /* LooksViewOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1419,6 +1561,10 @@
 				9E569EDDEA7A1071E44682F8 /* MyWardrobeRouterTests.swift in Sources */,
 				93E6BF4249BC0BDC7A1F716D /* MyWardrobePresenterTests.swift in Sources */,
 				DA4B2B636D8F704DD77DAC15 /* MyWardrobeViewTests.swift in Sources */,
+				44B6FFC0F70CB8C66AF0AF57 /* LooksModuleConfiguratorTests.swift in Sources */,
+				4BB067CEFE671A341CED0569 /* LooksRouterTests.swift in Sources */,
+				2A9730E09637FD2A181B6D37 /* LooksPresenterTests.swift in Sources */,
+				D630B8A119D26945033F1408 /* LooksViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,6 +32,8 @@ final class CameraRouter: CameraRouterInput {
     }
 
     func openLooks() {
+        let looksVc = LooksModuleConfigurator().configure()
+        view?.presentModule(looksVc, animated: true, completion: nil)
     }
 
 }
