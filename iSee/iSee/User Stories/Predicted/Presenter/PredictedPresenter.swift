@@ -20,6 +20,7 @@ final class PredictedPresenter {
 
     private let image: UIImage
     private let boxes: [PredictedBoxEntity]
+    private var isWasSaved = false
 
     // MARK: - Initialization
 
@@ -45,6 +46,14 @@ extension PredictedPresenter: PredictedViewOutput {
 
     func clothesPicked(_ image: UIImage, category: String) {
         router?.openCollection(image, category: category)
+    }
+
+    func saveToWardrobe() {
+        guard !isWasSaved else {
+            return
+        }
+        let wardrobeItem = WardrobeEntity(name: "tesst", image: image, boxes: boxes)
+        DataStorage.shared.setWardrobe(item: wardrobeItem)
     }
 
 }

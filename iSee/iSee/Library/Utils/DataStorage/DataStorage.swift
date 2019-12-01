@@ -17,6 +17,7 @@ final class DataStorage {
 
     private enum Keys {
         static let favoriteList = "favoriteList"
+        static let wardrobeList = "wardrobeList"
     }
 
     // MARK: - Private Properties
@@ -57,13 +58,28 @@ final class DataStorage {
 
     func removeFavorites(_ item: ClotheItemEntity) {
         var favoritesEntity = getFavorites()
-        guard let findedIndex = favoritesEntity.firstIndex(where: { $0.id == item.id}) else {
+        guard let findedIndex = favoritesEntity.firstIndex(where: { $0.id == item.id }) else {
             return
         }
         favoritesEntity.remove(at: findedIndex)
         let favoritesViewModel = favoritesEntity.map({ ClotheItemViewModel(with: $0) })
         let favoritesData = NSKeyedArchiver.archivedData(withRootObject: favoritesViewModel)
         set(data: favoritesData, forKey: Keys.favoriteList)
+    }
+
+    func setWardrobe(item: WardrobeEntity) {
+        var wardrobeList = getWardrobe()
+        wardrobeList.append(item)
+        let wardrobeData = NSKeyedArchiver.archivedData(withRootObject: wardrobeList)
+        set(data: wardrobeData, forKey: Keys.wardrobeList)
+    }
+
+    func getWardrobe() -> [WardrobeEntity] {
+        guard let wardrobeList = getData(forKey: Keys.wardrobeList) else {
+            return []
+        }
+        let wardrobeArray = NSKeyedUnarchiver.unarchiveObject(with: wardrobeList as Data) as? [WardrobeEntity]
+        return wardrobeArray ?? []
     }
 
     func clear() {

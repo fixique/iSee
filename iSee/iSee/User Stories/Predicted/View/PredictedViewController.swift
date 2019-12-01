@@ -16,6 +16,7 @@ final class PredictedViewController: UIViewController, ModuleTransitionable {
 
     @IBOutlet private weak var previewImageView: UIImageView!
     @IBOutlet private weak var closeButton: CommonButton!
+    @IBOutlet private weak var saveButton: CommonButton!
 
     // MARK: - Properties
 
@@ -52,6 +53,7 @@ extension PredictedViewController: PredictedViewInput {
         configureCloseButton()
         renderBoxes(boxes: boxes)
         renderPoints(boxes: boxes)
+        configureSaveToWardrobe()
     }
 
 }
@@ -81,6 +83,7 @@ private extension PredictedViewController {
             boxView.backgroundColor = .clear
             boxView.layer.borderColor = UIColor.clear.cgColor
             boxView.layer.borderWidth = 0.0
+            boxView.isUserInteractionEnabled = false
             view.addSubview(boxView)
             redBoxes.append(boxView)
         }
@@ -115,6 +118,13 @@ private extension PredictedViewController {
                          preferences: preferences)
     }
 
+    func configureSaveToWardrobe() {
+        saveButton.layer.cornerRadius = 24.0
+        saveButton.layer.masksToBounds = true
+        saveButton.set(backgroundColor: UIColor(red: 0, green: 27.0 / 255.0, blue: 194.0 / 255.0, alpha: 1.0), for: [.normal])
+        saveButton.set(backgroundColor: UIColor(red: 0, green: 27.0 / 255.0, blue: 194.0 / 255.0, alpha: 0.6), for: [.selected, .highlighted, .focused])
+    }
+
 }
 
 // MARK: - Actions
@@ -137,6 +147,9 @@ private extension PredictedViewController {
         output?.clothesPicked(image, category: boxes[button.tag].category)
     }
 
+    @IBAction func saveToWardrobe(_ sender: Any) {
+        output?.saveToWardrobe()
+    }
 }
 
 // MARK: - Help Methods

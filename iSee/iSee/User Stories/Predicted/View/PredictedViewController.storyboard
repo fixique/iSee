@@ -10,7 +10,7 @@
         <!--Predicted View Controller-->
         <scene sceneID="PlN-iW-H7B">
             <objects>
-                <viewController id="h3k-bK-TNO" customClass="PredictedViewController" customModule="iSee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="h3k-bK-TNO" customClass="PredictedViewController" customModule="SHKAF" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cA6-JB-jfU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,12 +28,25 @@
                                     <action selector="closeAction:" destination="h3k-bK-TNO" eventType="touchUpInside" id="4pO-E7-5Tl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ae6-We-FcD" customClass="CommonButton" customModule="SurfUtils">
+                                <rect key="frame" x="97" y="750" width="220" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="5cP-Fh-jnN"/>
+                                    <constraint firstAttribute="width" constant="220" id="87o-f4-WxH"/>
+                                </constraints>
+                                <state key="normal" title="Save to wardrobe"/>
+                                <connections>
+                                    <action selector="saveToWardrobe:" destination="h3k-bK-TNO" eventType="touchUpInside" id="ciI-Zt-0CP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ae6-We-FcD" firstAttribute="centerX" secondItem="cA6-JB-jfU" secondAttribute="centerX" id="EcI-jm-wrt"/>
                             <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="ra6-mB-VXB" secondAttribute="trailing" constant="16" id="F34-hS-UiM"/>
                             <constraint firstItem="2y8-6x-oxh" firstAttribute="leading" secondItem="cA6-JB-jfU" secondAttribute="leading" id="GVR-Wj-ppb"/>
                             <constraint firstAttribute="bottom" secondItem="2y8-6x-oxh" secondAttribute="bottom" id="O9m-dK-6Nq"/>
+                            <constraint firstItem="YWU-9O-L7t" firstAttribute="bottom" secondItem="ae6-We-FcD" secondAttribute="bottom" constant="48" id="Quf-uZ-jq3"/>
                             <constraint firstAttribute="trailing" secondItem="2y8-6x-oxh" secondAttribute="trailing" id="hT6-p5-uR6"/>
                             <constraint firstItem="ra6-mB-VXB" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="16" id="iRG-Cv-fI1"/>
                             <constraint firstItem="2y8-6x-oxh" firstAttribute="top" secondItem="cA6-JB-jfU" secondAttribute="top" id="m7w-b8-geE"/>
@@ -43,6 +56,7 @@
                     <connections>
                         <outlet property="closeButton" destination="ra6-mB-VXB" id="hM0-OT-Cc9"/>
                         <outlet property="previewImageView" destination="2y8-6x-oxh" id="OXu-q1-snh"/>
+                        <outlet property="saveButton" destination="ae6-We-FcD" id="Pcr-VJ-nCb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
