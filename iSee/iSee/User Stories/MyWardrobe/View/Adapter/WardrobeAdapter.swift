@@ -60,5 +60,4 @@ extension WardrobeAdapter: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension WardrobeAdapter: UITableViewDelegate {
-    
 }

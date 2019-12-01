@@ -48,11 +48,11 @@ extension PredictedPresenter: PredictedViewOutput {
         router?.openCollection(image, category: category)
     }
 
-    func saveToWardrobe() {
+    func saveToWardrobe(name: String) {
         guard !isWasSaved else {
             return
         }
-        let wardrobeItem = WardrobeEntity(name: "tesst", image: image, boxes: boxes)
+        let wardrobeItem = WardrobeEntity(name: name, image: image, boxes: boxes)
         DataStorage.shared.setWardrobe(item: wardrobeItem)
     }
 

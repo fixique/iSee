@@ -12,5 +12,5 @@ protocol PredictedViewOutput {
     func viewLoaded()
     func close()
     func clothesPicked(_ image: UIImage, category: String)
-    func saveToWardrobe()
+    func saveToWardrobe(name: String)
 }

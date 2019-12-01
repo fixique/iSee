@@ -33,6 +33,8 @@ final class PredictedViewController: UIViewController, ModuleTransitionable {
     private var redBoxes: [UIView] = []
     private var previewImage: UIImage?
 
+    private var nameTextField: UITextField?
+
     // MARK: - UIViewController
 
     override func viewDidLoad() {
@@ -148,7 +150,18 @@ private extension PredictedViewController {
     }
 
     @IBAction func saveToWardrobe(_ sender: Any) {
-        output?.saveToWardrobe()
+        let alertController = UIAlertController(title: "Set Description and save", message: nil, preferredStyle: .alert)
+        alertController.addTextField { [weak self] textField in
+            self?.nameTextField = textField
+            textField.placeholder = "Clothes Name"
+        }
+        let okAction = UIAlertAction(title: "Save", style: .default) { [weak self] _ in
+            self?.output?.saveToWardrobe(name: self?.nameTextField?.text ?? "Без названия")
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+        alertController.addAction(cancelAction)
+        alertController.addAction(okAction)
+        self.presentModule(alertController, animated: true, completion: nil)
     }
 }
 
