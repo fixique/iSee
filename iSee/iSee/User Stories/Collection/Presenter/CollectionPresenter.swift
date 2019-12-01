@@ -36,6 +36,7 @@ extension CollectionPresenter: CollectionViewOutput {
 
     func viewLoaded() {
         view?.setupInitialState(collectionTitle: category)
+        findSimilar()
     }
 
 }
@@ -43,3 +44,30 @@ extension CollectionPresenter: CollectionViewOutput {
 // MARK: - CollectionModuleInput
 
 extension CollectionPresenter: CollectionModuleInput {}
+
+// MARK: - Network
+
+private extension CollectionPresenter {
+
+    func findSimilar() {
+        view?.showLoader(style: .black)
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            let base64String = self.cropedImage.toBase64() ?? ""
+
+            SeeService().findSimilar(image64: base64String, category: self.category).onCompleted { _ in
+
+            }.onError { error in
+                print("Something whent wrong: \(error.localizedDescription)")
+            }.defer {
+                DispatchQueue.main.async {
+                    self.view?.hideLoader()
+                }
+            }
+
+        }
+    }
+
+}

@@ -6,6 +6,6 @@
 //  Copyright © 2019 Vlad. All rights reserved.
 //
 
-protocol CollectionViewInput: class {
+protocol CollectionViewInput: StatePresentable {
     func setupInitialState(collectionTitle: String)
 }

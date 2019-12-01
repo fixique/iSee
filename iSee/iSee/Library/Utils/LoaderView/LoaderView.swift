@@ -14,15 +14,18 @@ final class LoaderView: UIView {
     // MARK: - Private properties
 
     private var indicatorView: NVActivityIndicatorView?
+    private let style: LoaderStyle
 
     // MARK: - Initialization
 
-    init() {
+    init(style: LoaderStyle) {
+        self.style = style
         super.init(frame: .zero)
         setupInitialState()
     }
 
     required init?(coder: NSCoder) {
+        self.style = .white
         super.init(coder: coder)
         setupInitialState()
     }
@@ -39,11 +42,11 @@ private extension LoaderView {
     }
 
     func configureBackground() {
-        backgroundColor = .clear
+        backgroundColor = style.background
     }
 
     func configureInicator() {
-        let indicatorView = NVActivityIndicatorView(frame: .zero, type: .ballPulse, color: .white, padding: nil)
+        let indicatorView = NVActivityIndicatorView(frame: .zero, type: .ballPulse, color: style.dotsColor, padding: nil)
         addSubview(indicatorView)
         indicatorView.anchorSize(size: CGSize(width: 30, height: 30))
         indicatorView.anchorCenter(to: self, yOffset: -80)

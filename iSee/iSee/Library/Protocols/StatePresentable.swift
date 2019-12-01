@@ -8,14 +8,38 @@
 
 import UIKit
 
-public protocol StatePresentable: class {
+enum LoaderStyle {
+    case white
+    case black
+
+    var dotsColor: UIColor {
+        switch self {
+        case .white:
+            return UIColor.white
+        case .black:
+            return UIColor.black
+        }
+    }
+
+    var background: UIColor {
+        switch self {
+        case .white:
+            return .clear
+        case .black:
+            return .white
+        }
+    }
+
+}
+
+protocol StatePresentable: class {
     /// Method will show loader with specified present parameter
-    func showLoader()
+    func showLoader(style: LoaderStyle)
     /// Method will hide loader if it exist
     func hideLoader()
 }
 
-public extension StatePresentable where Self: UIViewController {
+extension StatePresentable where Self: UIViewController {
 
     // MARK: - Private Properties
 
@@ -28,11 +52,11 @@ public extension StatePresentable where Self: UIViewController {
 
     // MARK: - Public Methods
 
-    func showLoader() {
+    func showLoader(style: LoaderStyle) {
         guard loaderView == nil else {
             return
         }
-        let loader = LoaderView()
+        let loader = LoaderView(style: style)
         loader.translatesAutoresizingMaskIntoConstraints = false
         loader.alpha = 0.0
         view.addSubview(loader)

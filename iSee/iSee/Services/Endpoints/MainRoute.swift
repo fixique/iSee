@@ -10,6 +10,7 @@ import NodeKit
 
 enum MainRoute {
     case predict
+    case findSimilar
 }
 
 // MARK: - UrlRouteProvider
@@ -21,6 +22,8 @@ extension MainRoute: UrlRouteProvider {
         switch self {
         case .predict:
             return try base + "predict"
+        case .findSimilar:
+            return try base + "findsimilar"
         }
     }
 

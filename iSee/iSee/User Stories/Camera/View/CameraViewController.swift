@@ -308,7 +308,7 @@ private extension CameraViewController {
     }
 
     func setLoadingPreviewState() {
-        showLoader()
+        showLoader(style: .white)
         bluredLayer.isHidden = false
         bluredLayer.alpha = 0.0
         bluredLayer.isUserInteractionEnabled = false

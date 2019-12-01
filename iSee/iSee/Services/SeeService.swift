@@ -14,6 +14,7 @@ final class SeeService {
 
     private enum Keys {
         static let image = "image"
+        static let category = "category"
     }
 
     // MARK: - Methods
@@ -22,6 +23,13 @@ final class SeeService {
         return UrlChainsBuilder()
             .default(with: UrlChainConfigModel(method: .post, route: MainRoute.predict, metadata: ["Content-Type": "application/json"], encoding: .json))
             .process([Keys.image: image64])
+    }
+
+    func findSimilar(image64: String, category: String) -> Observer<Void> {
+        return UrlChainsBuilder()
+            .default(with: UrlChainConfigModel(method: .post, route: MainRoute.findSimilar, metadata: ["Content-Type": "application/json"], encoding: .json))
+            .process([Keys.image: image64,
+                      Keys.category: category])
     }
 
 }
